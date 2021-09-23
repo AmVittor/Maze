@@ -1,0 +1,14 @@
+cor do fundo da input 
+rgb(255, 235, 205)
+
+
+cor da div escura do login 
+#3b3d3f
+
+cor do fundo da pag toda
+#222324
+
+cor do cabeçalho e rodapé 
+#2b2c2d
+
+o branco é white mesmo
