@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt_Br">
+
+<head>
+  <link rel="stylesheet" href="csmetro.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="cabeça">
+    <p id="cabeçalho1">
+      <span onclick='calculadora()'>
+      Calculadora
+      </span>
+    </p>
+    <p id="cabeçalho2">
+      <span onclick='linhas()'>
+      Linhas parceiras
+    </p>
+    <div>
+      <img id="cbcImg" src="logo.png">
+    </div>
+    <!-- <p id="cabeçalho3">
+      Sobre nós
+    </p>
+    <p id="cabeçalho4">
+      Avaliações
+    </p> -->
+    <!-- DEIXAR SOMENTE 2 INPUTS-->
+  </div>
+
+  <div class="escuro" id='div_cadastro'>
+    <h1>Olá, seja bem vindo!</h1>
+    <h3>Cria sua conta gratuitamente!</h3>
+    <div class="login">
+      <button id="cadastrar" onclick="cadastrar()">Cadastrar-se</button>
+    </div>
+
+  </div>
+  <div class="branco" id='div_login'>
+    <h2>Entrar na minha conta</h2>
+    <!--Icones aqui-->
+    <div class="logosd">
+      <img class="logo" id="insta" src="instagram logo.png">
+      <img class="logo" id="linke" src="linkedin logo.png">
+      <img class="logo" id="face" src="facebook logo.png">
+    </div>
+
+
+
+    <div class="inputs"><span id="texto">
+        <h4>E-mail</h4>
+        <input type="text" class="inpute" placeholder="E-mail" id='email_inp'>
+    </div>
+
+    <div class="inputs"><span id="texto">
+        <h4>Senha</h4>
+        <input type="text" class="inpute" placeholder="Senha" id='senha_inp'>
+    </div>
+    <div class="login">
+      <button id="cadastrar" onclick="login()">Entrar</button>
+    </div>
+
+  </div>
+  <div id="ultimo">
+    <div>
+      <p id="sobrenos">Sobre nós</p>
+    </div>
+    <div id="desnDiv">
+      <p id="desenv">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>
+        Ea reprehenderit, harum officiis modi sequi eius cupiditate corporis ipsa, <br>
+        quo neque consequuntur deserunt, ullam dolorem. Quae iure harum ullam facilis natus.
+      </p>
+
+    </div>
+    <div id="foto">
+      <!-- Imagem meramente ilustrativa, depois vamos substituir-->
+      <img src="https://www.gov.br/infraestrutura/pt-br/centrais-de-conteudo/equipe-png">
+
+    </div>
+
+  </div>
+  </div>
+<script src='jsmetro.js'></script>
+</body>
+
+</html>
