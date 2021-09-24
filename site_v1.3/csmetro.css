@@ -80,7 +80,7 @@ body{
     border-radius: 3px;
     margin-left: 18%;
     margin-top: 2%;
-    transition: width 3s;
+    transition: width 1.3s;
   }
 
   /* Esqueceu a senha */
@@ -145,7 +145,7 @@ h3{
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   margin-top: 2%;
-  transition: width 3s;
+  transition: width 1.3s;
   
   }
 
