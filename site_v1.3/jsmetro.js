@@ -2,19 +2,19 @@ function cadastrar(){
     div_cadastro.style.width = '540px'
     div_login.style.width='360px'
     div_cadastro.innerHTML = ` 
-    <h2>Cadastre sua Conta</h2>
+    <h2 id="CadastroEscuro">Cadastre sua Conta</h2>
   
     <div class="inputs"><span id="texto">
-        <h4>Texto</h4>
+        <h4 id="LadoEscuro">Texto</h4>
         <input type="text" class="inpute" placeholder="texto" id='email_inp'>
     </div>
 
     <div class="inputs"><span id="texto">
-        <h4>Texto</h4>
+        <h4 id="LadoEscuro">Texto</h4>
         <input type="text" class="inpute" placeholder="texto    " id='senha_inp'>
     </div>
     <div class="login">
-      <button id="cadastrar"">Cadastrar</button>
+      <button id="cadastrar">Cadastrar</button>
     </div>  `
 
     div_login.innerHTML = `
