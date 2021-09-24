@@ -2,8 +2,11 @@
 
 body{
   background-color: #222324;
-  margin: 0%;
-  padding: 0%;
+}
+*{
+  margin: 0;
+  padding: 0;
+
 }
 
 #cabeça{
