@@ -1,6 +1,6 @@
-function cadastrar(){  
+function cadastrar() {
     div_cadastro.style.width = '540px'
-    div_login.style.width='360px'
+    div_login.style.width = '360px'
     div_cadastro.innerHTML = ` 
     <h2 id="CadastroEscuro">Cadastre sua Conta</h2>
   
@@ -26,39 +26,39 @@ function cadastrar(){
     <button id="cadastrar" onclick='voltarLogin()'>Entrar</button>
     </div>
     `
-  
+
 }
-localStorage.setItem('email','teste@bandtec.com.br')
-localStorage.setItem('passaword',1234)
+localStorage.setItem('email', 'teste@bandtec.com.br')
+localStorage.setItem('passaword', 1234)
 var email = localStorage.getItem('email')
-var senha = localStorage.getItem('passaword')  
-function login(){
-    
+var senha = localStorage.getItem('passaword')
+function login() {
+
     var email_ip = email_inp.value
     var senha_ip = senha_inp.value
-    if(email ==  email_ip){
-        if(senha == senha_ip){
+    if (email == email_ip) {
+        if (senha == senha_ip) {
             alert('logado com sucesso')
-            window.location.href=`index.html` ;
+            window.location.href = `index.html`;
         }
-        else{
+        else {
             alert('Senha incorreta!')
         }
     }
-    else{
+    else {
         alert('Email ou senha inválido!')
     }
 
 }
-function calculadora(){
-    window.location.href=`calculadora.html` ;
+function calculadora() {
+    window.location.href = `calculadora.html`;
 }
-function linhas(){
-    window.location.href=`index.html` ;
+function linhas() {
+    window.location.href = `index.html`;
 }
-function voltarLogin(){ 
+function voltarLogin() {
     div_cadastro.style.width = '360px'
-    div_login.style.width ='540px'
+    div_login.style.width = '540px'
 
     div_cadastro.innerHTML = `
     
@@ -91,9 +91,33 @@ function voltarLogin(){
     </div>
     <div class="login">
       <button id="cadastrar" onclick="login()">Entrar</button>
-    </div>
-
- 
-    `
- 
+    </div> `
 }
+let time = 1800,
+    currentImageIndex = 0,
+    images = document
+        .querySelectorAll("#slider img")
+max = images.length;
+
+function nextImage() {
+
+    images[currentImageIndex]
+        .classList.remove("selected")
+
+    currentImageIndex++
+
+    if (currentImageIndex >= max)
+        currentImageIndex = 0
+
+    images[currentImageIndex]
+        .classList.add("selected")
+}
+
+function start() {
+    setInterval(() => {
+        // troca de image
+        nextImage()
+    }, time)
+}
+
+window.addEventListener("load", start)
