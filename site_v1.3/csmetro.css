@@ -68,8 +68,13 @@ body{
 /* Logos de login */
 .logosd{
   margin-left: 35%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
-
+#linke{
+  margin-left: 6%;
+  margin-right: 6%;
+}
 .logo{
   width: 30px;
   float: left;
@@ -100,7 +105,7 @@ body{
   margin-left: 20%;
  }
  #cadastrar{
-   margin-left: 8%;
+   margin-left: 10%;
    margin-top: 12%;
    width: 130px;
    height: 36px;
@@ -170,6 +175,7 @@ h3{
     height: 6px;
     font-size: 20px;
     margin-right: 8%;
+    margin-bottom: 7%;
   }
 
 #texto{
@@ -200,7 +206,7 @@ font-weight: 700;
 
 }
 
-#ultimo{
+#first{
   width: 100%;
   height: 550px;
   background-color: white;
@@ -208,35 +214,28 @@ font-weight: 700;
   float: left;
   border-radius: 5px;
 }
-img{
+#about_us_img{
   width: 420px;
   float: left;
   margin-left: 3%;
+  margin-top: 5%;
   
 }
 
-#sobrenos{
+#about_us_title{
   font-family: 'Spartan', sans-serif;
     font-weight: 540;
   color: black;
   font-size: 30px;
-  margin-left: 60%;
-  
+  float: right;
+  margin-top: 10%; 
 }
-#desenv{
+
+#about_us_txt{
   font-family: 'Spartan', sans-serif;
   font-weight: 600;
   color: black;
   font-size: 16px;
-  
- 
-
-}
-#desnDiv{
- width: 600px;
- float: right;
- margin-right: 5%;
-
 }
 
 #LinhasPar{
@@ -247,4 +246,30 @@ img{
   border-radius: 5px;
   float: left;
 
+}
+#slider {
+ height: 550px;
+ background-color: #32363a;
+  margin-top: 42%;
+
+  
+}
+
+#slider img {
+  opacity: 0;
+
+  position: absolute;
+
+  width: 300px;
+  margin-left: 40%;
+  margin-top: 5%;
+  
+
+  object-fit: cover;
+
+  transition: opacity 800ms;
+}
+
+#slider img.selected {
+  opacity: 1;
 }
