@@ -1,14 +1,16 @@
-cor do fundo da input 
-rgb(255, 235, 205)
 
+	Cores de fundo do site:
 
-cor da div escura do login 
-#3b3d3f
+ Cor de Fundo Primaria: #222324 - (Escura);
 
-cor do fundo da pag toda
-#222324
+ Cor de Fundo Secundaria: #2B2C2D - (Clara, pórem não mais que a Terciaria);
 
-cor do cabeçalho e rodapé 
-#2b2c2d
+ Cor de Fundo Terciaria: #3B3D3F - (Mais clara).
 
-o branco é white mesmo
+_____________________________________________________________________________
+
+	Cor para os Textos do Site
+
+ Cor de Titulo: #69B99D - (Verde Escuro);
+	
+ Cor de Texto: #4ADAA8 - (Verde Claro).
