@@ -98,6 +98,7 @@ h1 {
 /* --- LAYOUT --- */
 /*
 - O border-bottom ira adicionar uma borda apenas na parte de baixo do site (por causa do bottom)
+- "display: flex" faz com que os elementos do cabeçalho fiquem visiveis se adaptando a os espaços já definidos
 */
 #header{
   border-bottom: 1px solid var(--base-color-tertiary);
@@ -148,6 +149,14 @@ nav {
 }
 
 /* --- HOME --- */
+
+/*
+- "overflow: hidden" define um limite de espaçamento.
+*/
+#home {
+  overflow: hidden;
+}
+
 #home .container {
   margin: 0;
 }
