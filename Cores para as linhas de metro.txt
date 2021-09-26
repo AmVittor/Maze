@@ -18,4 +18,4 @@ Linhas Parceiras
 
 	Linha 10 - Turquesa: #40E0D0
 
-	Linha - 11 Coral: #FF7F50
+	Linha 11 - Coral: #FF7F50
