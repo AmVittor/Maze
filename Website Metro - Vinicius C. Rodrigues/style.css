@@ -81,12 +81,17 @@ h1 {
   color: var(--text-color-secondary);
 }
 
+/*
+- background recebe um valor linear gradiente.
+- 270 deg é os graus que receberão a cor gradinte, ou seja 270 graus de 360.
+- inde de #4ADAA8 (começando em 0%), para #3B3D3F (terminado em 100%).
+*/
 .divider-1 {
   height: 1px;
   background: linear-gradient(
     270deg,
-    #4ADAA8,
-    #3B3D3F
+    #4ADAA8 0%,
+    #3B3D3F 100%
   );
 }
 
