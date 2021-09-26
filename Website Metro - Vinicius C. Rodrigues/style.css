@@ -66,14 +66,19 @@ h1 {
 */
 .button {
   background-color: var(--text-color-secondary);
-  color: white;
+  color: var(--base-color-tertiary);
   height: 45.5px;
   display: inline-flex;
   align-items: center;
   padding: 0 2rem;
   border-radius: 5px;
   font: 500 1rem 'DM Sans', sans-serif;
-  transition: background 0.3s;
+  transition: background 0.5s;
+}
+
+.button:hover{
+  background-color: var(--base-color-tertiary);
+  color: var(--text-color-secondary);
 }
 
 /* 
