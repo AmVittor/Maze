@@ -107,8 +107,16 @@ nav {
   margin-right: 1.5rem;
 }
 
+/*Com a possibilidade de atribuir mais de uma class para a div, o display grid será responsavel pelo espaçamento*/
+.grid{
+  display: grid;
+}
+
 .section {
   padding: 80px 0;
 }
 
 /* --- HOME --- */
+#home .container {
+  margin: 0;
+}

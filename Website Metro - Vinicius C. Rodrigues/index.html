@@ -24,21 +24,35 @@
     </nav>
   </header>
 
-    <main> <!--Todo o Conteúdo Principal do site(tirando o Header e o Footer)-->
-      <section class="section"> <!--Primeira Sessão do Site - Onde se locaçiza a Pagina Inicial(home)-->
-        <div class="container">
-        
-          <img 
-          id="img_logo_company" src="imagens-metro/metro logo.png" 
-          alt="Imagem Logo da Empresa">
-  
-          <h1>Sub-título sobre nós</h1>
-          <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing 
-          elit. Earum consequuntur dolores temporibus 
-          vero obcaecati eos atque qui mollitia!
-          </p>
-          <a class="button" href="#">Agendar um horário</a> <!-- por enquanto sem endereço-->      
+    <main> 
+      <!--
+        Todo o Conteúdo Principal do site(tirando o Header e o Footer)
+      -->
+      <section class="section"> 
+        <!--
+          Primeira Sessão do Site - Onde se locaçiza a Pagina Inicial(home)
+        -->
+
+        <!--
+          a div pode possuir mais de uma class, como da forma a baixo, dessa forma é possivel atribuir estilos para uma mesma div (podendo reutilizar em outros lugares)
+        -->
+        <div class="container grid">
+          
+          <!--div para manter a div filha class=image separada-->
+          <div class="image"> 
+            <img id="img_logo_company" src="imagens-metro/metro logo.png" alt="Imagem Logo da Empresa">
+          </div>
+
+          <!--div para manter a div filha class=text separada-->
+          <div class="text">
+            <h1>Sub-título sobre nós</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing 
+              elit. Earum consequuntur dolores temporibus 
+              vero obcaecati eos atque qui mollitia!
+            </p>
+            <a class="button" href="#">Agendar um horário</a> <!-- por enquanto sem endereço-->      
+          </div>
 
         </div>
       </section>
