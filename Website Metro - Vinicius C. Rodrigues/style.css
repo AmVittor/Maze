@@ -60,8 +60,20 @@ h1 {
   color: var(--title-color-primary);
 }
 
-button {
-  color: var(--color);
+
+/*
+-Display da teg a sempre é por padrão inline, ou seja, não possui tamnaho nem largura. Logo, o inline-flex permite a flexibilidade para alteração como o 'align-items: center'
+*/
+.button {
+  background-color: var(--text-color-secondary);
+  color: white;
+  height: 45.5px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 2rem;
+  border-radius: 5px;
+  font: 500 1rem 'DM Sans', sans-serif;
+  transition: background 0.3s;
 }
 
 /* 
@@ -107,9 +119,13 @@ nav {
   margin-right: 1.5rem;
 }
 
-/*Com a possibilidade de atribuir mais de uma class para a div, o display grid será responsavel pelo espaçamento*/
+/*
+- Com a possibilidade de atribuir mais de uma class para a div, o display grid será responsavel pelo espaçamento.
+- O gap adiciona por padrão um espaçamento definido dentro dele.
+*/
 .grid{
   display: grid;
+  gap: 32px;
 }
 
 .section {
@@ -119,4 +135,34 @@ nav {
 /* --- HOME --- */
 #home .container {
   margin: 0;
+}
+
+/*
+Elemento fantasma --> #home .image::before{
+  content: 'testestestestsetes'
+} 
+*/
+
+
+/*
+# - Dentro da home --> Proucura a class image --> dentro de classificação image proucura o elemento img
+*/
+#home .image img{
+  position: relative;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+#home .text {
+  margin-left: 24px;
+  margin-right: 24px;
+  text-align: center;
+}
+
+#home .text h1{
+  margin-bottom: 16px;
+}
+
+#home .text p{
+  margin-bottom: 32px;
 }
