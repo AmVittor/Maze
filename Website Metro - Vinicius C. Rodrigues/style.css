@@ -1,0 +1,61 @@
+/*
+body {
+  background-color: #222324;
+}
+*/
+
+/*
+- Tirando todo o espaçamento entre os elementos
+- Tirando todo o preenchimento interno entre os elementos
+*/
+
+/* --- RESET --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- BASE ---*/
+
+img {
+  width: 40%;
+  height: auto;
+}
+
+/* --- ? --- */
+:root{
+}
+
+/* 
+- rem pegade fonte do elemento raiz do documento (no caso o root, e aplica este valor sob ele) para tornar o website responsivo 
+- # para div
+*/
+
+/* --- LAYOUT --- */
+#header{
+  height: 4.5rem;
+}
+
+/*
+- display mantem os elementos alinhados e flexiveis dentro da nav
+- assim como no word, você pode justificar o conteudo da linha pelo justify-content
+- o space-between ira manter um espaço entre os elementos para as extremidades.
+*/
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+- . para class 
+- ira aplicar MARGIN de 1.5rem para as margens left e right, sendo elas 24px (cada 1rem conbiliza 16px logo 1.5rem = 16px + 8px).
+- width: 100% irá ocupar todo o espaço.
+*/
+.container{
+  width: 100%;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+/* --- HOME --- */

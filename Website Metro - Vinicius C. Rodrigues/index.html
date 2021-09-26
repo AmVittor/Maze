@@ -6,29 +6,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Metro - Sprint 02</title>
 
+  <!--Fonts - google fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+
+
   <!--Style - CSS linkdo-->
   <link rel="stylesheet" href="style.css">
-</head>
+
+  </head>
 <body>
   <header> <!--Cabeçalho - é onde se localiza o Menu do Site-->
-    <h1>Nome da Empresa</h1>
-    <div>...</div>
+    <nav class="container"> <!--Nav é onde terá elementos de clique / class=container para manter os espaçamentos padrão-->
+      <a class="logo_site" href="#">Nome da Empresa</a>
+      <div class="menu">...</div>
+    </nav>
   </header>
 
-  <main> <!--Todo o Conteúdo Principal do site(tirando o Header e o Footer)-->
-    <section> <!--Primeira Sessão do Site - Onde se locaçiza a Pagina Inicial(home)-->
-      <img style="height: 200px; width: 200px;" id="img_logo_company" src="imagens-metro/metro logo.png" alt="Imagem Logo da Empresa">
-
-      <h1>Sub-título sobre nós</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum consequuntur dolores temporibus vero obcaecati eos atque qui mollitia!</p>
-      <a href="#">Agendar um horário</a> <!-- por enquanto sem endereço-->      
-    </section>
-  </main>
+    <main> <!--Todo o Conteúdo Principal do site(tirando o Header e o Footer)-->
+      <section id="header"> <!--Primeira Sessão do Site - Onde se locaçiza a Pagina Inicial(home)-->
+        <div class="container">
+        
+          <img 
+          id="img_logo_company" src="imagens-metro/metro logo.png" 
+          alt="Imagem Logo da Empresa">
   
+          <h1>Sub-título sobre nós</h1>
+          <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing 
+          elit. Earum consequuntur dolores temporibus 
+          vero obcaecati eos atque qui mollitia!
+          </p>
+          <a href="#">Agendar um horário</a> <!-- por enquanto sem endereço-->      
 
-
-
-
-
-</body>
+        </div>
+      </section>
+      
+    </main>
+  </body>
 </html>
