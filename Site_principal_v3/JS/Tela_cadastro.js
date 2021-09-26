@@ -73,9 +73,9 @@ function voltarLogin() {
     <h2>Entrar na minha conta</h2>
     <!--Icones aqui-->
     <div class="logosd">
-      <img class="logo" id="insta" src="instagram logo.png">
-      <img class="logo" id="linke" src="linkedin logo.png">
-      <img class="logo" id="face" src="facebook logo.png">
+    <img class="logo" id="google" src="../CSS/Logo/google-logo.png">
+    <img class="logo" id="linke" src="../CSS/Logo/linkedin logo.png">
+    <img class="logo" id="face" src="../CSS/Logo/facebook logo.png">
     </div>
 
 

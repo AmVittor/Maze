@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar2 {
+  text-align: center;
+  height: 60px;
+  width: 100%;
+  background-color: #3b3d3f;
+}
+
+ul {
+  list-style: none;
+  color: white;
+}
+
+li {
+  float: left;
+  margin: 10px 22px 0 80px;
+  font-size: 23px;
+  height: 20px;
+}
+
+.title {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  background-color: #222324;
+}
+
+/* Logos de login */
+
+.logosd {
+  margin-left: 35%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+#linke {
+  margin-left: 6%;
+  margin-right: 6%;
+}
+
+.logo {
+  width: 30px;
+  float: left;
+}
+
+/* Div da esquerda com cor escura */
+
+.escuro {
+  width: 360px;
+  height: 500px;
+  background-color: #222324;
+  float: left;
+  border-radius: 3px;
+  margin-left: 18%;
+  margin-top: 2%;
+  transition: width 1.3s;
+}
+
+/* Esqueceu a senha */
+
+#esq {
+  font-weight: 300;
+  font-size: 15px;
+  margin-left: 16%;
+}
+
+/* Botão login*/
+
+.login {
+  margin-left: 20%;
+}
+
+#cadastrar {
+  margin-left: 10%;
+  margin-top: 12%;
+  width: 130px;
+  height: 36px;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 850;
+  font-family: 'Spartan', sans-serif;
+}
+
+/* Olá, seja bem vindo! */
+
+h1 {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+  color: white;
+  float: left;
+  margin-top: 47%;
+  margin-left: 12%;
+}
+
+/* Cadastrar-se */
+
+h2 {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 540;
+  color: black;
+  margin-left: 23%;
+  margin-top: 8%;
+}
+
+/* Continue conectado */
+
+h3 {
+  margin-top: 10%;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 500;
+  color: white;
+  margin-left: 8%;
+}
+
+/* Div da direita branca */
+
+.branco {
+  width: 540px;
+  height: 500px;
+  background-color: white;
+  float: left;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: 2%;
+  transition: width 1.3s;
+}
+
+#LadoEscuro {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 540;
+  color: white;
+}
+
+#CadastroEscuro {
+  margin-left: 25%;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 800;
+  color: white;
+}
+
+h4 {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 540;
+  height: 6px;
+  font-size: 20px;
+  margin-right: 8%;
+  margin-bottom: 7%;
+}
+
+#texto {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 540;
+  color: rgb(0, 0, 0);
+  margin-left: 24%;
+  float: left;
+  font-size: 14px;
+  margin-top: 5%;
+}
+
+.inpute {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  background-color: rgb(255, 235, 205);
+  float: left;
+  border-radius: 5px;
+  width: 270px;
+  height: 44px;
+  font-style: italic;
+  text-align: center;
+  font-weight: 700;
+}
+
+#first {
+  width: 100%;
+  height: 550px;
+  background-color: white;
+  margin-top: 0.3%;
+  float: left;
+  border-radius: 5px;
+}
+
+#about_us_img {
+  width: 420px;
+  float: left;
+  margin-left: 3%;
+  margin-top: 5%;
+}
+
+#about_us_title {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 540;
+  color: black;
+  font-size: 30px;
+  float: right;
+  margin-top: 10%;
+}
+
+#about_us_txt {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+}
+
+#LinhasPar {
+  width: 100%;
+  height: 550px;
+  background-color: #32363a;
+  margin-top: 0.5%;
+  border-radius: 5px;
+  float: left;
+}
+
+#slider {
+  height: 550px;
+  background-color: #32363a;
+  margin-top: 42%;
+}
+
+#slider img {
+  opacity: 0;
+  position: absolute;
+  width: 300px;
+  margin-left: 40%;
+  margin-top: 5%;
+  object-fit: cover;
+  transition: opacity 800ms;
+}
+
+#slider img.selected {
+  opacity: 1;
+}

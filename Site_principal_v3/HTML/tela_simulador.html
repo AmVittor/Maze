@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/CSS/simulador.css">
+    <title>Document</title>
+</head>
+<body>
+    <!--Navbar-->
+    <nav>
+        <div class="navbar2">
+          <ul class="grid">
+            <li><a class="title" href="../HTML/tela_inical.html">Início</a></li>
+            <li><a class="title" href="#about">Sobre Nós</a></li>
+            <li><a class="title" href="../HTML/tela_simulador.html">Simulador</a></li>
+            <li><a class="title" href="../HTML/tela_cadastro.html">Cadastrar/Login</a></li>
+            <li><a class="title" href="#contac">Contato</a></li>
+          </ul>
+        </div>
+      </nav>
+
+    <!-- A div "container" é a div que conterá todas as outras divs-->
+    <div id="container">
+        <!-- A div "header é o "cabeçalho"-->
+        <div class="header">
+
+
+            <h1>Multiplique em muitas vezes
+                suas
+                visualizações.
+            </h1>
+
+            <h2>Com nosso serviço, você tem
+                garantia de que seu serviço crescerá!</h2>
+
+
+        </div>
+
+        <div class="conteudo conta">
+            <h2>Digite quantas pessoas passam diariamente nas linhas que você gerencia:</h2>
+            <input type="number" id="qtd_pessoas" placeholder="Quantidade de pessoas diariamente">
+
+            <h2>Selecione o plano de anúncio:</h2>
+            <select id="selecao">
+                <option value="30">Mensal</option>
+                <option value="180">Semestral</option>
+                <option value="365">Anual</option>
+            </select>
+
+
+            <div id="div_preco">
+                <h2>Digite o preço do seu serviço: </h2>
+                <input type="number" id="input_preco">
+            </div>
+            <br>
+            <input id="chkbox" type="checkbox" onchange="fnChkBox()">
+            <label for="chkbox">Não estou anunciando um produto</label>
+            <button onclick="fnCalculo()">Estimar</button>
+        </div>
+
+        <div class="conteudo resultado">
+            <h1 id="tempo">Em ..., seu anúncio alcançará, em média: </h1>
+            <h1 id="resultado">
+            </h1>
+            <i>
+                <p id="comentario">Este resultado é apenas uma estimativa. O valor pode variar para mais ou menos.<br>
+                    Dados sobre a quantidade de passageiros atualizados em Julho de 2021.<br>
+                    Leva-se em conta que a probabilidade de venda do seu produto é de 1%<br>
+            </i>
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+<script src="../JS/simulador.js"></script>
+
+
+
