@@ -81,10 +81,14 @@ h1 {
   color: var(--text-color-secondary);
 }
 
-/* 
-- rem pegade fonte do elemento raiz do documento (no caso o root, e aplica este valor sob ele) para tornar o website responsivo 
-- # para div
-*/
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    #4ADAA8,
+    #3B3D3F
+  );
+}
 
 /* --- LAYOUT --- */
 /*
@@ -102,7 +106,7 @@ h1 {
 - O aling-itens ira literalmente alinhas os itens ao centro da box.
 */
 nav {
-  height: 4.5rem;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -120,8 +124,8 @@ nav {
 */
 .container{
   width: 100%;
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 24px;
+  margin-right: 24px;
 }
 
 /*
