@@ -3,25 +3,23 @@ body {
   background-color: #222324;
 }
 */
-
 /*
 - Tirando todo o espaçamento entre os elementos
 - Tirando todo o preenchimento interno entre os elementos
 */
-
 /* --- RESET --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 a {
   text-decoration: none;
 }
 
 
 img {
+  width: 20%;
   width: 100%;
   height: auto;
 }
@@ -40,15 +38,12 @@ img {
 --base-color-secondary: #2B2C2D;
 /* Cor de Fundo Terciaria: #3B3D3F - (Mais clara) */
 --base-color-tertiary: #3B3D3F;
-
 /*	--- Cor para os Textos do Site --- */
 /* Cor de Titulo: #69B99D - (Verde Escuro) */
 --title-color-primary: #69B99D;
 /* Cor de Texto: #4ADAA8 - (Verde Claro) */
 --text-color-secondary: #4ADAA8;
 }
-
-
 /* --- BASE ---*/
 /*Alterando a fonte do body*/
 body {
@@ -56,13 +51,10 @@ body {
   color: var(--text-color-secondary);
   background-color: var(--base-color-primary);
 }
-
 h1 {
   font: 700 30px "Poppins", sans-serif;
   color: var(--title-color-primary);
 }
-
-
 /*
 -Display da teg a sempre é por padrão inline, ou seja, não possui tamnaho nem largura. Logo, o inline-flex permite a flexibilidade para alteração como o 'align-items: center'
 */
@@ -77,12 +69,10 @@ h1 {
   font: 500 1rem 'DM Sans', sans-serif;
   transition: background 0.5s;
 }
-
 .button:hover{
   background-color: var(--base-color-tertiary);
   color: var(--text-color-secondary);
 }
-
 /*
 - background recebe um valor linear gradiente.
 - 270 deg é os graus que receberão a cor gradinte, ou seja 270 graus de 360.
@@ -125,8 +115,6 @@ h1 {
 /*
 - O border-bottom ira adicionar uma borda apenas na parte de baixo do site (por causa do bottom)
 - "display: flex" faz com que os elementos do cabeçalho fiquem visiveis se adaptando a os espaços já definidos
-
-
 - position: fixed ira manter o header (cabeçalho) fixo na pagina, de modo que acompanhe a rolagem da pagina.
 - top: 0 e left: 0 retira os espaçamentos anteriormente definidos para 0. 
 - z-index: 100%
@@ -138,11 +126,11 @@ h1 {
   margin-bottom: 32px;
   display: flex;
 
-  
+
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000%;
+  z-index: 100%;
   background-color: var(--base-color-secondary);
   width: 100%;
 }
@@ -166,14 +154,35 @@ nav {
 }
 
 /*
+- . para class 
+- ira aplicar MARGIN de 1.5rem para as margens left e right, sendo elas 24px (cada 1rem conbiliza 16px logo 1.5rem = 16px + 8px).
+- width: 100% irá ocupar todo o espaço.
+*/
+.container{
+  width: 100%;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+/*
+- Com a possibilidade de atribuir mais de uma class para a div, o display grid será responsavel pelo espaçamento.
+- O gap adiciona por padrão um espaçamento definido dentro dele.
 Todo o conteúdo dentro do main
 */
+.grid{
+  display: grid;
+  gap: 32px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
 main {
   height: 72px;
 }
 
 /* --- HOME --- */
-
 /*
 - "overflow: hidden" define um limite de espaçamento.
 */
@@ -184,18 +193,17 @@ main {
 #home .container {
   margin: 0;
 }
-
 /*
 Elemento fantasma --> #home .image::before{
   content: 'testestestestsetes'
 } 
 */
-
 /*
 # - Dentro da home --> Proucura a class image --> dentro de classificação image proucura o elemento img
 */
-#home .image img{
-  width: 30%;
+#home .image img_logo_company{
+  position: relative;
+  width: 10%;
   height: auto;
   margin-left: 24px;
   margin-right: 24px;
