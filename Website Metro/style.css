@@ -1,0 +1,170 @@
+/*====  RESET ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+/*====  VARIABLES ============================ */
+:root {
+/* --- Cores de fundo do site ---  */
+/* Cor de Fundo Primaria: #222324 - (Escura) */
+--base-color-primary: #222324;
+/* Cor de Fundo Secundaria: #2B2C2D - (Clara, pórem não mais que a Terciaria) */
+--base-color-secondary: #2B2C2D;
+/* Cor de Fundo Terciaria: #3B3D3F - (Mais clara) */
+--base-color-tertiary: #3B3D3F;
+
+/*	--- Cor para os Textos do Site --- */
+/* Cor de Titulo: #69B99D - (Verde Escuro) */
+--title-color-primary: #69b99d;
+/* Cor de Texto: #4ADAA8 - (Verde Claro) */
+--text-color-secondary: #4ADAA8;
+}
+
+/* ====  BASE ============================ */
+body {
+  font: 400 1rem 'DM Sans', sans-serif;
+  color: var(--title-color-primary);
+  background: var(--base-color-primary);
+}
+
+h1 {
+  font: 700 1.875rem 'Poppins', sans-serif;
+  color: var(--title-color-primary);
+}
+
+.button {
+  background-color: var(--title-color-primary);
+  color: var(--base-color-tertiary);
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 32px;
+  border-radius: 5px;
+  font: 700 16px 'Poppins', sans-serif;
+  transition: background 0.3s;
+}
+
+.button:hover {
+  background-color: var(--base-color-tertiary);
+  color: var(--text-color-secondary);
+}
+
+.divider-1 {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    #4ADAA8 0%,
+    #3B3D3F 100%
+  );
+}
+
+/*====  LAYOUT ============================ */
+.container {
+  margin: 0 10%;
+
+}
+
+.grid {
+  display: grid;
+  gap: 32px;
+}
+
+.section {
+  padding: 100px 10px 0px 10px;
+}
+
+#header {
+  border-bottom: 1px solid var(--base-color-tertiary);
+  margin-bottom: 32px;
+  display: flex;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--base-color-secondary);
+  width: 100%;
+}
+
+nav {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font: 700 21px "Poppins", sans-serif;
+  color: var(--title-color-primary);
+}
+
+main {
+  height: 72px;
+}
+
+/*====  HOME ============================ */
+#home {
+  overflow: hidden;
+}
+
+#home .container {
+  grid-auto-flow: column;
+  justify-content: space-between;
+  margin: 3% 10%;
+}
+
+#home .image {
+  order: 1;
+  float: right;
+  width: 300px;
+}
+
+#home .image img_logo_company{
+  right: 47px;
+  width: 30%;
+  height: auto;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+#home .text {
+  order: 0;
+  max-width: 384px;
+  text-align: left;
+  margin-top: 20%;
+}
+
+#home .text h1 {
+  font-size: 2rem;
+  margin-bottom: 16px;
+}
+
+#home .text p {
+  margin-bottom: 32px;
+  color: white;
+}
+
+#home .button {
+  text-align: center;
+}
+
+/* ------------------ PROXIMA SECTION --------------- */
+
+#metro_img {
+  width: 460px;
+  margin-top: 3%;
+  margin-left: 3%;
+  border: 5px solid #232424;
+  border-radius: 5px;
+}
