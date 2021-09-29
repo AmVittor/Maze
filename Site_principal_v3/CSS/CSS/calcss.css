@@ -1,0 +1,75 @@
+body {
+    background-color: #2B2C2D;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins Medium', sans-serif;
+    color: white;
+}
+.nav{
+    background-color: #232424;
+}
+.grid{
+    
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    width: 80%;
+    list-style: none;
+}
+.engloba{
+    display: flex;
+    justify-content: space-between;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+.conta{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    height: 500px;
+    width: 50%;
+}
+
+.header h1{
+    text-align: center;
+}
+.conteudo-conta{
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 15%; 
+    width: 100%;
+}
+
+.conteudo-conta input{
+    width: 30%;
+    color: #232424;
+}
+.conteudo-conta select{
+    width: 22%;
+    color: #232424;
+}
+.conteudo-conta option{
+    color: #232424;
+}
+.conteudo-conta button{
+    width: 22%;
+   color: #232424;
+   margin-top: 4px;
+}
+.conteudo-resultado{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    height: 40%; 
+    width: 70%;
+}
+.result{
+    display: flex;   
+}
