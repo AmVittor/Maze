@@ -1,3 +1,12 @@
+// localStorage.setItem('email', 'teste@bandtec.com.br')
+// localStorage.setItem('passaword', 1234)
+// var email = localStorage.getItem('email')
+// var senha = localStorage.getItem('passaword')
+// if (email != true && senha != true){
+//     alert('Não conectado')
+//     window.location.href ='tela_cadastro.html'
+// }
+
 var linha_selecionada;
 var plano;
 var preco;
