@@ -13,20 +13,23 @@ Este projeto tem como ideia controlar o fluxo de pessoas nas linhas de metrô de
 
 ### Em andamento:
 - 🔲 Escopo do projeto
-- 🔲 Backlog do projeto
+- ✅ Backlog do projeto
 - ✅ Identidade visual da empresa
-- 🔲 Site da empresa
 - 🔲 Banco de dados
 - 🔲 Apresentação do projeto
-- 🔲 Visual do site
 - 🔲 Apresentação em PowerPoint
 
 
+# Site da empresa
 
-
-
-
-
+- 🔲 Linkar calculadora CNPJ
+- ✅ Home do site
+- 🔲 Select CNPJ/Pessoa física
+- 🔲 Carrossel de feedback
+- 🔲 Linhas parceiras 
+- 🔲 Tirar do protótipo os cards
+- 🔲 Tela do dashbord
+- 🔲 CSS DO login
 
 # Visual do site
 
