@@ -12,7 +12,7 @@ body {
 
 /* CABEÇALHO */
 .containernav{
-  background-color: red;
+  background-color: #3B3D3F;
   display: flex;
   justify-content: center;
   padding: 1%;

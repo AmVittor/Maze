@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /*====  RESET ============================ */
 * {
   margin: 0;
@@ -25,9 +26,9 @@ img {
 
 /*	--- Cor para os Textos do Site --- */
 /* Cor de Titulo: #69B99D - (Verde Escuro) */
---title-color-primary: #69b99d;
+--title-color-primary: #ffffff;
 /* Cor de Texto: #4ADAA8 - (Verde Claro) */
---text-color-secondary: #4ADAA8;
+--text-color-secondary: #ffffff;
 }
 
 /* ====  BASE ============================ */
@@ -38,7 +39,7 @@ body {
 }
 
 h1 {
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font-family: 'Spartan', sans-serif;
   color: var(--title-color-primary);
 }
 
@@ -50,7 +51,7 @@ h1 {
   align-items: center;
   padding: 0 32px;
   border-radius: 5px;
-  font: 700 16px 'Poppins', sans-serif;
+  font-family: 'Spartan', sans-serif;
   transition: background 0.3s;
 }
 
@@ -105,7 +106,8 @@ nav {
 }
 
 .logo {
-  font: 700 21px "Poppins", sans-serif;
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
   color: var(--title-color-primary);
 }
 
@@ -157,14 +159,59 @@ main {
 
 #home .button {
   text-align: center;
+  font-weight: bold;
 }
 
-/* ------------------ PROXIMA SECTION --------------- */
-
-#metro_img {
-  width: 460px;
-  margin-top: 3%;
-  margin-left: 3%;
-  border: 5px solid #232424;
-  border-radius: 5px;
+/* ------------------ LINHAS PARCEIRAS --------------- */
+.addjust{
+  
+  display: flex;
+  padding-top: 4%;
 }
+.linhas{
+  height: 550px;
+  width: 50%;
+  position: relative
+}
+.linhas img{
+  display: flex;
+  height: 80%;
+}
+.linhasTxt{
+  padding-left: 6%;
+  height: 14%;
+  width: 40%;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-left: 8%;
+  position: relative;
+  cursor: pointer;
+  
+}
+/* ANIMAÇÃO TEXTO */
+.linhasTxt:after, 
+.linhasTxt:before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right:0;
+  transition: transform .3s ease-in-out;
+  }
+  .linhasTxt:before{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    transform:scaleY(0)
+  }
+  .linhasTxt:after{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transform:scaleX(0)
+  }
+  .linhasTxt:hover::before{
+    transform:scaleY(1)
+  }
+  .linhasTxt:hover::after{
+    transform:scaleX(1)
+  }
