@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 body {
   background-color: #2B2C2D;
+  margin: 0;
+  padding: 0;
 }
 *{
   text-decoration: none;
-  margin: 0;
-  padding: 0;
   font-family: 'Spartan', sans-serif;
   color: white;
 }
-.nav{
-  background-color: #232424;
-}
-.container{
+
+/* CABEÇALHO */
+.containernav{
+  background-color: #3B3D3F;
   display: flex;
   justify-content: center;
-  padding: 2%;
-  font-weight: bold;
+  padding: 1%;
+  
 }
 .grid{   
   display: flex;
@@ -25,38 +25,113 @@ body {
   width: 80%;
   list-style: none;
 }
-.containerPag{
+/* CORPO */ 
+.cointainer{
   display: flex;
-  width: 70%;
-  height: 240px;
-  padding: 1%;
+  width: 80%;
+  margin: auto;
   justify-content: space-between;
+}
+
+/*CARDS */
+.cardsHome{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 300px;
+  width: 100%;
+
+}
+.card{
+  box-shadow: 5px 10px 5px 0 rgba(0, 0, 0, 0.39);
+  height: 90%;
+  border-radius: 10px;
+  width: 20%;
+  background-color: white;
+}
+.card img{
+  height: 143.7px;
+  align-self: center;
+  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
+
+}
+.card p{
+  color: black;
+  font-weight: bolder;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+#blue img{
+  border-bottom: 8px solid blue;
+  width: 100%;
+}
+#green img{
+  border-bottom: 5px solid green;
+  width: 100%;
+}
+#red img{
+  border-bottom: 5px solid red;
+  width: 100%;
+}
+#yellow img{
+  border-bottom: 5px solid yellow;
+  width: 100%;
+}
+.card:hover {
+  transform: scale(1.05);
+  transition: .2s;
+}
+.addjust{
+  display: flex;
+  padding:2%;
+}
+.linhas{
+  height: 550px;
+  width: 50%;
+  position: relative
+}
+.linhas img{
+  display: flex;
+  height: 80%;
+}
+.linhasTxt{
+  padding-left: 2%;
+  height: 14%;
+  width: 30%;
+  font-size: 40px;
+  font-weight: bolder;
+  margin-left: 3%;
+  position: relative;
+  cursor: pointer;
   
 }
-.containerPag2{
-  display: flex;
-  width: 70%;
-  height: 240px;
-  padding: 1%;
-  justify-content: space-between;
-}
-.card1{
-box-shadow: 5px 10px 5px 0 rgba(0, 0, 0, 0.39);
-  height: 100%;
-  border-radius: 10px;
-  width: 20%;
-  background-color: white;
-}
-.card2{
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.39);
-  height: 100%;
-  border-radius: 10px;
-  width: 20%;
-  background-color: white;
-}
-.vermelho{
-  border-bottom: 5px solid red;
-}
-.amarelo{
-  border-bottom: 5px solid rgb(195, 195, 15);
-}
+/* ANIMAÇÃO TEXTO */
+.linhasTxt:after, 
+.linhasTxt:before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right:0;
+  transition: transform .3s ease-in-out;
+  }
+  .linhasTxt:before{
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    transform:scaleY(0)
+  }
+  .linhasTxt:after{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transform:scaleX(0)
+  }
+  .linhasTxt:hover::before{
+    transform:scaleY(1)
+  }
+  .linhasTxt:hover::after{
+    transform:scaleX(1)
+  }
