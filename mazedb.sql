@@ -226,10 +226,11 @@ insert into estacao(nomeEstacao, linhaEstacao) values
 select * from estacao;
 
 
-insert into catraca (estacaoCatraca,statusCatraca) values
+insert into catraca (fkEstacao,statusCatraca) values
 	(1, 'ativa'),
 	(2, 'ativa'),
 	(3, 'ativa');
+  
 select * from catraca;
 
 
