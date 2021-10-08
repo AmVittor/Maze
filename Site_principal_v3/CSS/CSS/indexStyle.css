@@ -8,6 +8,13 @@
 
 a {
   text-decoration: none;
+  color:#ffffff;
+  font-size: 20px;
+}
+
+
+li{
+  list-style: none;
 }
 
 img {
@@ -64,7 +71,7 @@ h1 {
   height: 1px;
   background: linear-gradient(
     270deg,
-    #4ADAA8 0%,
+    #ffffff 0%,
     #3B3D3F 100%
   );
 }
@@ -84,26 +91,9 @@ h1 {
   padding: 100px 10px 0px 10px;
 }
 
-#header {
-  border-bottom: 1px solid var(--base-color-tertiary);
-  margin-bottom: 32px;
-  display: flex;
 
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  background-color: var(--base-color-secondary);
-  width: 100%;
-}
 
-nav {
-  height: 72px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
+
 
 .logo {
   font-family: 'Spartan', sans-serif;
@@ -123,7 +113,7 @@ main {
 #home .container {
   grid-auto-flow: column;
   justify-content: space-between;
-  margin: 3% 10%;
+  margin: 1% 10%;
 }
 
 #home .image {
@@ -160,6 +150,23 @@ main {
 #home .button {
   text-align: center;
   font-weight: bold;
+}
+.containernav{
+  background-color: #1a1b1c;
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  height: 70px;
+
+}
+.gridnav{   
+  font-weight: 500;
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  margin-top: 0.5%;
+  width: 80%;
+  list-style: none;
 }
 
 /* ------------------ LINHAS PARCEIRAS --------------- */
