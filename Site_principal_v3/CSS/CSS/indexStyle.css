@@ -8,7 +8,7 @@
 
 a {
   text-decoration: none;
-  color:#ffffff;
+  color:#69B99D;
   font-size: 20px;
 }
 
@@ -33,9 +33,9 @@ img {
 
 /*	--- Cor para os Textos do Site --- */
 /* Cor de Titulo: #69B99D - (Verde Escuro) */
---title-color-primary: #ffffff;
+--title-color-primary: #69B99D;
 /* Cor de Texto: #4ADAA8 - (Verde Claro) */
---text-color-secondary: #ffffff;
+--text-color-secondary: #69B99D;
 }
 
 /* ====  BASE ============================ */
