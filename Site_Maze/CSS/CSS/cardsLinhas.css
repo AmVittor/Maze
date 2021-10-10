@@ -44,6 +44,7 @@ body {
 
 }
 .card{
+  cursor: pointer;
   box-shadow: 5px 10px 5px 0 rgba(0, 0, 0, 0.39);
   height: 90%;
   border-radius: 10px;
@@ -69,15 +70,15 @@ body {
   width: 100%;
 }
 #green img{
-  border-bottom: 5px solid green;
+  border-bottom: 8px solid green;
   width: 100%;
 }
 #red img{
-  border-bottom: 5px solid red;
+  border-bottom: 8px solid red;
   width: 100%;
 }
 #yellow img{
-  border-bottom: 5px solid yellow;
+  border-bottom: 8px solid yellow;
   width: 100%;
 }
 .card:hover {
