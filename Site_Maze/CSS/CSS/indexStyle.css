@@ -10,9 +10,8 @@ li{
 }
 a {
   text-decoration: none;
-<<<<<<< HEAD:Site_Maze/CSS/CSS/indexStyle.css
   color: white;
-=======
+
   color:#69B99D;
   font-size: 20px;
 }
@@ -20,7 +19,6 @@ a {
 
 li{
   list-style: none;
->>>>>>> c71ddaf9c53d95c030289aa36f7e4d2c439b8f5e:Site_principal_v3/CSS/CSS/indexStyle.css
 }
 
 img {
@@ -39,15 +37,15 @@ img {
 
 /*	--- Cor para os Textos do Site --- */
 /* Cor de Titulo: #69B99D - (Verde Escuro) */
-<<<<<<< HEAD:Site_Maze/CSS/CSS/indexStyle.css
+
 --title-color-primary: #ffff;
 /* Cor de Texto: #4ADAA8 - (Verde Claro) */
 --text-color-secondary: #4ADAA8;
-=======
+
 --title-color-primary: #69B99D;
 /* Cor de Texto: #4ADAA8 - (Verde Claro) */
 --text-color-secondary: #69B99D;
->>>>>>> c71ddaf9c53d95c030289aa36f7e4d2c439b8f5e:Site_principal_v3/CSS/CSS/indexStyle.css
+
 }
 
 /* ====  BASE ============================ */
@@ -100,7 +98,8 @@ h1 {
 }
 
 .section {
-  padding: 100px 10px 0px 10px;
+  height: 500px;
+  padding: 80px 10px 0px 10px;
 }
 
 
