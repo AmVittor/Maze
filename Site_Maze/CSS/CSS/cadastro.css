@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css");
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #2b2c2d;
+    font-family: 'Spartan', sans-serif;
+    color: white;
+}
+#logo{
+    height: 40px;
+    margin-left: 1%;
+    margin-top: 1%;
+    opacity:  0.5;
+}
+.containernav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 120px;
+    justify-content: space-between;
+    align-items: center;
+}
+.containernav h3{
+    text-align: center;
+    font-style: italic;
+    font-weight: 300;
+    border-bottom: 2px solid white;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+    height: 90vh;
+   flex-direction: column;
+   
+  
+}
+.container .login{
+    text-align: center;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    width: 350px;
+    flex-direction: column;
+    
+}
+.container .login h1{
+    margin-bottom: 10%;
+}
+.container .login p{
+    margin-bottom: 10%;
+
+}
+.entrar{
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    margin: 5%;
+    justify-content: space-evenly;
+}
+.entrar input{
+    margin-top: 13%;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    background-color: transparent;
+    height: 20%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 4px solid white;
+    width: 340px;
+    height: 30px;
+    margin-top: 5%;
+}
+.footer-social-links{
+    font-size: 14px;
+  text-align: center;
+  
+}
+.footer-social-links a{
+    width: 25px;
+    height: 25px;
+    line-height: 25px !important;
+    position: relative;
+    margin: 0 5px;
+    text-align: center;
+    display: inline-block;
+    color: #ffff;
+    
+    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+}
+.footer-social-links a i,
+.footer-social-links a span{
+    position: relative;
+    top: 2px;
+    left: 1px; 
+}
+.footer-social-links a:before{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #ffff;
+    
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    
+    -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
+    -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    -o-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
+    transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    
+}
+.footer-social-links a:hover{
+    color: #fff;
+}
+.footer-social-links a:hover:before{
+    background: #4ADAA8;
+}
+
+/* ANIMAÇÃO DO BOTÃO */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-top: 8%;
+  }
+  
+  .cta {
+      display: flex;
+      padding: 10px 45px;
+      text-decoration: none;
+      font-family: 'Spartan', sans-serif;
+      font-size: 40px;
+      color: #2b2c2d;
+      background: white;
+      transition: 1s;
+      box-shadow: 6px 6px 0 black;
+      transform: skewX(-15deg);
+  }
+  
+  .cta:focus {
+     outline: none; 
+  }
+  
+  .cta:hover {
+      transition: 0.5s;
+      box-shadow: 10px 10px 0 #4ADAA8;
+  }
+  
+  .cta span:nth-child(2) {
+      transition: 0.5s;
+      margin-right: 0px;
+  }
+  
+  .cta:hover  span:nth-child(2) {
+      transition: 0.5s;
+      margin-right: 45px;
+  }
+  
+    span {
+      transform: skewX(15deg) 
+    }
+  
+    span:nth-child(2) {
+      width: 20px;
+      margin-left: 30px;
+      position: relative;
+      top: 12%;
+    }
+    
+  /**************SVG****************/
+  
+  path.one {
+      transition: 0.4s;
+      transform: translateX(-60%);
+  }
+  
+  path.two {
+      transition: 0.5s;
+      transform: translateX(-30%);
+  }
+  
+  .cta:hover path.three {
+      animation: color_anim 1s infinite 0.2s;
+  }
+  
+  .cta:hover path.one {
+      transform: translateX(0%);
+      animation: color_anim 1s infinite 0.6s;
+  }
+  
+  .cta:hover path.two {
+      transform: translateX(0%);
+      animation: color_anim 1s infinite 0.4s;
+  }
+  
+  /* SVG animations */
+  
+  @keyframes color_anim {
+      0% {
+          fill: #2b2c2d;
+      }
+      50% {
+          fill: #4ADAA8;
+      }
+      100% {
+          fill: #2b2c2d;
+      }
+  }
