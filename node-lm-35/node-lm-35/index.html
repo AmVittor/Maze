@@ -18,7 +18,7 @@
 
 <body>
 	<div>
-		<h1>Sensor LM35 - Temperatura</h1>
+		<h1>Sensor TRC5000 - Presencia</h1>
 			<section>
 				<h2>Média: <label id='average'>0.00</label></h2>
 			</section>
@@ -34,11 +34,11 @@
 		context.canvas.height = 300;
         
         var configuration = {
-			type: 'bar',
+			type: 'line',
 			data: {
 				datasets: [{
-					label: "Temperatura",
-					type: 'bar',
+					label: "Teste",
+					type: 'line',
 					borderColor: ['#ff3232'],
 					backgroundColor: ['#ff7f7f']
 				}]
@@ -66,7 +66,6 @@
 				}
 			}
         };
-        
 		var chart = new Chart(context, configuration);
 
         //Função para obter os dados de temperatura do server
