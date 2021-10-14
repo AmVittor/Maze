@@ -12,18 +12,21 @@
 
 <body>
   <!-- CABEÇALHO -->
-  <div class="containernav">
-    <ul class="grid">
-      <li><a class="title" href="../HTML/index.html">Início</a></li>
-      <li><a class="title" href="#about">Sobre Nós</a></li>
-      <li><a class="title" href="../HTML/tela_cadastro.html">Cadastrar/Login</a></li>
-      <li><a class="title" href="#contac">Contato</a></li>
-    </ul>
-  </div>
+  <header>
+    <div class="containernav">
+      <ul class="gridnav">
+        <li><a class="title" href="../HTML/index.html">Início</a></li>
+        <li><a class="title" href="#about">Sobre Nós</a></li>
+        <li><a id="header_logo" href="#about">Maze</a></li>
+        <li><a class="title" href="../HTML/cadastro.html">Cadastrar/Login</a></li>
+        <li><a class="title" href="#contac">Contato</a></li>
+      </ul>
+    </div>
+  </header>
   <!-- CORPO-->
   <div class="cointainer">
     <div class="cardsHome">
-      <div class="card" id="blue">
+      <div class="card" id="blue" onclick="blue()">
         <img src="../CSS/Linhas de Metro/Linha 1 - Azul.jpg" alt="">
         <p>Conheça a linha 1 Azul do metrô!</p>
       </div>
@@ -54,23 +57,23 @@
     </div>
   </div>
 
-  <div class="container">
+  <div style="display: block;" id="show" class="containerDash">
+    <div class="linhas">
 
+    </div>
+    <div class="linha_txt">
 
+    </div>
   </div>
   </div>
-
-
-
-
-
-
-
-
-
 </body>
 
 </html>
 <!--
 
 -->
+<script>
+  function blue() {
+    show.style.display = `block`;
+  }
+</script>

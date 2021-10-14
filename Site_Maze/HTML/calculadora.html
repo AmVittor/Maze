@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
 
-
 <head>
     <link rel="stylesheet" href="../CSS/CSS/calcss.css">
     <meta charset="UTF-8">
@@ -13,15 +12,17 @@
 
 
 <body>
-    <div class="container nav">
-        <ul class="grid">
-            <li><a class="title" href="../HTML/index.html">Início</a></li>
-            <li><a class="title" href="#about">Sobre Nós</a></li>
-            <li><a class="title" href="../HTML/cadastro.html">Entrar/Cadastrar</a></li>
-            <li><a class="title" href="#contac">Contato</a></li>
-        </ul>
-    </div>
-
+    <header>
+        <div class="containernav">
+            <ul class="gridnav">
+                <li><a class="title" href="../HTML/index.html">Início</a></li>
+                <li><a class="title" href="#about">Sobre Nós</a></li>
+                <li><a id="header_logo" href="#about">Maze</a></li>
+                <li><a class="title" href="../HTML/cadastro.html">Cadastrar/Login</a></li>
+                <li><a class="title" href="#contac">Contato</a></li>
+            </ul>
+        </div>
+    </header>
     <section class="container">
         <div class="header">
             <h1>Multiplique em muitas vezes
@@ -63,7 +64,7 @@
                 <input type="number" id="input_preco">
             </div>
             <div class="conteudo-conta">
-                <button onclick="fnCalculo()">Estimar</button>
+                <button class="button" onclick="fnCalculo()">Estimar</button>
             </div>
 
         </section>
