@@ -1,20 +1,8 @@
 create database sprint2;
 use sprint2;
 
-
--- Criação da tabela de cadastro do usuário --
-create table usuario(
-	idUsuario int primary key auto_increment,
-    nomeUsuario varchar(100) not null,
-    CPF char(11) not null not null,
-    emailUsuario varchar(60) not null,
-    senhaUsuario varchar(40) not null
-);
-
-describe usuario;
-
 -- Criação da tabela de cadastro da empresa --
-create table empresa(
+create table cadastroEmpresa(
 	idEmpresa int primary key auto_increment,
     nomeEmpresa varchar(60) not null,
     CNPJ char(14) not null,
@@ -22,9 +10,21 @@ create table empresa(
     senhaEmpresa varchar(40) not null
 );
 
-describe empresa;
+describe cadastroEmpresa;
 
+-- Criação da tabela de login da empresa --
+create table loginEmpresa (
+	idLoginEmpresa int primary key auto_increment,
+    CNPJ char(14) not null,
+    senhaEmpresa varchar(40)  not null,
+    fkCadastro int
+);
 
+describe loginEmpresa;
+-- Criação de uma chave estrangeira ligando a tabela de login com a tabela de cadastro --
+alter table loginEmpresa add foreign key (fkCadastro)
+	references cadastroEmpresa(idEmpresa);
+    
 -- Criação da tabela das linhas parceiras
 create table linha(
 idLinha int primary key,
@@ -75,6 +75,17 @@ desc passagem;
 -- Criação de uma chave estrangeira ligando a tabela passagem com a catraca que foi utilizada
 alter table passagem add foreign key (fkCatraca) references catraca(idCatraca);
 
+-- Criação de uma tabela dos locais da estação, para um possível mapa térmico --
+create table Locais (
+	idLocais int primary key auto_increment,
+	nomeLocal varchar(150),
+    fkEstacao int,
+    fkEstacaoLinha int,
+    fkLogin int);
+    
+alter table Locais add foreign key (fkEstacao) references estacao(idEstacao);
+alter table Locais add foreign key (fkEstacaoLinha) references linha(idLinha);
+alter table Locais add foreign key (fkLogin) references loginEmpresa(idLogin);
 
 show tables;
 
