@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/CSS/contato.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="containernav">
+            <ul class="gridnav">
+                <li><a class="title" href="../HTML/index.html">Início</a></li>
+                <li><a class="title" href="#about">Sobre Nós</a></li>
+                <li><a id="header_logo" href="#about">Maze</a></li>
+                <li><a class="title" href="../HTML/cadastro.html">Cadastrar/Login</a></li>
+                <li><a class="title" href="../HTML/contato.html">Contato</a></li>
+            </ul>
+        </div>
+
+        <form name="meu_form">
+
+            <h1>Entre em contato</h1>
+
+            <label for="nome">Nome</label>
+            <input type="text" id="nomeid" placeholder="Lara" required="required" name="nome" />
+
+            <label for="fone">Fone&nbsp</label>
+            <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
+
+            <label for="email">Email</label>
+            <input type="email" id="emailid" placeholder="fulano@mail.com" name="email" />
+
+            <textarea placeholder="Deixe sua opinião"></textarea>
+
+            <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
+        </form>
+
+</body>
+
+</html>
