@@ -1,27 +1,29 @@
-/*===== GOOGLE FONTS =====*/
+/* GOOGLE FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-/*===== VARIABLES CSS =====*/
+
+/*Variaveis CSS - Pré definições da pagina*/
 :root{
   --nav-width: 92px;
 
-  /*===== Colors =====*/
+  /* Colors */
   --first-color: #69B99D;
   --bg-color: #222324;
   --sub-color: #4ADAA8;
   --white-color: #FFF;
   
-  /*===== Fonts =====*/
+  /* Fonts */
   --body-font: 'Poppins', sans-serif;
   --normal-font-size: 16px;
   --small-font-size: 14px;
   
-  /*===== z index =====*/
+  /* z index é um elemento de empilhamento, logo um numero superior fica a frente de um numero inferior (trabalha com o eixo z) */
+
   --z-fixed: 100;
 }
 
 
-/*===== BASE =====*/
+/* BASE */
 *,::before,::after{
   box-sizing: border-box;
 }
@@ -45,7 +47,7 @@ a{
   text-decoration: none;
 }
 
-/*===== l NAV =====*/
+/* l NAV é a class que contem todos os filhos (elementos) */
 .l-navbar{
   position: fixed;
   top: 0;
@@ -59,7 +61,7 @@ a{
   z-index: var(--z-fixed);
 }
 
-/*===== NAV =====*/
+/* NAV é a class que contem todos os filhos - Porém adiciona espaçamento para deparar os icones das spans */
 .nav{
   height: 100%;
   display: flex;
@@ -68,6 +70,7 @@ a{
   overflow: hidden;
 }
 
+/*div pai do icone menu e texto Maze*/
 .nav_brand{
   display: flex;
   justify-content: space-between;
@@ -75,6 +78,7 @@ a{
   margin-bottom: 32px;
 }
 
+/*class - a href do icone menu e texto Maze */
 .menu-toggle{
   display: flex;
   justify-content: space-between;
@@ -84,11 +88,14 @@ a{
   width: 256px;
 }
 
-.menu-toggle .nav_toggle{
+/*id e class - a href do icone menu e texto Maze */
+.menu-toggle, 
+.nav_toggle{
   display: flex;
   justify-content: space-between;
 }
 
+/*id - a href do icone menu e texto Maze */
 .nav_toggle{
   cursor: pointer;
   font-size: 20px;
@@ -97,6 +104,7 @@ a{
   justify-content: space-between;
 }
 
+
 .nav_logo{
   color: var(--white-color);
   font-weight: 600;
@@ -104,8 +112,8 @@ a{
 }
 
 .nav_link{
-  display: grid;
-  grid-template-columns: max-content max-content;
+  display: flex;
+  grid-template-columns: max-content;
   align-items: center;
   column-gap: 12px;
   padding: 12px;
@@ -129,17 +137,17 @@ a{
   font-size: var(--small-font-size);
 }
 
-/*Expander menu*/
+/* Expande o menu/sidebar */
 .expander{
   width: calc(var(--nav-width) + 148px);
 }
 
-/*Add padding body*/
+/* Adicona padding ao body */
 .body-pd{
   padding: 32px 0 0 256px;
 }
 
-/*Active links menu*/
+/* Active links menu */
 .active{
   background-color: var(--first-color);
 }
