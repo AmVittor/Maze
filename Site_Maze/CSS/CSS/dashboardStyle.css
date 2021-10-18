@@ -1,0 +1,145 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root{
+  --nav-width: 92px;
+
+  /*===== Colors =====*/
+  --first-color: #69B99D;
+  --bg-color: #222324;
+  --sub-color: #4ADAA8;
+  --white-color: #FFF;
+  
+  /*===== Fonts =====*/
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  
+  /*===== z index =====*/
+  --z-fixed: 100;
+}
+
+
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+body{
+  position: relative;
+  margin: 0;
+  padding: 32px 0 0 108px;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: 0.5s;
+}
+h1{
+  margin: 0;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+/*===== l NAV =====*/
+.l-navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--white-color);
+  padding: 24px 24px 32px;
+  transition: 0.5s;
+  z-index: var(--z-fixed);
+}
+
+/*===== NAV =====*/
+.nav{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.nav_brand{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.menu-toggle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  font-size: 24px;
+  width: 256px;
+}
+
+.menu-toggle .nav_toggle{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_toggle{
+  cursor: pointer;
+  font-size: 20px;
+  width: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav_logo{
+  color: var(--white-color);
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.nav_link{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  align-items: center;
+  column-gap: 12px;
+  padding: 12px;
+  color: var(--white-color);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav_link:hover{
+  background-color: var(--first-color);
+}
+
+.nav_icon{
+  font-size: 20px;
+  width: 24px;
+}
+
+.nav_name{
+  font-size: var(--small-font-size);
+}
+
+/*Expander menu*/
+.expander{
+  width: calc(var(--nav-width) + 148px);
+}
+
+/*Add padding body*/
+.body-pd{
+  padding: 32px 0 0 256px;
+}
+
+/*Active links menu*/
+.active{
+  background-color: var(--first-color);
+}
