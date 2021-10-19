@@ -1,52 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Maze Metro</title>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="../CSS/CSS/dashboardStyle.css">
-    </head>
-    <!-- body-pd para animar a sidebar pelo JS-->
-    <body id="body-pd">
-        <div class="l-navbar" id="navbar">
-            <nav class="nav">
-                <div>
-                    <div class="nav_brand">
-                        <a href="#" class="menu-toggle">
-                            <span><img src="../CSS/icon/menu.png" name="menu-outline" class="nav_toggle"  id="nav-toggle"></span>             
-                            <span href="#" class="nav_logo">Maze</span>
-                        </a>
-                    </div>
-                    <div class="nav_list">
-                        <a href="#" class="nav_link active">
-                            <span><img src="../CSS/icon/grafico-renko.png" class="nav_icon"></span>
-                            <span class="nav_name">Dashboard</span>
-                        </a>
-                        <a href="#" class="nav_link">
-                            <span><img src="../CSS/icon/mortarboard.png" class="nav_icon"></span>                            
-                            <span class="nav_name">Tutorial</span>
-                        </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Metro</title>
 
-                        <a href="#" class="nav_link">
-                            <span><img src="../CSS/icon/gear.png" class="nav_icon"></span>                           
-                            <span class="nav_name">Configurações</span>
-                        </a>
-                    </div>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/CSS/dashboardStyle.css">
+</head>
+<!-- body-pd para animar a sidebar pelo JS-->
+
+<body id="body-pd">
+    <div class="l-navbar" id="navbar">
+        <nav class="nav">
+            <div>
+                <div class="nav_brand">
+                    <a href="#" class="menu-toggle">
+                        <span><img src="../CSS/icon/menu.png" name="menu-outline" class="nav_toggle"
+                                id="nav-toggle"></span>
+                        <span href="#" class="nav_logo">Maze</span>
+                    </a>
                 </div>
+                <div class="nav_list">
+                    <a href="#" class="nav_link active">
+                        <span><img src="../CSS/icon/grafico-renko.png" class="nav_icon"></span>
+                        <span class="nav_name">Dashboard</span>
+                    </a>
+                    <a href="#" class="nav_link">
+                        <span><img src="../CSS/icon/mortarboard.png" class="nav_icon"></span>
+                        <span class="nav_name">Tutorial</span>
+                    </a>
 
-                <a href="#" class="nav_link">
-                    <span><img src="../CSS/icon/logout.png" class="nav_icon"></span>
-                    <span class="nav_name">Sair</span>
-                </a>
-            </nav>
+                    <a href="#" class="nav_link">
+                        <span><img src="../CSS/icon/gear.png" class="nav_icon"></span>
+                        <span class="nav_name">Configurações</span>
+                    </a>
+                </div>
+            </div>
+
+            <a href="#" class="nav_link">
+                <span><img src="../CSS/icon/logout.png" class="nav_icon"></span>
+                <span class="nav_name">Sair</span>
+            </a>
+        </nav>
+    </div>
+    <!-- Div no espaço em branco -> espaço para colocar as proximas partes -->
+
+    <div class="container">
+
+        <h1></h1>
+
+        <div class="cointainer">
+            <div class="cardsHome">
+                <div class="card" id="blue" onclick="blue()">
+                    <img src="../CSS/Linhas de Metro/Linha 1 - Azul.jpg" alt="">
+                    <p>Conheça a linha 1 Azul do metrô!</p>
+                </div>
+                <div class="card" id="green">
+                    <img src="../CSS/Linhas de Metro/Linha 2 - Verde.jpg" alt="">
+                    <p>Conheça a linha 2 Verde do metrô!</p>
+                </div>
+                <div class="card" id="red">
+                    <img src="../CSS/Linhas de Metro/Linha 3 - Vermelha.jpg" alt="">
+                    <p>Conheça a linha 3 Vermelha do metrô!</p>
+                </div>
+                <div class="card" id="yellow">
+                    <img src="../CSS/Linhas de Metro/Linha 4 - Amarela.jpg" alt="">
+                    <p>Conheça a linha 4 Amarela do metrô!</p>
+                </div>
+            </div>
         </div>
-        <!-- Div no espaço em branco -> espaço para colocar as proximas partes -->
-        <div>
-            <h1>Componentes</h1>
-        </div>   
-        <!-- MAIN JS -->
-        <script src="../JS/dashboard.js"></script>
-    </body>
+
+        <!-- Segunda linha dos Cards -->
+        <div class="cointainer">
+            <div class="cardsHome">
+                <div class="card" id="blue" onclick="blue()">
+                    <img src="../CSS/Linhas de Metro/Linha 1 - Azul.jpg" alt="">
+                    <p>Conheça a linha 1 Azul do metrô!</p>
+                </div>
+                <div class="card" id="green">
+                    <img src="../CSS/Linhas de Metro/Linha 2 - Verde.jpg" alt="">
+                    <p>Conheça a linha 2 Verde do metrô!</p>
+                </div>
+                <div class="card" id="red">
+                    <img src="../CSS/Linhas de Metro/Linha 3 - Vermelha.jpg" alt="">
+                    <p>Conheça a linha 3 Vermelha do metrô!</p>
+                </div>
+                <div class="card" id="yellow">
+                    <img src="../CSS/Linhas de Metro/Linha 4 - Amarela.jpg" alt="">
+                    <p>Conheça a linha 4 Amarela do metrô!</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    function blue() {
+        show.style.display = `block`;
+    }
+</script>
+
+</div>
+<!-- MAIN JS -->
+<script src="../JS/dashboard.js"></script>
+</body>
+
 </html>
