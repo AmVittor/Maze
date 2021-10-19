@@ -204,8 +204,7 @@ main {
 .linhasTxt{
   height: 180px;
   width: 220px;
-  font-size: 25px;
-  font-weight: bolder;
+  font-size: 24.5px;
   position: relative;
   border-radius: 5px;
 }
@@ -378,4 +377,9 @@ footer .wave#wave4{
   100%{
     background-position-x: 1000px;
   }
+}
+.loginn{
+  height: 500px;
+  background-color: red;
+  margin-bottom: 9%;
 }
