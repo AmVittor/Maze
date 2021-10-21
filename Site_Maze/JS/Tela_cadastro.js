@@ -1,3 +1,34 @@
+//validação cadastro
+function transformacoes() {
+    var frase = in_frase.value;
+  
+    if (frase.indexOf("@") > -1) {
+      if (frase.indexOf(".com") > -1) {
+       alert("Email válido");
+      } else {
+        alert("Email inválido");
+      }
+    } else {
+    alert("Email inválido");
+    }
+  }
+
+//validação login
+  function transformacoeslogin() {
+    var frase = in_frase.value;
+  
+    if (frase.indexOf("@") > -1) {
+      if (frase.indexOf(".com") > -1) {
+       alert("Email válido");
+      } else {
+        alert("Email inválido");
+      }
+    } else {
+    alert("Email inválido");
+    }
+  }
+
+
 function cadastrar() {
     div_cadastro.style.width = '540px'
     div_login.style.width = '360px'
