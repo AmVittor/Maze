@@ -18,9 +18,12 @@ function transformacoes() {
     }
   } else {
     alert("Email inválido");
-
+  } if (email == "") {
+    alert("email em branco")
+  } else {
+    alert("email válido");
   } if (cpf == "") {
-    alert("cpf inválido")
+    alert("cpf em branco")
   } else {
     alert("cpf válido");
   } if (nome == "") {
@@ -28,7 +31,7 @@ function transformacoes() {
   } else {
     alert("nome válido");
   } if (senha == "") {
-    alert("senha inválido")
+    alert("senha em branco")
   } else {
     alert("senha válido");
   }
@@ -49,6 +52,10 @@ function transformacoeslogin() {
     }
   } else {
     alert("Email inválido");
+  } if (email == "") {
+    alert("email em branco")
+  } else {
+    alert("email válido");
   } if (senha == "") {
     alert("senha inválido")
   } else {
