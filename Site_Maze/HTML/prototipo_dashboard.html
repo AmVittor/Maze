@@ -48,31 +48,35 @@
 			options: {
 				scales: {
 					xAxes: [{
+						barPercentage: .7,
 						distribution: 'series',
                         ticks: {
-                            beginAtZero:true
+                            beginAtZero: true,
+							fontColor: "#FFF",
+							drawBorder: false,
+                        },
+					
+						gridLines: {
+							color: [ "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],	
+						},
+						scaleLabel: {
+							display: true,
+							labelString: 'Meses do ano',
+							fontColor: "#FF0000"
                         }
+					
 					}],
 					yAxes: [{
 						gridLines: {
-							color: "#2B2C2D",
-							borderColor: "#fff",		
+							color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#FFF"],	
 						},
 						scaleLabel: {
+							fontColor: "#FFF",
 							display: true,
-							labelString: 'Número de pesssoas'
+							labelString: 'Número de pesssoas',
                         }
 					}],
-					xAxes: [{
-						gridLines: {
-							color: "#2B2C2D",
-							borderColor: "#fff",
-						},
-						scaleLabel: {
-							display: true,
-							labelString: 'Meses do ano'
-                        }
-					}]
+				
 				},
 			}
         };
