@@ -1,40 +1,68 @@
 //validação cadastro
 function transformacoes() {
-    var frase = in_frase.value;
-  
-    if (frase.indexOf("@") > -1) {
-      if (frase.indexOf(".com") > -1) {
-       alert("Email válido");
-      } else {
-        alert("Email inválido");
-      }
+  var email = in_email.value;
+  var cpf = in_cpf.value;
+  var senha = in_senha.value;
+  var nome = in_senha.value;
+
+  email = email.trim();
+  cpf = cpf.trim();
+  senha = senha.trim();
+  nome = nome.trim();
+
+  if (email.indexOf("@") > -1) {
+    if (email.indexOf(".com") > -1) {
+      alert("Email válido");
     } else {
-    alert("Email inválido");
+      alert("Email inválido");
     }
+  } else {
+    alert("Email inválido");
+
+  } if (cpf == "") {
+    alert("cpf inválido")
+  } else {
+    alert("cpf válido");
+  } if (nome == "") {
+    alert("nome inválido")
+  } else {
+    alert("nome válido");
+  } if (senha == "") {
+    alert("senha inválido")
+  } else {
+    alert("senha válido");
   }
+}
 
 //validação login
-  function transformacoeslogin() {
-    var frase = in_frase.value;
-  
-    if (frase.indexOf("@") > -1) {
-      if (frase.indexOf(".com") > -1) {
-       alert("Email válido");
-      } else {
-        alert("Email inválido");
-      }
+function transformacoeslogin() {
+  var email = in_email_login.value;
+  var senha = in_senha_login.value;
+  email = in_email_login.trim();
+  senha = in_senha_login.trim();
+
+  if (email.indexOf("@") > -1) {
+    if (email.indexOf(".com") > -1) {
+      alert("Email válido");
     } else {
-    alert("Email inválido");
+      alert("Email inválido");
     }
+  } else {
+    alert("Email inválido");
+  } if (senha == "") {
+    alert("senha inválido")
+  } else {
+    alert("senha válido");
   }
+}
 
 
-function cadastrar() {
-    div_cadastro.style.width = '540px'
-    div_login.style.width = '360px'
-    div_cadastro.innerHTML = ` 
+/* function cadastrar() {
+  div_cadastro.style.width = '540px'
+  div_login.style.width = '360px'
+  div_cadastro.innerHTML = `
     <h2 id="CadastroEscuro">Cadastre sua Conta</h2>
-  
+
     <div class="inputs"><span id="texto">
         <h4 id="LadoEscuro">Texto</h4>
         <input type="text" class="inpute" placeholder="texto" id='email_inp'>
@@ -48,7 +76,7 @@ function cadastrar() {
       <button id="cadastrar">Cadastrar</button>
     </div>  `
 
-    div_login.innerHTML = `
+  div_login.innerHTML = `
 
     <h1 style='color:black'>Olá, seja bem vindo!</h1>
     <h3 style='color:black'>Já tenho um conta!</h3>
@@ -65,42 +93,42 @@ var email = localStorage.getItem('email')
 var senha = localStorage.getItem('passaword')
 function login() {
 
-    var email_ip = email_inp.value
-    var senha_ip = senha_inp.value
-    if (email == email_ip) {
-        if (senha == senha_ip) {
-            alert('logado com sucesso')
-            window.location.href = `index.html`;
-        }
-        else {
-            alert('Senha incorreta!')
-        }
+  var email_ip = email_inp.value
+  var senha_ip = senha_inp.value
+  if (email == email_ip) {
+    if (senha == senha_ip) {
+      alert('logado com sucesso')
+      window.location.href = `index.html`;
     }
     else {
-        alert('Email ou senha inválido!')
+      alert('Senha incorreta!')
     }
+  }
+  else {
+    alert('Email ou senha inválido!')
+  }
 
 }
 function calculadora() {
-    window.location.href = `calculadora.html`;
+  window.location.href = `calculadora.html`;
 }
 function linhas() {
-    window.location.href = `index.html`;
+  window.location.href = `index.html`;
 }
 function voltarLogin() {
-    div_cadastro.style.width = '360px'
-    div_login.style.width = '540px'
+  div_cadastro.style.width = '360px'
+  div_login.style.width = '540px'
 
-    div_cadastro.innerHTML = `
-    
+  div_cadastro.innerHTML = `
+
     <h1>Olá, seja bem vindo!</h1>
     <h3>Cria sua conta gratuitamente!</h3>
     <div class="login">
       <button id="cadastrar" onclick="cadastrar()">Cadastrar-se</button>
     </div>
     `
-    div_login.innerHTML = `
-    
+  div_login.innerHTML = `
+
     <h2>Entrar na minha conta</h2>
     <!--Icones aqui-->
     <div class="logosd">
@@ -124,31 +152,7 @@ function voltarLogin() {
       <button id="cadastrar" onclick="login()">Entrar</button>
     </div> `
 }
-// let time = 1800,
-//     currentImageIndex = 0,
-//     images = document
-//         .querySelectorAll("#slider img")
-// max = images.length;
 
-// function nextImage() {
 
-//     images[currentImageIndex]
-//         .classList.remove("selected")
-
-//     currentImageIndex++
-
-//     if (currentImageIndex >= max)
-//         currentImageIndex = 0
-
-//     images[currentImageIndex]
-//         .classList.add("selected")
-// }
-
-// function start() {
-//     setInterval(() => {
-//         // troca de image
-//         nextImage()
-//     }, time)
-// }
-
-window.addEventListener("load", start)
+// window.addEventListener("load", start)
+ */

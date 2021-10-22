@@ -80,7 +80,7 @@
 
             var http = new XMLHttpRequest();
             http.open('GET', 'http://localhost:3000/api', false);
-            http.send(null);        
+            http.send(20);        
 			
             var obj = JSON.parse(http.responseText);
             if (obj.data.length == 0){
