@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../CSS/CSS/login.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Entrar</title>
+  <title>Cadastrar</title>
 </head>
 
 <body>
@@ -38,15 +38,30 @@
       <a href="https://www.linkedin.com/feed/" title="LinkedIn+" target="_blank"><i class="fa fa-linkedin"></i></a>
     </div>
     <div class="entrar">
-      <input type="text" placeholder="Login">
-      <input type="number" placeholder="CPF">
-      <input type="password" placeholder="Senha">
+      <input maxlength="30" id="in_email" type="text" placeholder="Email">
+      <input maxlength="30" id="in_nome" type="text" placeholder="Nome">
+      <input maxlength="10" id="in_cpf" placeholder="CPF">
+      <input maxlength="8" id="in_senha" type="password" placeholder="Senha">
       <div class="options">
-        <a class="button" style="font-size: 21px; height: 60px;" href="#">Criar conta</a>
+        <a onclick="transformacoes()" class="button" style="font-size: 21px; height: 60px;" href="#">Criar conta</a>
       </div>
     </div>
   </div>
 </body>
 
 </html>
-<script src=" ../JS/Tela_cadastro.js"></script>
+<script src=" ../JS/Tela_cadastro.js">
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
