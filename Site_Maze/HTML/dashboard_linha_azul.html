@@ -8,6 +8,18 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="../CSS/CSS/dashboard_linha_azul.css">
+
+  <!-- JS CANVAS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+  <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+  <style>
+    canvas {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+  </style>
 </head>
 <!-- body-pd para animar a sidebar pelo JS-->
 
@@ -51,6 +63,21 @@
     <h1>Linha 1 - Azul</h1>
   </div>
 
+  <div class="section_blue_line">
+
+    <!-- GRAFICO -->
+    <div class="grafico_linha_azul">
+      <div>
+        <h3>Gráfico anual</h1>
+
+          <div style="width: 900px;">
+            <canvas id="chart" style="background-color: #2B2C2D" width="1000" height="300"> </canvas>
+          </div>
+
+      </div>
+    </div>
+
+  </div>
 
 
   <!-- MAIN JS -->
@@ -58,3 +85,63 @@
 </body>
 
 </html>
+
+<script>
+  // Referenciando a tag canvas e defininco que o gráfico será em 2d
+
+  var context = document.getElementById("chart").getContext("2d");
+
+  // configurando todo o corpo do gráfico, as colunas, linhas, valores, etc
+  var configuration = {
+    type: 'bar',
+    data: {
+      labels: ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
+      datasets: [{
+        label: ["volume de pessoas"],
+        data: ["280000", "340000", "295000", "260000", "330000", "403000", "250000", "190000", "365000", "440000", "450000", "300000"],
+        type: 'bar',
+        borderColor: ['#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9',],
+        backgroundColor: ['#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9',],
+      }]
+    },
+    options: {
+      scales: {
+        xAxes: [{
+          barPercentage: .7,
+          distribution: 'series',
+          ticks: {
+            beginAtZero: true,
+            fontColor: "#FFF",
+            drawBorder: false,
+          },
+
+          gridLines: {
+            color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
+          },
+          scaleLabel: {
+            display: true,
+            labelString: 'Meses do ano',
+            fontColor: "#FF0000"
+          }
+
+        }],
+        yAxes: [{
+          gridLines: {
+            color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#FFF"],
+          },
+          scaleLabel: {
+            fontColor: "#FFF",
+            display: true,
+            labelString: 'Número de pesssoas',
+          }
+        }],
+
+      },
+    }
+  };
+
+  //adicionando esses valores a um novo gráfico na tag canvas
+  var chart = new Chart(context, configuration);
+
+
+</script>
