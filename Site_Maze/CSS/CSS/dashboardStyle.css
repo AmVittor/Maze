@@ -52,12 +52,12 @@
 body{
   position: relative;
   margin: 0;
-  padding: 32px 0 0 108px;
+  padding: 0px 0 0 93px;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   font: 400 1rem 'DM Sans', sans-serif;
   color: var(--title-color-primary);
-  background: var(--base-color-secondary);
+  background-color: var(--base-color-secondary);
   transition: 0.5s;
 }
 
@@ -187,6 +187,7 @@ span {
 /* CONTEUDO DA DASHBOARD */
 
 /* CARDS */
+
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /*====  RESET ============================ */
 * {
@@ -273,77 +274,60 @@ img {
   justify-content: space-between;
 }
 
-/*CARDS */
-.cardsHome{
+/*cards*/
+
+.title_cards h1{
+  margin: 16px 16px;
+  font-family: var(--body-font);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+.cards_container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: #10182f;
+}
+.card_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  height: 300px;
-  /*mudei aqui 100%*/
-  width: ;
+}
+.card {
+  margin: 10px;
+  background-color: var(--base-color-tertiary);
+  border-radius: 5px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 160px;
+  height: 225px;
 }
 
-.card{
-  cursor: pointer;
-  box-shadow: 2.5px 3px 2.5px 0 hsla(0, 0%, 0%, 0.388);
-  height: 85%;
-  border-radius: 7px;
-  width: 20%;
-  background-color: #3B3D3F;
-}
-
-.card img{
-  height: 130px;
-  align-self: center;
-  border-radius: 7px 7px 0 0;
-
-}
-.card p{
-  color: white;
-  font-weight: bolder;
-  margin-left: 10%;
-  margin-top: 10%;
-}
-
-#blue img{
-  border-bottom: 8px solid #6E95F9;
+.card-header img {
   width: 100%;
+  height: 100px;
+  object-fit: cover;
 }
-#green img{
-  border-bottom: 8px solid green;
-  width: 100%;
-}
-#red img{
-  border-bottom: 8px solid red;
-  width: 100%;
-}
-#yellow img{
-  border-bottom: 8px solid yellow;
-  width: 100%;
-}
-
-.card:hover {
-  transform: scale(1.03);
-  transition: .3s;
-}
-
-.containerDash{
-  width: 80%;
-  height: 300px;
+.card-body {
   display: flex;
-  padding-top: 2%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
 }
 
-.containerDash .linhas{
-  display: flex;
-  height: 50%;
-  width: 20%;
-  background-color: red;
+.card-body p {
+  font-size: 13px;
+  margin: 0 0 40px;
 }
 
-.containerDash .linha_txt{
-  height: 50%;
-  width: 20%;
-  background-color: #6E95F9;
+.card-body h4 {
+  font-size: 13px;
+  margin: 0 0 16px;
+  color: var(--first-color);
 }
