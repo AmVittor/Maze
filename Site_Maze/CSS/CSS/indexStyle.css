@@ -1,66 +1,121 @@
+
+/******        FONTE PRINCIPAL                     **************/
+
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/*====  RESET ============================ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+/******        SEGUNDA OPÇÃO DE FONTE                     **************/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body{
+  background-color: #2b2c2d;
 }
-li{
-  list-style: none;
+
+:root{
+  /* Colors */
+  --first-color: #69B99D;
+  --sub-color: #4ADAA8;
+
+  --bg-color: #222324;
+ 
+  --white-color: #FFF;
+  
+  /* Fonts */
+  --body-font: 'Spartan', sans-serif;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  
 }
-a {
+*{
+  font-family: 'Spartan', sans-serif; 
+}
+a{
   text-decoration: none;
-  color: white;
-  color:#69B99D;
-  font-size: 20px;
 }
-
-img {
-  width: 100%;
-}
-
-/*====  VARIABLES ============================ */
-:root {
-/* --- Cores de fundo do site ---  */
-/* Cor de Fundo Primaria: #222324 - (Escura) */
---base-color-primary: #222324;
-/* Cor de Fundo Secundaria: #2B2C2D - (Clara, pórem não mais que a Terciaria) */
---base-color-secondary: #2B2C2D;
-/* Cor de Fundo Terciaria: #3B3D3F - (Mais clara) */
---base-color-tertiary: #3B3D3F;
-
-/*	--- Cor para os Textos do Site --- */
-/* Cor de Titulo: #69B99D - (Verde Escuro) */
-
---title-color-primary: #ffff;
-/* Cor de Texto: #4ADAA8 - (Verde Claro) */
---text-color-secondary: #4ADAA8;
-
---title-color-primary: #69B99D;
-/* Cor de Texto: #4ADAA8 - (Verde Claro) */
---text-color-secondary: #69B99D;
-
-}
-
-/* ====  BASE ============================ */
-body {
-  font: 400 1rem 'DM Sans', sans-serif;
-  color: var(--title-color-primary);
-  background: var(--base-color-primary);
-}
-
 h1 {
   font-family: 'Spartan', sans-serif;
-  color: var(--title-color-primary);
+  color: var(--first-color);
 }
-
+body{
+  padding: 0;
+  margin: 0;
+}
 span {
   font-family: 'Spartan', sans-serif;
 }
+/* SPAN PARA DEIXAR QUALQUER TEXTO NEGRITO span_negrito */
+.span_negrito{
+  font-weight: bolder;
+}
+.stroke_divide{
+  width: 100%;
+  height: 2px;
+  background-color: var(--first-color);
+}
+.header{
+  
+  color: var(--first-color);
+  border-bottom: 3px solid #4ADAA8;
+  text-align: center;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+}
+.navbar{
+  height: 100%;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  justify-content: space-evenly;
+  width: 40%;
+  color: var(--sub-color);
+  font-weight: 500;
+  font-size: 20px;
+}
+.navbar a{
+  color: var(--sub-color);
+  text-decoration: none;
+}
 
-.button {
-  background-color: var(--title-color-primary);
-  color: var(--base-color-tertiary);
+/* Banner */
+
+.abt-us{
+  display: flex;
+  height: 100vh;
+}
+.logo_img{
+  height: 500px;
+  width: 500px;
+}
+.logo_img img{
+  height: 100%;
+}
+.text {
+  order: 0;
+  max-width: 420px;
+  text-align: left;
+}
+.text h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+.text p {
+  margin-bottom: 32px;
+  color: white;
+  font-size: 22px;
+}
+.button_main {
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.button_main {
+  cursor: pointer;
+  background-color: var(--first-color);
+  color: var(--white-color);
   height: 56px;
   display: inline-flex;
   align-items: center;
@@ -70,176 +125,240 @@ span {
   transition: background 0.3s;
 }
 
-.button:hover {
-  background-color: var(--base-color-tertiary);
-  color: var(--text-color-secondary);
+.button_main:hover {
+  background-color: #3B3D3F;
+  color: #4ADAA8;
 }
 
-.divider-1 {
-  height: 1px;
-  background: linear-gradient(
-    270deg,
-    #ffffff 0%,
-    #3B3D3F 100%
-  );
-}
-
-/*====  LAYOUT ============================ */
-.container {
-  margin: 0 10%;
-
-}
-
-.grid {
-  display: grid;
-  gap: 32px;
-}
-
-.section {
-  height: 500px;
-  padding: 80px 10px 0px 10px;
-}
-
-.logo {
-  font-family: 'Spartan', sans-serif;
-  font-weight: 700;
-  color: var(--title-color-primary);
-}
-
-main {
-  height: 72px;
-}
-
-/*====  HOME ============================ */
-#home {
-  overflow: hidden;
-}
-
-#home .container {
-  grid-auto-flow: column;
-  justify-content: space-between;
-  margin: 1% 10%;
-}
-
-#home .image {
-  order: 1;
-  float: right;
-  width: 300px;
-}
-
-#home .image img_logo_company{
-  right: 47px;
-  width: 30%;
-  height: auto;
-  margin-left: 24px;
-  margin-right: 24px;
-}
-
-#home .text {
-  order: 0;
-  max-width: 420px;
-  text-align: left;
-
-}
-
-#home .text h1 {
-  font-size: 32px;
-  margin-bottom: 16px;
-}
-
-#home .text p {
-  margin-bottom: 32px;
-  color: white;
-  font-size: 22px;
-}
-
-#home .button {
-  text-align: center;
-  font-weight: bold;
-}
-
-.containernav{
-  background-color: #1a1b1c;
-  display: flex;
-  justify-content: center;
-  padding: 1.2%;
-  height: 70px;
-}
-
-.containernav .gridnav #header_logo{
-  background-color: #1a1b1c;
-  font-weight: 1000;
-  font-size: 26px;
-  margin-top: 0.5%;
-}
-
-.containernav .gridnav .title{
-  background-color: #1a1b1c;
-  font-weight: 100;
-  font-size: 20px;
-}
-
-.gridnav{   
-  font-weight: 500;
-  display: flex;
-  height: 100%;
-  justify-content: space-evenly;
-  margin-top: 0.5%;
-  width: 80%;
-  list-style: none;
-}
-
-/* ------------------ LINHAS PARCEIRAS --------------- */
-.addjust{
-  height: 800px;
-  display: flex;
-  padding-top: 4%;
-}
+/*********************                LINHAS PARCEIRAS               *************/
 .linhas{
-  background-position: center;
-  height: 550px;
-  margin-bottom: 30%;
+  padding-right: 17%;
+  display: flex;
 }
 
-.linhasTxt{
-  height: 180px;
-  width: 220px;
-  font-size: 24.5px;
-  position: relative;
-  border-radius: 5px;
+.linha_img{
+  padding: 3%;
+  height: 540px;
+  width: 540px;
 }
-.linhasTxt p{
-  padding: 5%;
-  color: white;
+.linha_img img{
+  height: 100%;
 }
-/* ANIMAÇÃO TEXTO */
-.linhasTxt:after, 
-.linhasTxt:before{
-  content: "";
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right:0;
-  transition: transform .3s ease-in-out;
+
+
+  .linhasTxt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    width: 320px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
   }
+  .linhasTxt h1{
+    margin: 0;
+    margin-top: 6%;
+  }
+  .linhasTxt p{
+  
+    color: white;
+  }
+  /* ANIMAÇÃO TEXTO */
+  .linhasTxt:after, 
   .linhasTxt:before{
-    border-left: 3px dashed #4ADAA8;
-    border-right: 3px dashed #4ADAA8;
-    transform:scaleY(0)
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right:0;
+    transition: transform .3s ease-in-out;
+    }
+    .linhasTxt:before{
+      border-left: 2px dashed #4ADAA8;
+      border-right: 2px dashed #4ADAA8;
+      transform:scaleY(0)
+    }
+    .linhasTxt:after{
+      border-top: 2px dashed #4ADAA8;
+      border-bottom: 2px dashed #4ADAA8;
+      transform:scaleX(0)
+    }
+    .linhasTxt:hover::before{
+      transform:scaleY(1)
+    }
+    .linhasTxt:hover::after{
+      transform:scaleX(1)
+    }
+
+    /***************************                  CALCULADORA                   ***********/
+    .calculadora{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100vh;
+  
+    }
+    .conteudo-resultado{
+      display: flex;
+    }
+   
+    .explica_cal h3{
+      color: var(--first-color);
+  
+    }
+   .explica_cal{
+     font-size: 26px;
+     width: 60%;
+     height: 24px;
+     align-self: center;
+     margin-left: 2%;
+   }
+   
+    .conta{
+      padding-left: 2%;
+      display: flex;
+      color: var(--first-color);
+      flex-direction: column;
+ 
+      width: 40%;
+    }
+    .conta select{
+      cursor: pointer;
+      height: 40px;
+      background-color: var(--sub-color);
+      color: var(--bg-color);
+      font-size: 18px;
+      font-weight: bold;
+      width: 39.4%;
+      border: 0;
+      border-radius: 5px;
+    }
+    .conta option{
+      color: #232424;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 2%;
   }
-  .linhasTxt:after{
-    border-top: 3px dashed #4ADAA8;
-    border-bottom: 3px dashed #4ADAA8;
-    transform:scaleX(0)
+  .conta input{
+    outline: 0;
+    border-radius: 5px;
+    border: 0;
+    width: 38%;
+    height: 40px;
+    background-color: var(--sub-color);
+      color: var(--bg-color);
+      font-size: 18px;
+      font-weight: bold;
+}
+.result{
+  width: 35%;
+}
+    /**************               LOGIN                 **************/
+    .acessar{
+      height: 240px;
+      margin-bottom: 5%;
+    }
+  .login p{
+    color: white;
+    width: 400px;
   }
-  .linhasTxt:hover::before{
-    transform:scaleY(1)
+  .entrar{
+      display: flex;
+      flex-direction: column;
+      margin: 5%;
+      height: 200px;
+      justify-content: space-evenly;
+      margin-top: 3%;
   }
-  .linhasTxt:hover::after{
-    transform:scaleX(1)
+  .entrar input{
+      margin-top: 8%;
+      font-size: 20px;
+      font-weight: 600;
+      color: white;
+      background-color: transparent;
+      height: 20%;
+      border-top: 0;
+      border-left: 0;
+      border-right: 0;
+      border-bottom: 4px solid white;
+      width: 340px;
   }
-/*FOOTER*/
+  .footer-social-links{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+  
+}
+.footer-social-links a{
+    width: 25px;
+    height: 25px;
+    line-height: 30px;
+    position: relative;
+    margin: 0 5px;
+    text-align: center;
+    display: inline-block;
+    color: #ffff;
+    
+}
+.footer-social-links a i,
+.footer-social-links a span{
+    position: relative;
+
+    
+}
+.footer-social-links a:before{
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #ffff;
+}
+.footer-social-links a:hover{
+    color: #fff;
+}
+.footer-social-links a:hover:before{
+    background: #4ADAA8;
+}
+.options{
+  display: flex;
+  justify-content: space-evenly;
+  width: 340px;
+  height: 80px;
+  padding-top: 3%;
+ 
+}
+
+.button_login {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: #4ADAA8;
+  color: #3B3D3F;
+  height: 85%;
+  width: 23%;
+  margin-top: 3%;
+  padding-left: 5%;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 5px;
+  font-family: 'Spartan', sans-serif;
+  transition: background 0.3s;
+}
+.button_login:hover {
+  background-color: #3B3D3F;
+  color: #4ADAA8;
+}
+
+
+
+/************   FOOTER  **************/
 #main_footer{
   display: flex;
   justify-content: flex-end;
@@ -248,6 +367,7 @@ main {
 }
 
 footer{
+  margin-top: 5%;
   position: relative;
   width: 100%;
   background-color: #69b99d;
@@ -314,21 +434,15 @@ footer .menu_footer li a:hover{
   transition: 0.5s;
 }
 
-footer .rights_footer{
-  color: #222324;
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
 footer .wave{
   position: absolute;
   top: -100px;
   left: 0;
   width: 100%;
   height: 100px;
+  
   background: url(../Images/greenWave.png);
+  
   background-size: 1000px 100px;
 }
 
@@ -378,8 +492,7 @@ footer .wave#wave4{
     background-position-x: 1000px;
   }
 }
-.loginn{
-  height: 500px;
-  background-color: red;
-  margin-bottom: 9%;
-}
+
+
+
+
