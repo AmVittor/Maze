@@ -326,3 +326,34 @@ img {
   transition: 0.5s;
 
 }
+
+/* linhas */
+
+.line{
+  display: flex;
+  margin-top: -65px;
+}
+
+.vl {
+  border-left: 5px solid #6E95F9;
+  height: 545px;
+}
+
+.v2 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: right;
+  padding-right: 8px;
+}
+
+.v2 .blue_line{
+  justify-content: space-between;
+  padding: 2.5px;
+  cursor: pointer;
+}
+
+.v2 .blue_line:hover{
+  color: var(--first-color);
+  transition: 0.5s;
+
+}
