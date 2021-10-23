@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -10,35 +10,36 @@
 </head>
 
 <body>
-    <header>
-        <div class="containernav">
-            <ul class="gridnav">
-                <li><a class="title" href="../HTML/index.html">Início</a></li>
-                <li><a class="title" href="#about">Sobre Nós</a></li>
-                <li><a id="header_logo" href="#about">Maze</a></li>
-                <li><a class="title" href="../HTML/cadastro.html">Cadastrar/Login</a></li>
-                <li><a class="title" href="../HTML/contato.html">Contato</a></li>
-            </ul>
+    <!-- CABEÇALHO -->
+    <div class="header">
+        <div class="container">
+            <u class="navbar">
+                <li><a href="">Inicial</a></li>
+                <li><a href="./contato.html">Sobre nós</a></li>
+            </u>
+            <h1>Maze</h1>
+            <u class="navbar">
+                <li><a href="./cadastro.html">Cadastro</a></li>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+            </u>
         </div>
+    </div>
 
-        <form name="meu_form">
+    <form class="feedback" name="meu_form">
 
-            <h1>Entre em contato</h1>
+        <h1>Entre em contato</h1>
+        <label for="nome">Nome</label>
+        <input type="text" id="nomeid" placeholder="Nome" required="required" name="nome" />
+        <label for="fone">Fone&nbsp</label>
+        <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
+        <label for="email">Email</label>
+        <input type="email" id="emailid" placeholder="seuemail@aqui.com" name="email" />
+        <label for="email">Nos dê seu feedback!</label>
+        <textarea id="opnion" placeholder="Deixe sua opinião"></textarea>
 
-            <label for="nome">Nome</label>
-            <input type="text" id="nomeid" placeholder="Lara" required="required" name="nome" />
 
-            <label for="fone">Fone&nbsp</label>
-            <input type="tel" id="foneid" placeholder="(xx)xx-xx-xx-xx" name="fone" />
-
-            <label for="email">Email</label>
-            <input type="email" id="emailid" placeholder="fulano@mail.com" name="email" />
-
-            <textarea placeholder="Deixe sua opinião"></textarea>
-
-            <input type="submit" class="enviar" onclick="Enviar();" value="Enviar" />
-        </form>
-
+    </form>
+    <a style="cursor: pointer;" class="enviar" onclick="Enviar();" class="button_login" href="#">Enviar</a>
 </body>
 
 </html>

@@ -1,111 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
-body {
-    background-color: #2B2C2D;
-}
+/******        FONTE PRINCIPAL                     **************/
 
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/*====  RESET ============================ */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/******        SEGUNDA OPÇÃO DE FONTE                     **************/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body{
+  background-color: #2b2c2d;
 }
 
-li {
-    list-style: none;
+:root{
+  /* Colors */
+  --first-color: #69B99D;
+  --sub-color: #4ADAA8;
+
+  --bg-color: #222324;
+ 
+  --white-color: #FFF;
+  
+  /* Fonts */
+  --body-font: 'Spartan', sans-serif;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  
+}
+*{
+  font-family: 'Spartan', sans-serif; 
+}
+a{
+  text-decoration: none;
+}
+h1 {
+  font-family: 'Spartan', sans-serif;
+  color: var(--first-color);
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+span {
+  font-family: 'Spartan', sans-serif;
+}
+/* SPAN PARA DEIXAR QUALQUER TEXTO NEGRITO span_negrito */
+.span_negrito{
+  font-weight: bolder;
+}
+.stroke_divide{
+  width: 100%;
+  height: 2px;
+  background-color: var(--first-color);
+}
+.header{
+  
+  color: var(--first-color);
+  border-bottom: 3px solid #4ADAA8;
+  text-align: center;
+}
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+}
+.navbar{
+  height: 100%;
+  display: flex;
+  list-style: none;
+  text-decoration: none;
+  justify-content: space-evenly;
+  width: 40%;
+  color: var(--sub-color);
+  font-weight: 500;
+  font-size: 20px;
+}
+.navbar a{
+  color: var(--sub-color);
+  text-decoration: none;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-    color: #69B99D;
-    font-size: 20px;
-}
-
-img {
-    width: 100%;
-}
 
 
-/*====  HOME ============================ */
-#home {
-    overflow: hidden;
-  }
-  
-  #home .container {
-    grid-auto-flow: column;
-    justify-content: space-between;
-    margin: 1% 10%;
-  }
-  
-  #home .image {
-    order: 1;
-    float: right;
-    width: 300px;
-  }
-  
-  #home .image img_logo_company{
-    right: 47px;
-    width: 30%;
-    height: auto;
-    margin-left: 24px;
-    margin-right: 24px;
-  }
-  
-  #home .text {
-    order: 0;
-    max-width: 420px;
-    text-align: left;
-  
-  }
-  
-  #home .text h1 {
-    font-size: 32px;
-    margin-bottom: 16px;
-  }
-  
-  #home .text p {
-    margin-bottom: 32px;
-    color: white;
-    font-size: 22px;
-  }
-  
-  #home .button {
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .containernav{
-    background-color: #1a1b1c;
-    display: flex;
-    justify-content: center;
-    padding: 1.2%;
-    height: 70px;
-  }
-  
-  .containernav .gridnav #header_logo{
-    background-color: #1a1b1c;
-    font-weight: 1000;
-    font-size: 26px;
-    margin-top: 0.5%;
-  }
-  
-  .containernav .gridnav .title{
-    background-color: #1a1b1c;
-    font-weight: 100;
-    font-size: 20px;
-  }
-  
-  .gridnav{   
-    font-weight: 500;
-    display: flex;
-    height: 100%;
-    justify-content: space-evenly;
-    margin-top: 0.5%;
-    width: 80%;
-    list-style: none;
-  }
+
+
+
 
 /*====  VARIABLES ============================ */
 :root {
@@ -132,67 +110,57 @@ img {
 
    
     form {
-        font-family: Verdana,Tahoma,sans-serif;
+        display: flex;
         font-size: 15px;
         background-color: #3B3D3F;
-        max-width: 500px;
-        margin-left: 30%;
-        margin-top: 10%;
+        width: 600px;
+        height: 600px;
+     margin-left: 30%;
+      flex-direction: column;
+      justify-content: space-evenly;
         
     }
     
-    h1 {
-        margin-bottom: 20px;
-       text-align: center;
-        color: #69B99D;
-        text-shadow: 5px 5px 5px black;
-    }
+  .feedback input{
+    height: 10%;
+    width: 50%;
+  }
     
-    input, textarea {
-        width: 200px;
-        padding: 10px;
-        color: black;
-        margin-left:25px;
-        margin-top: 10px;
-        margin-right:200px;
-
-        border: 1px solid;
-    }
     
-    input:hover, textarea:hover, input:focus, textarea:focus {
-        border-color: #000066;
-        box-shadow: 5px 0px 9px #69B99D;
-        background-color: #69B99D;
-        color: black;
-        font-weight: bold;
-    }
+ #opnion{
+    height: 50%;
+    width: 80%;
+  }  
+  
     
     .enviar {
-        background-color: #69B99D;
-        height: 40px;
-        width: 100px;
-        font-weight: bold;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        border: 1px solid;
-        color: black;
-        margin-left: 40%;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      background-color: #4ADAA8;
+      color: #3B3D3F;
+      height: 10%;
+      width: 16%;
+      padding-left: 5%;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 5px;
+      font-family: 'Spartan', sans-serif;
+      transition: background 0.8s;
+    }
+    label{
+      margin-top: 3%;
+      font-size: 20px;
+    }
+    .enviar:hover {
+      background-color: #3B3D3F;
+      color: #4ADAA8;
     }
     
-    textarea {
-        width: 400px;
-        height: 120px;
-        line-height: 20px;
-        max-width: 400px;
-        margin-left: 50px;
-    }
+   
     
     form label {
-        margin-left: 15px;
         color: #FFFFFF;
-        font-weight: bold;
-        margin-right: 2px;
-       
+        font-weight: bold;  
     }
 
