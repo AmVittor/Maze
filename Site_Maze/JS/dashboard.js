@@ -15,12 +15,11 @@ const showMenu = (toggleId, navbarId, bodyId)=>{
     toggle.addEventListener('click', ()=>{
       navbar.classList.toggle('expander')
 
-      bodypadding.classList.toggle('body-pd')
     })
   }
 }
 /* mostra na tela os seguntes elementos: */
-showMenu('nav-toggle','navbar','body-pd')
+showMenu('nav-toggle','navbar')
 
 /*nav_link -> Resonsavel pelas cores e valores atribuidos quando o menu está expandido*/ 
 const linkColor = document.querySelectorAll('.nav_link')
