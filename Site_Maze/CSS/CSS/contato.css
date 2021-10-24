@@ -109,58 +109,25 @@ span {
     }
 
    
-    form {
-        display: flex;
-        font-size: 15px;
-        background-color: #3B3D3F;
-        width: 600px;
-        height: 600px;
-     margin-left: 30%;
-      flex-direction: column;
-      justify-content: space-evenly;
-        
-    }
-    
-  .feedback input{
-    height: 10%;
-    width: 50%;
-  }
-    
-    
+ 
+ .feedback{
+   display: flex;
+   height: 500px;
+   flex-direction: column;
+   padding-left: 15%;
+   color: #4ADAA8;
+  margin-bottom: 3%;
+ }
+ .feedback input{
+   width: 20%;
+   height: 16%;
+ }
  #opnion{
-    height: 50%;
-    width: 80%;
-  }  
-  
-    
-    .enviar {
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 18px;
-      background-color: #4ADAA8;
-      color: #3B3D3F;
-      height: 10%;
-      width: 16%;
-      padding-left: 5%;
-      display: inline-flex;
-      align-items: center;
-      border-radius: 5px;
-      font-family: 'Spartan', sans-serif;
-      transition: background 0.8s;
-    }
-    label{
-      margin-top: 3%;
-      font-size: 20px;
-    }
-    .enviar:hover {
-      background-color: #3B3D3F;
-      color: #4ADAA8;
-    }
-    
+   height: 60%;
+ }
+ .feedback textarea{
+   width: 600px;
+ }
    
     
-    form label {
-        color: #FFFFFF;
-        font-weight: bold;  
-    }
-
+ 
