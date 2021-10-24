@@ -1,9 +1,9 @@
 //validação cadastro
 function transformacoes() {
   var email = in_email.value;
-  var cpf = in_cpf.value;
+  var cpf = in_cnpj.value;
   var senha = in_senha.value;
-  var nome = in_senha.value;
+  var nome = in_nome.value;
 
   email = email.trim();
   cpf = cpf.trim();

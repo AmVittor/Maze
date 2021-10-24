@@ -110,7 +110,7 @@
 
 
   <!--                              LOGIN/CADASTRO                                  -->
-  <div class="acessar">
+  <div style="display: block;" id="div_login" class="acessar">
     <div class="container">
       <div class="login">
         <h1>Login</h1>
@@ -128,7 +128,7 @@
         <input maxlength="8" id="in_senha_login" type="password" placeholder="Senha">
 
         <div class="options">
-          <a class="button_login" href="">Entrar</a>
+          <a onclick="transformacoeslogin()" class="button_login" href="">Entrar</a>
         </div>
       </div>
     </div>
@@ -168,15 +168,3 @@
 
 </html>
 <script src="../JS/Caljs.js"></script>
-<!--
-
-   <i id="comentario">
-            Este resultado é apenas uma
-            estimativa. O valor
-            pode variar para
-            mais ou
-            menos.<br>
-            Dados sobre a quantidade de passageiros atualizados em Julho de 2021.<br>
-            Leva-se em conta que a probabilidade de venda do seu produto é de 1%<br>
-          </i>
--->
