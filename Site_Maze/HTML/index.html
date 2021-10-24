@@ -2,6 +2,8 @@
 <html lang="pt">
 
 <head>
+  <script src="../JS/Caljs.js"></script>
+  <script src="../JS/Tela_cadastro.js"></script>
   <meta charset="UTF-8">
   <link rel="shortcut icon" href="../CSS/Images/ico_maze.ico" type="image/x-icon">
   <link rel="stylesheet" href="../CSS/CSS/indexStyle.css">
@@ -21,7 +23,7 @@
         <li><a href="./sobreus.html">Sobre nós</a></li>
       </u>
       <h1>Maze</h1>
-      <u class="navbar">
+      <u id="nav_index" class="navbar">
         <li><a href="./cadastro.html">Cadastro</a></li>
         <li><a href="./dashboard.html">Dashboard</a></li>
       </u>
@@ -36,7 +38,7 @@
           Os nossos Dados, para que seu Negócio <span style="font-weight: bold;">cresça</span>,
           para quem quer ver <span style="font-weight: bold;">além</span>.
         </p>
-        <a class="button_main">Veja nossos dados</a>
+        <a href="../HTML/sobreus.html" class="button_main">Conheça mais sobre a Maze</a>
       </div>
       <div class="logo_img">
         <img src="../CSS/Images/maze_logo.png" alt="">
@@ -105,12 +107,12 @@
     </div>
   </div>
 
-  <div class="stroke_divide"> </div>
+  <div id="linha_login" class="stroke_divide"> </div>
 
 
 
   <!--                              LOGIN/CADASTRO                                  -->
-  <div style="display: block;" id="div_login" class="acessar">
+  <div id="div_login" class="acessar">
     <div class="container">
       <div class="login">
         <h1>Login</h1>
@@ -123,12 +125,12 @@
           <a href="https://web.facebook.com/?_rdc=1&_rdr" title="Google"><i class="fa fa-facebook">G</i></a>
           <a href="https://web.facebook.com/?_rdc=1&_rdr" title="Linkedin"><i class="fa fa-facebook">Li</i></a>
         </div>
+        <input maxlength="20" id="empresa_login" type="text" placeholder="Nome da empresa">
+        <input maxlength="20" id="email_login" type="text" placeholder="E-mail">
+        <input maxlength="8" id="senha_login" type="password" placeholder="Senha">
 
-        <input maxlength="20" id="in_email_login" type="text" placeholder="E-mail">
-        <input maxlength="8" id="in_senha_login" type="password" placeholder="Senha">
-
-        <div class="options">
-          <a onclick="transformacoeslogin()" class="button_login" href="">Entrar</a>
+        <div style="cursor: pointer;" onclick="login()" class="options">
+          <a class="button_login">Entrar</a>
         </div>
       </div>
     </div>
@@ -167,4 +169,3 @@
 </body>
 
 </html>
-<script src="../JS/Caljs.js"></script>

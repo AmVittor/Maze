@@ -281,6 +281,10 @@ img {
   margin: 16px 16px;
   font-family: var(--body-font);
 }
+.title_cards span{
+  margin: 16px 16px;
+  font-family: var(--body-font);
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
