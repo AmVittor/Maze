@@ -7,12 +7,13 @@
   <title>Maze Metro</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../CSS/CSS/dashboard_linha_azul.css">
+  <link rel="stylesheet" href="../CSS/CSS/dashboard_linha_azul_tucuruvi.css">
 
   <!-- JS CANVAS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
   <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
   <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+  <script src="../JS/tela_azul.js"></script>
   <style>
     canvas {
       -moz-user-select: none;
@@ -59,32 +60,35 @@
 
   <!-- Div no espaço em branco -> espaço para colocar as proximas partes -->
   <div class="title_dash">
-    <h1>Linha 1 - Azul</h1>
+    <h1>Linha 1 - Azul > <span>Tucuruvi</span></h1>
     <div class="content_linha_azul">
 
-      <div>
-        <div class="section_blue_line">
+    </div>
+  </div>
+  <div class="dash">
+    <div class="dash_space">
 
-          <!-- GRAFICO -->
-          <div class="grafico_linha_azul">
-            <div>
-              <h3>Gráfico anual</h1>
-
-                <div style="width: 700px;">
-                  <canvas id="chart" style="background-color: #2B2C2D" width="550" height="250"> </canvas>
-                </div>
-
+      <div class="dash_space_4">
+        <!-- GRAFICO -->
+        <div class="grafico_linha_azul">
+          <div>
+            <div style="width: 500px;">
+              <canvas id="chart" style="background-color: #2B2C2D" width="auto" height="auto"> </canvas>
             </div>
+
           </div>
         </div>
       </div>
 
-      <!-- LINHAS -->
+      <div class="dash_space_2"></div>
 
+      <div class="dash_space_3"></div>
+    </div>
+    <div class="dash_space_1">
       <div class="line_linha_azul">
         <div class="v2">
 
-          <a class="a_line_linha_azul" href="./dashboard_linha_azul_tucuruvi.html">
+          <a class="a_line_linha_azul" href="./dashboard.html">
             <div class="blue_line"></div>Tucuruvi
           </a>
           <a class="a_line_linha_azul" href="./dashboard.html">
@@ -157,12 +161,13 @@
         </div>
         <div class="vl"></div>
       </div>
-
-
     </div>
+  </div>
 
-    <!-- MAIN JS -->
-    <script src="../JS/dashboard.js"></script>
+
+
+  <!-- MAIN JS -->
+  <script src="../JS/dashboard.js"></script>
 </body>
 
 </html>
