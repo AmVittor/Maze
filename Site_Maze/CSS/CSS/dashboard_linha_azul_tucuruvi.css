@@ -44,7 +44,7 @@ z index é um elemento de empilhamento, logo um numero superior fica a frente de
   /* Cor de Texto: #4ADAA8 - (Verde Claro) */
   --text-color-secondary: #69B99D;
   
-  }
+}
 
 
 /* BASE */
@@ -274,34 +274,42 @@ span {
   display: flex-start;
   width: 80%;
   height: 490px;
+  margin-right: 20px;
 }
 
 .dash_space_1 {
-
+  display: inline-flex;
   width: 20%;
   height: 490px;
 }
 
 .dash_space_2 {
-  background-color: red;
   display: inline-flex;
   width: 50%;
-  height: 240px;
-  
+  height: 230px; 
 }
 
 .dash_space_3 {
-  background-color: blue;
   display: inline-flex;
   width: 49.5%;
-  height: 240px;
+  height: 230px;
   
 }
 
 .dash_space_4 {
-  width: 100%;
+  width: 50%;
+  display: inline-flex;
   height: 250px;
 }
+
+.dash_space_5 {
+  width: 49%;
+  display: inline-flex;
+  height: 250px;
+  justify-content: center;
+  padding: 5px;
+}
+
 
 /* Graficos */
 
