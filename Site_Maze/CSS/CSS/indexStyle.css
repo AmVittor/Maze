@@ -45,6 +45,8 @@ span {
 /* SPAN PARA DEIXAR QUALQUER TEXTO NEGRITO span_negrito */
 .span_negrito{
   font-weight: bolder;
+  color: #69B99D;
+  border-bottom: 2px solid #4ADAA8;
 }
 .stroke_divide{
   width: 100%;

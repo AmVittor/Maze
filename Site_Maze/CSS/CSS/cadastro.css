@@ -15,7 +15,9 @@ body{
 
 
 
-
+input{
+    outline: 0;
+}
 /**************   TODA A PARTE DE LOGIN                 *************************/
 #logo{
     height: 40px;
