@@ -365,7 +365,9 @@ span {
   align-items: flex-end;
   background-color: var(--base-color-primary);
 }
-
+input{
+  outline: 0;
+}
 footer{
   margin-top: 5%;
   position: relative;
