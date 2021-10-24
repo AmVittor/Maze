@@ -5,11 +5,6 @@
 
 - && operador de comparação logo, se toggle foi igual a navbar -> da inicio a função de expandir a tela de acordo com o padding do body
 */
-var empresa = localStorage.getItem("nome_empresa")
-em_login.innerHTML = `${empresa}`;
-// function empresa_login() {
-//   em_login.innerHTML = `${empresa}`;
-// }
 
 
 const showMenu = (toggleId, navbarId, bodyId) => {
@@ -34,3 +29,7 @@ function colorLink() {
   this.classList.add('active')
 }
 linkColor.forEach(l => l.addEventListener('click', colorLink))
+
+
+var empresa = localStorage.getItem("nome_empresa")
+em_login.innerHTML = `${empresa}`;

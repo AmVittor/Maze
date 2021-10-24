@@ -277,6 +277,11 @@ img {
 
 /*cards*/
 
+.title_cards{
+  display: flex;
+  justify-content: space-between;
+}
+
 .title_cards h1{
   margin: 16px 16px;
   font-family: var(--body-font);

@@ -187,8 +187,6 @@ span {
 
 /* CONTEUDO DA DASHBOARD */
 
-/* CARDS */
-
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
 /*====  RESET ============================ */
 * {
@@ -316,9 +314,6 @@ img {
   list-style-type: style;
 }
 
-.v2 .blue_line{
-
-}
 
 .v2 .blue_line:hover{
   color: var(--first-color);
