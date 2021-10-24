@@ -63,7 +63,6 @@ function transformacoeslogin() {
   }
 }
 
-
 /* function cadastrar() {
   div_cadastro.style.width = '540px'
   div_login.style.width = '360px'
