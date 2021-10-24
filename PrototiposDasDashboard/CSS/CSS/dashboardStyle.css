@@ -1,0 +1,334 @@
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+
+/*Variaveis CSS - Pré definições da pagina*/
+:root{
+  --nav-width: 92px;
+
+  /* Colors */
+  --first-color: #69B99D;
+  --bg-color: #222324;
+  --sub-color: #4ADAA8;
+  --white-color: #FFF;
+  
+  /* Fonts */
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: 16px;
+  --small-font-size: 14px;
+  
+  /* z index é um elemento de empilhamento, logo um numero superior fica a frente de um numero inferior (trabalha com o eixo z) */
+
+  --z-fixed: 100;
+
+/*====  VARIAVEIS  Cards ============================ */
+
+  /* --- Cores de fundo do site ---  */
+  /* Cor de Fundo Primaria: #222324 - (Escura) */
+  --base-color-primary: #222324;
+  /* Cor de Fundo Secundaria: #2B2C2D - (Clara, pórem não mais que a Terciaria) */
+  --base-color-secondary: #2B2C2D;
+  /* Cor de Fundo Terciaria: #3B3D3F - (Mais clara) */
+  --base-color-tertiary: #3B3D3F;
+  
+  /*	--- Cor para os Textos do Site --- */
+  /* Cor de Titulo: #69B99D - (Verde Escuro) */
+  
+  --title-color-primary: #ffff;
+  /* Cor de Texto: #4ADAA8 - (Verde Claro) */
+  --text-color-secondary: #4ADAA8;
+  
+  --title-color-primary: #69B99D;
+  /* Cor de Texto: #4ADAA8 - (Verde Claro) */
+  --text-color-secondary: #69B99D;
+  
+  }
+
+
+/* BASE */
+*,::before,::after{
+  box-sizing: border-box;
+}
+body{
+  position: relative;
+  margin: 0;
+  padding: 0px 0 0 93px;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font: 400 1rem 'DM Sans', sans-serif;
+  color: var(--title-color-primary);
+  background-color: var(--base-color-secondary);
+  transition: 0.5s;
+}
+
+h1{
+  margin: 0;
+  font-family: 'Spartan', sans-serif;
+  color: var(--title-color-primary);
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+
+span {
+  font-family: 'Spartan', sans-serif;
+}
+
+/* l NAV é a class que contem todos os filhos (elementos) */
+.l-navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--white-color);
+  padding: 24px 24px 32px;
+  transition: 0.5s;
+  z-index: var(--z-fixed);
+}
+
+/* NAV é a class que contem todos os filhos - Porém adiciona espaçamento para deparar os icones das spans */
+.nav{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+/*div pai do icone menu e texto Maze*/
+.nav_brand{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+/*class - a href do icone menu e texto Maze */
+.menu-toggle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  font-size: 24px;
+  width: 256px;
+}
+
+/*id e class - a href do icone menu e texto Maze */
+.menu-toggle, 
+.nav_toggle{
+  display: flex;
+  justify-content: space-between;
+}
+
+/*id - a href do icone menu e texto Maze */
+.nav_toggle{
+  cursor: pointer;
+  font-size: 20px;
+  width: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.nav_logo{
+  color: var(--white-color);
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.nav_link{
+  display: flex;
+  grid-template-columns: max-content;
+  align-items: center;
+  column-gap: 12px;
+  padding: 12px;
+  color: var(--white-color);
+  border-radius: 8px;
+  margin-bottom: 16px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.nav_link:hover{
+  background-color: var(--first-color);
+  transition: 0.5s;
+}
+
+.nav_icon{
+  font-size: 20px;
+  width: 24px;
+}
+
+.nav_name{
+  font-size: var(--small-font-size);
+}
+
+/* Expande o menu/sidebar */
+.expander{
+  width: calc(var(--nav-width) + 148px);
+}
+
+/* Adicona padding ao body */
+.body-pd{
+  padding: 32px 0 0 108px;
+}
+
+/* Active links menu */
+.active{
+  background-color: var(--first-color);
+}
+
+/* CONTEUDO DA DASHBOARD */
+
+/* CARDS */
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/*====  RESET ============================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li{
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  color:#69B99D;
+  font-size: 20px;
+}
+
+img {
+  width: 100%;
+}
+
+
+/* ====  BASE ============================ */
+#home .text {
+  order: 0;
+  max-width: 420px;
+  text-align: left;
+}
+
+#home .text h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+#home .text p {
+  margin-bottom: 32px;
+  color: white;
+  font-size: 22px;
+}
+
+#home .button {
+  text-align: center;
+  font-weight: bold;
+}
+
+.containernav{
+  background-color: #1a1b1c;
+  display: flex;
+  justify-content: center;
+  padding: 1.2%;
+  height: 70px;
+}
+
+.containernav .gridnav #header_logo{
+  background-color: #1a1b1c;
+  font-weight: 1000;
+  font-size: 26px;
+  margin-top: 0.5%;
+}
+
+.containernav .gridnav .title{
+  background-color: #1a1b1c;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.gridnav{   
+  font-weight: 500;
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  margin-top: 0.5%;
+  width: 80%;
+  list-style: none;
+}
+
+/* CORPO */ 
+.cointainer{
+  display: flex;
+  width: 70%;
+  margin: auto;
+  justify-content: space-between;
+}
+
+/*cards*/
+
+.title_cards h1{
+  margin: 16px 16px;
+  font-family: var(--body-font);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  box-sizing: border-box;
+}
+.cards_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  color: #10182f;
+}
+.card_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 10px;
+  background-color: var(--base-color-tertiary);
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 160px;
+  height: 225px;
+}
+
+.card-header img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.card-body p {
+  font-size: 13px;
+  margin: 0 0 40px;
+}
+
+.card-body h4 {
+  font-size: 13px;
+  margin: 0 0 16px;
+  color: var(--first-color);
+}
