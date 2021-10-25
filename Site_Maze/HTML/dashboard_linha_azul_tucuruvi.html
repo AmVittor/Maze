@@ -14,6 +14,7 @@
   <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
   <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
   <script src="../JS/tela_azul.js"></script>
+  <script src="../JS/dashboards_azul.js"></script>
   <style>
     canvas {
       -moz-user-select: none;
@@ -60,7 +61,7 @@
 
   <!-- Div no espaço em branco -> espaço para colocar as proximas partes -->
   <div class="title_dash">
-    <h1>Linha 1 - Azul > <span>Tucuruvi</span></h1>
+    <h1>Linha 1 - Azul > <span id='nome_linha'>Tucuruvi</span></h1>
     <div class="content_linha_azul">
 
     </div>
@@ -71,7 +72,7 @@
       <div class="dash_space_4">
         <!-- GRAFICO -->
         <div class="grafico_linha_azul">
-          <div style="width: 500px;">
+          <div style="width: 500px;" id='grafico_1'>
             <canvas id="chart" style="background-color: #2B2C2D" width="auto" height="auto"> </canvas>
           </div>
         </div>
@@ -79,19 +80,19 @@
 
       <div class="dash_space_5">
         <!-- GRAFICO -->
-        <div style="width: 500px; height: auto;">
+        <div style="width: 500px; height: auto;" id='grafico_4'>
           <canvas id="chart_4" style="background-color: #2B2C2D" width="auto" height="auto"> </canvas>
         </div>
       </div>
 
       <div class="dash_space_2">
-        <div style="width: 500px;">
+        <div style="width: 500px;" id='grafico_2'>
           <canvas id="chart_2" style="background-color: #2B2C2D" width="auto" height="auto"> </canvas>
         </div>
       </div>
 
       <div class="dash_space_3">
-        <div style="width: 500px;">
+        <div style="width: 500px;" id='grafico_3'>
           <canvas id="chart_3" style="background-color: #2B2C2D" width="auto" height="auto"> </canvas>
         </div>
       </div>
@@ -104,8 +105,8 @@
           <a class="a_line_linha_azul" href="./dashboard.html">
             <div class="blue_line"></div>Tucuruvi
           </a>
-          <a class="a_line_linha_azul" href="./dashboard.html">
-            <div class="blue_line">Parada Inglesa</div>
+          <a class="a_line_linha_azul" href="#">
+            <div class="blue_line" onclick="parada()">Parada Inglesa</div>
           </a>
           <a class="a_line_linha_azul" href="./dashboard.html">
             <div class="blue_line">Jardim São Paulo</div>
