@@ -1,11 +1,12 @@
 create database sprint2;
 use sprint2;
 
+
 -- Criação da tabela de cadastro da empresa --
 create table cadastroEmpresa(
 	idEmpresa int primary key auto_increment,
     nomeEmpresa varchar(60) not null,
-    CNPJ char(14) not null,
+    CNPJ varchar(25) not null,
     emailEmpresa varchar(60) not null,
     senhaEmpresa varchar(40) not null
 );
@@ -15,12 +16,13 @@ describe cadastroEmpresa;
 -- Criação da tabela de login da empresa --
 create table loginEmpresa (
 	idLoginEmpresa int primary key auto_increment,
-    CNPJ char(14) not null,
+    emailEmpresa varchar(60) not null,
     senhaEmpresa varchar(40)  not null,
     fkCadastro int
 );
 
 describe loginEmpresa;
+
 -- Criação de uma chave estrangeira ligando a tabela de login com a tabela de cadastro --
 alter table loginEmpresa add foreign key (fkCadastro)
 	references cadastroEmpresa(idEmpresa);
@@ -66,8 +68,10 @@ desc catraca;
 create table passagem(
 idPassagem int primary key auto_increment,
 registro int default(1),
+check (registro = 1),
 tempoPassagem datetime default current_timestamp, 
-fkCatraca int
+fkCatraca int,
+fkLinha int
 );
 
 desc passagem;
@@ -75,35 +79,44 @@ desc passagem;
 -- Criação de uma chave estrangeira ligando a tabela passagem com a catraca que foi utilizada
 alter table passagem add foreign key (fkCatraca) references catraca(idCatraca);
 
+-- Criação de uma chave estrangeira ligando a tabela passagem com a linha na qual foi registrada
+alter table passagem add foreign key (fkLinha) references linha(idLinha);
+
 -- Criação de uma tabela dos locais da estação, para um possível mapa térmico --
 create table Locais (
 	idLocais int primary key auto_increment,
 	nomeLocal varchar(150),
-    fkEstacao int,
-    fkEstacaoLinha int,
-    fkLogin int);
+    fkLinha int,
+    fkLogin int,
+    fkEstacao int);
     
 alter table Locais add foreign key (fkEstacao) references estacao(idEstacao);
-alter table Locais add foreign key (fkEstacaoLinha) references linha(idLinha);
-alter table Locais add foreign key (fkLogin) references loginEmpresa(idLogin);
+alter table Locais add foreign key (fkLinha) references linha(idLinha);
+alter table Locais add foreign key (fkLogin) references loginEmpresa(idLoginEmpresa);
+
+desc Locais;
 
 show tables;
 
 
-insert into usuario (nomeUsuario, CPF, emailUsuario, senhaUsuario) values
-('usuario1', '89339642902', 'usuario1@gmail.com', 'senhausuario1'),
-('usuario2', '95264626103', 'usuario2@gmail.com', 'senhausuario2'),
-('usuario3', '21459996984', 'usuario3@gmail.com', 'senhausuario3');
+insert into cadastroEmpresa (nomeEmpresa, CNPJ, emailEmpresa, senhaEmpresa) values
+('Empresa1', '59.933.311/0001-56', 'empresa1@empresa1.com', 'senhaempresa1'),
+('Empresa2', '02.773.554/0001-57', 'empresa2@empresa2.com', 'senhaempresa2'),
+('Empresa3', '18.970.865/0001-46', 'empresa3@empresa3.com', 'senhaempresa3'),
+('Empresa4', '38.656.605/0001-08', 'empresa4@empresa4.com', 'senhaempresa4'),
+('Empresa5', '74.647.472/0001-77', 'empresa5@empresa5.com', 'senhaempresa5');
 
-select * from usuario;
+select * from cadastroEmpresa;
 
 
-insert into empresa (nomeEmpresa, CNPJ, emailEmpresa, senhaEmpresa) values
-('empresa1', '3472423000105', 'empresa1@empresa.com.br', 'senhaempresa1'),
-('empresa2', '78865872000100', 'empresa2@empresa.com.br', 'senhaempresa2'),
-('empresa3', '16842193000168', 'empresa3@empresa.com.br', 'senhaempresa3');
+insert into loginEmpresa (emailEmpresa, senhaEmpresa, fkCadastro) values
+('empresa1@empresa1.com', 'senhaempresa1', 1),
+('empresa2@empresa2.com', 'senhaempresa2', 2),
+('empresa3@empresa3.com', 'senhaempresa3', 3),
+('empresa4@empresa4.com', 'senhaempresa4', 4),
+('empresa5@empresa5.com', 'senhaempresa5', 5);
 
-select * from empresa;
+select * from loginEmpresa;
 
 
 insert into linha values 
@@ -117,7 +130,7 @@ insert into linha values
 select * from linha;
 
 
-insert into estacao(nomeEstacao, linhaEstacao) values 
+insert into estacao(nomeEstacao, fkLinha) values 
 ('Tucuruvi', 1),
 ('Parada Inglesa', 1),
 ('Jardim São Paulo', 1),
@@ -143,7 +156,7 @@ insert into estacao(nomeEstacao, linhaEstacao) values
 ('Jabaquara', 1);
 
 
-insert into estacao(nomeEstacao, linhaEstacao) values 
+insert into estacao(nomeEstacao, fkLinha) values 
 ('Vila Madalena', 2), 
 ('Sumaré', 2), 
 ('Clínicas', 2), 
@@ -160,7 +173,7 @@ insert into estacao(nomeEstacao, linhaEstacao) values
 ('Vila Prudente', 2); 
 
 
-insert into estacao(nomeEstacao, linhaEstacao) values 
+insert into estacao(nomeEstacao, fkLinha) values 
 ('Barra funda', 3),
 ('Marechal Deodoro', 3),
 ('Santa Cecília', 3),
@@ -181,7 +194,7 @@ insert into estacao(nomeEstacao, linhaEstacao) values
 ('Corinthians - Itaquera', 3);
 
 
-insert into estacao(nomeEstacao, linhaEstacao) values
+insert into estacao(nomeEstacao, fkLinha) values
 ('Luz', 4),
 ('República', 4),
 ('Higienoólis-Mackenzie', 4),
@@ -195,7 +208,7 @@ insert into estacao(nomeEstacao, linhaEstacao) values
 ('Vila Sônia', 4);
 
 
-insert into estacao(nomeEstacao, linhaEstacao) values
+insert into estacao(nomeEstacao, fkLinha) values
 ('Capão Redondo', 5),
 ('Campo Limpo', 5),
 ('Vila das Belezas', 5),
@@ -215,7 +228,7 @@ insert into estacao(nomeEstacao, linhaEstacao) values
 ('Chácara Klabin', 5);
 
 
-insert into estacao(nomeEstacao, linhaEstacao) values
+insert into estacao(nomeEstacao, fkLinha) values
 ('Vila Prudente', 15),
 ('Oratório', 15),
 ('São Lucas', 15),
@@ -240,20 +253,56 @@ select * from estacao;
 insert into catraca (fkEstacao,statusCatraca) values
 	(1, 'ativa'),
 	(2, 'ativa'),
-	(3, 'ativa');
+	(3, 'ativa'),
+	(4, 'ativa'),
+	(5, 'ativa'),
+	(15, 'ativa'),
+	(3, 'ativa'),
+	(5, 'ativa'),
+	(15, 'ativa'),
+	(1, 'ativa'),
+	(1, 'ativa'),
+	(2, 'ativa'),
+	(3, 'ativa'),
+	(4, 'ativa'),
+	(4, 'ativa');
   
 select * from catraca;
 
 
-insert into passagem (catraca) values
-	(1),
-    (2),
-    (3);
+insert into passagem (fkCatraca, fkLinha) values
+	(1, 1),
+    (2, 2),
+    (3, 3),
+    (4, 4),
+    (5, 5),
+    (6, 15),
+    (7, 2),
+    (8, 1),
+    (9, 1),
+    (10, 15),
+    (11, 4),
+    (12, 3),
+    (13, 5),
+    (14, 2),
+    (15, 1);
 
 select * from passagem;
 
 select * from estacao join linha on fkLinha = idLinha;
 
-select * from catraca join estacao on fkEstacao = idEstacao;
+select * from catraca join estacao on fkEstacao = fkLinha;
 
 select * from passagem join catraca on fkCatraca = idCatraca;
+
+select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Azul';
+
+select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Verde';
+
+select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Vermelha';
+
+select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Amarela';
+
+select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Lilás';
+
+select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Prata';
