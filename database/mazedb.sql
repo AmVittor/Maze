@@ -1,7 +1,6 @@
 create database sprint2;
 use sprint2;
 
-
 -- Criação da tabela de cadastro da empresa --
 create table cadastroEmpresa(
 	idEmpresa int primary key auto_increment,
@@ -36,7 +35,6 @@ nomeLinha varchar(30) not null
 
 describe linha;
 
-
 -- Criação da tabela das estações que estão nas linhas
 create table estacao(
 idEstacao int primary key auto_increment,
@@ -48,7 +46,6 @@ fkLinha int
 alter table estacao add foreign key (fkLinha) references linha (idLinha);
 
 desc estacao;
-
 
 -- Por uma questão de segurança criamos a tabela catraca para sabermos onde ela está caso não esteja funcionando corretamente --
 create table catraca(
@@ -71,7 +68,8 @@ registro int default(1),
 check (registro = 1),
 tempoPassagem datetime default current_timestamp, 
 fkCatraca int,
-fkLinha int
+fkLinha int,
+fkEstacao int
 );
 
 desc passagem;
@@ -81,6 +79,9 @@ alter table passagem add foreign key (fkCatraca) references catraca(idCatraca);
 
 -- Criação de uma chave estrangeira ligando a tabela passagem com a linha na qual foi registrada
 alter table passagem add foreign key (fkLinha) references linha(idLinha);
+
+-- Criação de uma chave estrangeira ligando a tabela passsagem com a estação na qual foi registrada
+alter table passagem add foreign key (fkLinha) references estacao(idEstacao);
 
 -- Criação de uma tabela dos locais da estação, para um possível mapa térmico --
 create table Locais (
@@ -265,27 +266,81 @@ insert into catraca (fkEstacao,statusCatraca) values
 	(2, 'ativa'),
 	(3, 'ativa'),
 	(4, 'ativa'),
-	(4, 'ativa');
+	(4, 'ativa'),
+	(4, 'ativa'),
+	(4, 'ativa'),
+	(4, 'ativa'),
+	(4, 'ativa'),
+	(4, 'ativa'),
+	(4, 'ativa'),
+	(4, 'ativa'),
+	(4, 'ativa'),
+	(1, 'ativa'),
+	(1, 'ativa'),
+	(2, 'ativa'),
+	(2, 'ativa'),
+	(2, 'ativa'),
+	(2, 'ativa'),
+	(3, 'ativa'),
+	(3, 'ativa'),
+	(3, 'ativa'),
+	(3, 'ativa'),
+	(5, 'ativa'),
+	(5, 'ativa'),
+	(5, 'ativa'),
+	(5, 'ativa'),
+	(5, 'ativa'),
+	(15, 'ativa'),
+	(15, 'ativa'),
+	(15, 'ativa'),
+	(15, 'ativa'),  
+	(15, 'ativa');  
   
 select * from catraca;
 
 
-insert into passagem (fkCatraca, fkLinha) values
-	(1, 1),
-    (2, 2),
-    (3, 3),
-    (4, 4),
-    (5, 5),
-    (6, 15),
-    (7, 2),
-    (8, 1),
-    (9, 1),
-    (10, 15),
-    (11, 4),
-    (12, 3),
-    (13, 5),
-    (14, 2),
-    (15, 1);
+insert into passagem (fkCatraca, fkLinha, fkEstacao) values
+	(1, 1, 5),
+    (2, 2, 43),
+    (3, 3, 7),
+    (4, 4, 21),
+    (5, 5, 14),
+    (6, 15, 24),
+    (7, 2, 52),
+    (8, 1, 67),
+    (9, 1, 35),
+    (10, 15, 2),
+    (11, 4, 61),
+    (12, 3, 61),
+    (13, 5, 61),
+    (14, 2, 15),
+    (15, 1, 5),
+    (1, 2, 81),
+    (2, 3, 18),
+    (3, 4, 78),
+    (4, 5, 73),
+    (5, 15, 98),
+    (6, 1, 15),
+    (7, 2, 37),
+    (8, 3, 19),
+    (9, 4, 83),
+    (10, 5, 7),
+    (11, 15, 71),
+    (12, 1, 91),
+    (13, 2, 62),
+    (14, 3, 10),
+    (15, 4, 50),
+    (1, 15, 71),
+    (2, 15, 71),
+    (3, 15, 71),
+    (4, 15, 71),
+    (5, 3, 61),
+    (6, 3, 61),
+    (7, 3, 61),
+    (8, 3, 61),
+    (9, 3, 61);
+    
+    
 
 select * from passagem;
 
@@ -295,7 +350,7 @@ select * from catraca join estacao on fkEstacao = fkLinha;
 
 select * from passagem join catraca on fkCatraca = idCatraca;
 
-select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Azul';
+select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha  where nomeLinha = 'Azul';
 
 select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Verde';
 
