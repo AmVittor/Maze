@@ -12,10 +12,10 @@ var context_parada1 = document.getElementById("parada_1").getContext("2d");
       labels: ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
       datasets: [{
         label: ["volume de pessoas"],
-        data: ["280000", "340000", "295000", "260000", "330000", "403000", "250000", "190000", "365000", "440000", "450000", "300000"],
+        data: ["29500", "24000", "2000", "6600", "1000", "13000", "18500", "19000", "9500", "27650", "25950", "13500"],
         type: 'bar',
-        borderColor: ['#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9', '#6E95F9',],
-        backgroundColor: ['#00FF00', '#00FF00', '#00FF00', '#00FF00', '#00FF00', '#00FF00', '#00FF00', '#00FF00', '#00FF00', '#00FF00', '#00FF00', '#00FF00',],
+        borderColor: ['#009900', '#009900', '#FF0000', '#FFA500', '#FFFF00', '#FFFF00', '#00FF00', '#00FF00', '#FFA500', '#009900', '#009900', '#FFFF00',],
+        backgroundColor: ['#009900', '#009900', '#FF0000', '#FFA500', '#FF0000', '#FFFF00', '#00FF00', '#00FF00', '#FFA500', '#009900', '#009900', '#FFFF00',],
       }]
     },
     options: {
@@ -177,13 +177,13 @@ var context_parada2 = document.getElementById("parada_2").getContext("2d");
     var configuration_parada4 = {
         type: 'doughnut',
     data: {
-      labels: ["Alerta 1", "Alerta 2", "Alerta 3", "Alerta 4"],
+      labels: ["Bom", "Mediano", "Risco", "Alerta","Excelente"],
       datasets: [{
         label: ["Numero de Alertas"],
-        data: ["4", "3", "5", "3"],
+        data: ["2", "2", "2", '2',"4"],
         type: 'doughnut',
-        borderColor: ['#00FF00', '#FFFF00', '#FF0000', '#009900'],
-        backgroundColor: ['#00FF00', '#FFFF00', '#FF0000', '#009900'],
+        borderColor: ['#00FF00', '#FFFF00', '#FF0000','#FFA500' ,'#009900'],
+        backgroundColor: ['#00FF00', '#FFFF00', '#FF0000','#FFA500' ,'#009900'],
       }]
     },
     options: {
