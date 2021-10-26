@@ -41,6 +41,18 @@
   --title-color-primary: #69B99D;
   /* Cor de Texto: #4ADAA8 - (Verde Claro) */
   --text-color-secondary: #69B99D;
+
+  /* CARDS */
+  --card-color-azul: #2c6ff7;
+  --card-color-verde: #61d897;
+  --card-color-vermelha: #EF3131;
+  --card-color-amarela: #8FFF00;
+  --card-color-lilas: #C8A2C8;
+  --card-color-rubi: #860f29;
+  --card-color-diamante: #DCEDEC;
+  --card-color-esmeralda: #50C878;
+  --card-color-turquesa: #40E0D0;
+  --card-color-coral: #FF7F50;
   
   }
 
@@ -213,6 +225,8 @@ img {
 }
 
 
+
+
 /* ====  BASE ============================ */
 #home .text {
   order: 0;
@@ -347,4 +361,44 @@ img {
   font-size: 13px;
   margin: 0 0 16px;
   color: var(--first-color);
+}
+
+.azul h4{
+  color: var(--card-color-azul);
+}
+
+.verde h4{
+  color: var(--card-color-verde);
+}
+
+.vermelha h4{
+  color: var(--card-color-vermelha);
+}
+
+.amarela h4{
+  color: var(--card-color-amarela);
+}
+
+.lilas h4{
+  color: var(--card-color-lilas);
+}
+
+.rubi h4{
+  color: var(--card-color-rubi);
+}
+
+.diamante h4{
+ color: var(--card-color-diamante);
+}
+
+.esmeralda h4{
+  color: var(--card-color-esmeralda);
+}
+
+.turquesa h4{
+  color: var(--card-color-turquesa);
+}
+
+.coral h4{
+  color: var(--card-color-coral);
 }
