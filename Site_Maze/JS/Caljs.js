@@ -1,3 +1,29 @@
+//validação Sobre nós
+function enviar_msg() {
+    var email = emailid.value;
+    var mensagem = opnion.value;
+    var nome = nomeid.value;
+    email = email.trim();
+    mensagem = mensagem.trim();
+    nome = nome.trim();
+
+        if (email.trim() == "") {
+            alert("E-mail em branco")
+        } else if (email.indexOf(".com") == -1) {
+            alert("Email falta .com");
+        } else if (email.indexOf("@") == -1) {
+            alert("email em branco")
+        } else if (nome == "") {
+            alert("Nome em branco")
+        } else if (nome.length < 3) {
+            alert("Nome muito curto")
+        } else if (mensagem == "") {
+            alert("Mensagem em branco")
+        } else {
+            alert("Mensagem enviada");
+        }
+    }
+
 // localStorage.setItem('email', 'teste@bandtec.com.br')
 // localStorage.setItem('passaword', 1234)
 var email = localStorage.getItem('email')
