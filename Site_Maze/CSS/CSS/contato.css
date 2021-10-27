@@ -11,8 +11,8 @@ body{
 
 :root{
   /* Colors */
-  --first-color: #69B99D;
-  --sub-color: #4ADAA8;
+  --first-color: #fff;
+  --sub-color: #fff;
 
   --bg-color: #222324;
  
@@ -32,7 +32,7 @@ a{
 }
 h1 {
   font-family: 'Spartan', sans-serif;
-  color: var(--first-color);
+  color: #4ADAA8;
 }
 body{
   padding: 0;
@@ -100,17 +100,17 @@ span {
     
     --title-color-primary: #ffff;
     /* Cor de Texto: #4ADAA8 - (Verde Claro) */
-    --text-color-secondary: #4ADAA8;
+    --text-color-secondary: #fff;
     
-    --title-color-primary: #69B99D;
+    --title-color-primary: #fff;
     /* Cor de Texto: #4ADAA8 - (Verde Claro) */
-    --text-color-secondary: #69B99D;
+    --text-color-secondary: #fff;
     
     }
 
     .span_negrito{
       font-weight: bolder;
-      color: #69B99D;
+      color: #fff;
       border-bottom: 2px solid #4ADAA8;
     }
  
