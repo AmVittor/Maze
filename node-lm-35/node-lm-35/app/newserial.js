@@ -16,7 +16,7 @@ class ArduinoRead {
 
     fake_data() {
         setInterval(() => {
-            let data_float = sensors.trc5000();
+            let data_float = sensors.lm35();
 
             if (this.listData.length === 59) {
                 let sum = this.listData.reduce((a, b) => a + b, 0);
@@ -25,7 +25,7 @@ class ArduinoRead {
                     this.listData.pop();
                 } 
             }
-            console.log('Data', data_float);
+            console.log(data_float);
             this.listData.push(data_float);
         }, 2000);
     }
