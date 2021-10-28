@@ -7,22 +7,22 @@ function enviar_msg() {
     mensagem = mensagem.trim();
     nome = nome.trim();
 
-        if (email.trim() == "") {
-            alert("E-mail em branco")
-        } else if (email.indexOf(".com") == -1) {
-            alert("Email falta .com");
-        } else if (email.indexOf("@") == -1) {
-            alert("email em branco")
-        } else if (nome == "") {
-            alert("Nome em branco")
-        } else if (nome.length < 3) {
-            alert("Nome muito curto")
-        } else if (mensagem == "") {
-            alert("Mensagem em branco")
-        } else {
-            alert("Mensagem enviada");
-        }
+    if (email.trim() == "") {
+        alert("E-mail em branco")
+    } else if (email.indexOf("@") == -1) {
+        alert("email sem @")
+    } else if (email.indexOf(".com") == -1) {
+        alert("Email falta .com");
+    } else if (nome == "") {
+        alert("Nome em branco")
+    } else if (nome.length < 3) {
+        alert("Nome muito curto")
+    } else if (mensagem == "") {
+        alert("Mensagem em branco")
+    } else {
+        alert("Mensagem enviada");
     }
+}
 
 
 var linha_selecionada;

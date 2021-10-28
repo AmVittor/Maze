@@ -33,3 +33,9 @@ linkColor.forEach(l => l.addEventListener('click', colorLink))
 
 var empresa_loc = localStorage.getItem('nome_emp')
 em_login.innerHTML = `${empresa_loc}`;
+
+function sair(){
+  localStorage.setItem('email_emp', ` `)
+    localStorage.setItem('passaword_emp', ` `)
+    localStorage.setItem("nome_emp", ` `)
+}
