@@ -17,7 +17,9 @@
   --normal-font-size: 16px;
   --small-font-size: 14px;
   
-  /* z index é um elemento de empilhamento, logo um numero superior fica a frente de um numero inferior (trabalha com o eixo z) */
+/* 
+z index é um elemento de empilhamento, logo um numero superior fica a frente de um numero inferior (trabalha com o eixo z) 
+*/
 
   --z-fixed: 100;
 
@@ -42,7 +44,7 @@
   /* Cor de Texto: #4ADAA8 - (Verde Claro) */
   --text-color-secondary: #69B99D;
   
-  }
+}
 
 
 /* BASE */
@@ -187,29 +189,6 @@ span {
 
 /* CONTEUDO DA DASHBOARD */
 
-@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
-/*====  RESET ============================ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-li{
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-  font-size: 20px;
-}
-
-img {
-  width: 100%;
-}
-
-
 /* ====  BASE ============================ */
 #home .text {
   order: 0;
@@ -282,13 +261,63 @@ img {
   font-family: var(--body-font);
 }
 
+/*Espaço para os graficos*/
+.dash {
+  margin: auto;
+  text-align: center;
+  display: flex;
+  padding: 0%;
+  margin: 0%;
+}
+
+.dash_space {
+  display: flex-start;
+  width: 80%;
+  height: 490px;
+  margin-right: 20px;
+}
+
+.dash_space_1 {
+  display: inline-flex;
+  width: 20%;
+  height: 490px;
+}
+
+.dash_space_2 {
+  display: inline-flex;
+  width: 50%;
+  height: 230px; 
+}
+
+.dash_space_3 {
+  display: inline-flex;
+  width: 49.5%;
+  height: 230px;
+  
+}
+
+.dash_space_4 {
+  width: 50%;
+  display: inline-flex;
+  height: 250px;
+  justify-content: flex-start;
+  padding-right: 20px;
+}
+
+.dash_space_5 {
+  width: 49%;
+  display: inline-flex;
+  height: 250px;
+  justify-content: center;
+  padding: 5px;
+}
+
+
+/* Graficos */
 
 /*GRAFICO*/
 
 .grafico_linha_azul{
-  width: 80%;
-  height: 350px;
-  margin-left: 12%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -312,12 +341,6 @@ img {
   text-align: right;
   padding-right: 8px;
   list-style-type: style;
-}
-
-
-.v2 .blue_line:hover{
-  color: var(--first-color);
-  transition: 0.5s;
 }
 
 .a_line_linha_azul{
