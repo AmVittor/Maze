@@ -297,23 +297,19 @@ span {
 }
 
 .dash_space_4 {
-  width: 50%;
-  display: inline-flex;
-  height: 250px;
-  justify-content: flex-start;
-  padding-right: 20px;
-}
-
-.dash_space_5 {
   width: 49%;
   display: inline-flex;
   height: 250px;
-  justify-content: center;
-  padding: 5px;
+  justify-content: flex-start;
 }
 
-
-/* Graficos */
+.dash_space_5 {
+  width: 50%;
+  display: inline-flex;
+  height: 250px;
+  justify-content: center;
+  padding-right: 50px;
+}
 
 /*GRAFICO*/
 
@@ -321,6 +317,8 @@ span {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 700px;
+  padding-right: 50px;
 }
 
 /* linhas */
