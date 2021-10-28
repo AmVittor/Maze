@@ -5,7 +5,6 @@ function transformacoes() {
   var senha = in_senha.value;
   var nome = in_nome.value;
   var empresa = in_nome_emp.value;
-  localStorage.setItem("nome_empresa", `${empresa}`);
   email = email.trim();
   cpf = cpf.trim();
   senha = senha.trim();
@@ -31,18 +30,24 @@ function transformacoes() {
     alert("senha em branco")
   } else {
     alert("Bem-vindo!");
+    localStorage.setItem('email_emp', `${email}`)
+    localStorage.setItem('passaword_emp', `${senha}`)
+    localStorage.setItem("nome_emp", `${empresa}`)
     href("../HTML/dashboard.html")
   }
+
 }
 
-
+var email_local = 0
+var senha_local = 0
 //validação login
 function login() {
   var email = email_login.value;
   var senha = senha_login.value;
   var empresa = empresa_login.value;
-  localStorage.setItem("nome_empresa", `${empresa}`);
-  var empresa_local = localStorage.getItem("nome_empresa");
+  email_local = localStorage.getItem('email_emp')
+  senha_local = localStorage.getItem('passaword_emp')
+  var empresa_loc = localStorage.getItem('nome_emp')
   if (email.trim() == "") {
     alert("E-mail em branco")
   }
@@ -57,13 +62,24 @@ function login() {
     alert("E-mail muito curto")
   } else if (senha == "") {
     alert("Senha em branco")
-  } else {
+  }
+  else if (empresa != empresa_loc) {
+    alert("empresa incorreta ou não existente")
+  } 
+  else if (email != email_local) {
+    alert("email incorreta")
+  } 
+  else if (senha != senha_local) {
+    alert("Senha incorreta")
+  } 
+  else {
     alert("Bem-vindo!");
     div_login.style.display = "none";
     linha_login.style.display = "none";
     nav_index.innerHTML = `
         <li><a href="./dashboard.html">Dashboard</a></li>
-        <li><a style="margin-left: 2%;" href="./cadastro.html">${empresa_local}</a></li>`
-
+        <li><a style="margin-left: 2%;" href="./cadastro.html">${empresa_loc}</a></li>`
+        
   }
+  
 }

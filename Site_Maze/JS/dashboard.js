@@ -31,5 +31,5 @@ function colorLink() {
 linkColor.forEach(l => l.addEventListener('click', colorLink))
 
 
-var empresa = localStorage.getItem("nome_empresa")
-em_login.innerHTML = `${empresa}`;
+var empresa_loc = localStorage.getItem('nome_emp')
+em_login.innerHTML = `${empresa_loc}`;
