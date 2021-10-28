@@ -14,26 +14,29 @@ function transformacoes() {
 
   if (email.trim() == "") {
     alert("E-mail em branco")
+  }else if (email.indexOf("@") == -1) {
+    alert("email sem @")
   }
   else if (email.indexOf(".com") == -1) {
     alert("Email falta .com");
-  } else if (email.indexOf("@") == -1) {
-    alert("email em branco")
-
-  } else if (nome == "") {
+  }  else if (nome == "") {
     alert("Nome em branco")
   } else if (nome.length < 3) {
     alert("Nome muito curto")
-  } else if (cpf == "") {
+  } else if(empresa == ''){
+    alert("Empresa em branco")
+  }
+  else if (cpf == "") {
     alert("CNPJ em branco")
   } else if (senha == "") {
     alert("senha em branco")
   } else {
-    alert("Bem-vindo!");
+    alert("Cadastro feito com Sucesso!");
     localStorage.setItem('email_emp', `${email}`)
     localStorage.setItem('passaword_emp', `${senha}`)
     localStorage.setItem("nome_emp", `${empresa}`)
-    href("../HTML/dashboard.html")
+    window.location.href = 'index.html'
+   
   }
 
 }
@@ -51,11 +54,11 @@ function login() {
   if (email.trim() == "") {
     alert("E-mail em branco")
   }
-  else if (email.indexOf(".com") == -1) {
-    alert("Email falta .com");
-  } else if (email.indexOf("@") == -1) {
-    alert("email em branco")
+   else if (email.indexOf("@") == -1) {
+    alert("email sem @")
 
+  }else if (email.indexOf(".com") == -1) {
+    alert("Email falta .com");
   } else if (senha == "") {
     alert("Senha em branco")
   } else if (email.length < 6) {
@@ -78,8 +81,7 @@ function login() {
     linha_login.style.display = "none";
     nav_index.innerHTML = `
         <li><a href="./dashboard.html">Dashboard</a></li>
-        <li><a style="margin-left: 2%;" href="./cadastro.html">${empresa_loc}</a></li>`
-        
+        <li><a style="margin-left: 2%;" >${empresa_loc}</a></li>`
   }
   
 }

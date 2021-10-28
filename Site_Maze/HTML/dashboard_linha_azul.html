@@ -52,7 +52,7 @@
       </div>
 
       <a href="./index.html" class="nav_link">
-        <span><img src="../CSS/icon/logout.png" class="nav_icon"></span>
+        <span><img src="../CSS/icon/logout.png" class="nav_icon" onclick="sair()"></span>
         <span class="nav_name">Sair</span>
       </a>
     </nav>
@@ -180,6 +180,7 @@
 
   <!-- MAIN JS -->
   <script src="../JS/dashboard.js"></script>
+  <script src="../JS/validacaoURL.js"></script>
 </body>
 
 </html>
@@ -401,4 +402,9 @@
   //adicionando esses valores a um novo gráfico na tag canvas
   var chart_4 = new Chart(context_4, configuration_4);
 
+  function sair(){
+  localStorage.setItem('email_emp', ` `)
+    localStorage.setItem('passaword_emp', ` `)
+    localStorage.setItem("nome_emp", ` `)
+}
 </script>
