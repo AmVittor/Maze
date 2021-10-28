@@ -14,8 +14,8 @@ var context_parada1 = document.getElementById("parada_1").getContext("2d");
         label: ["volume de pessoas"],
         data: ["29500", "24000", "2000", "6600", "1000", "13000", "18500", "19000", "9500", "27650", "25950", "13500"],
         type: 'bar',
-        borderColor: ['#009900', '#009900', '#FF0000', '#FFA500', '#FFFF00', '#FFFF00', '#00FF00', '#00FF00', '#FFA500', '#009900', '#009900', '#FFFF00',],
-        backgroundColor: ['#009900', '#009900', '#FF0000', '#FFA500', '#FF0000', '#FFFF00', '#00FF00', '#00FF00', '#FFA500', '#009900', '#009900', '#FFFF00',],
+        borderColor: ['#118547', '#118547', '#FF0000', '#FFA500', '#FFFF00', '#FFFF00', '#00FF00', '#00FF00', '#FFA500', '#118547', '#118547', '#FFFF00',],
+        backgroundColor: ['#118547', '#118547', '#FF0000', '#FFA500', '#FF0000', '#FFFF00', '#00FF00', '#00FF00', '#FFA500', '#118547', '#118547', '#FFFF00',],
       }]
     },
     options: {
@@ -146,7 +146,7 @@ var context_parada2 = document.getElementById("parada_2").getContext("2d");
               },
               scaleLabel: {
                 display: true,
-                labelString: 'Meses do ano',
+                labelString: 'Horario',
                 fontColor: "#4ADAA8"
               }
     
@@ -177,13 +177,13 @@ var context_parada2 = document.getElementById("parada_2").getContext("2d");
     var configuration_parada4 = {
         type: 'doughnut',
     data: {
-      labels: ["Bom", "Mediano", "Risco", "Alerta","Excelente"],
+      labels: ["Bom", "Comum", "Crítico", "Risco","Excelente"],
       datasets: [{
         label: ["Numero de Alertas"],
         data: ["2", "2", "2", '2',"4"],
         type: 'doughnut',
-        borderColor: ['#00FF00', '#FFFF00', '#FF0000','#FFA500' ,'#009900'],
-        backgroundColor: ['#00FF00', '#FFFF00', '#FF0000','#FFA500' ,'#009900'],
+        borderColor: ['#00FF00', '#FFFF00', '#FF0000','#FFA500' ,'#118547'],
+        backgroundColor: ['#00FF00', '#FFFF00', '#FF0000','#FFA500' ,'#118547'],
       }]
     },
     options: {
@@ -236,8 +236,8 @@ function tucuruvi(){
           label: ["volume de pessoas"],
           data: ["280000", "340000", "295000", "260000", "330000", "403000", "250000", "190000", "365000", "440000", "450000", "300000"],
           type: 'bar',
-          borderColor: ['#eef414','#00f01f','#00f01f','#eef414','#00f01f','#009900','#FFA500','#d3000d','#00f01f','#009900','#009900','#eef414'],
-          backgroundColor: ['#eef414','#00f01f','#00f01f','#eef414','#00f01f','#009900','#FFA500','#d3000d','#00f01f','#009900','#009900','#eef414'],
+          borderColor: ['#eef414','#00f01f','#00f01f','#eef414','#00f01f','#118547','#FFA500','#d3000d','#00f01f','#118547','#118547','#eef414'],
+          backgroundColor: ['#eef414','#00f01f','#00f01f','#eef414','#00f01f','#118547','#FFA500','#d3000d','#00f01f','#118547','#118547','#eef414'],
         }]
       },
       options: {
@@ -373,7 +373,7 @@ function tucuruvi(){
             },
             scaleLabel: {
               display: true,
-              labelString: 'Meses do ano',
+              labelString: 'Horario',
               fontColor: "#4ADAA8"
             }
   
@@ -406,13 +406,13 @@ function tucuruvi(){
     var configuration_4 = {
       type: 'doughnut',
       data: {
-        labels: ["Bom", "Mediano", "Risco", "Alerta","Excelente"],
+        labels: ["Bom", "Comum", "Crítico", "Risco","Excelente"],
         datasets: [{
           label: ["Numero de Alertas"],
           data: ["4", "2", "1", '2',"3"],
           type: 'doughnut',
-          borderColor: ['#00FF00', '#FFFF00', '#FF0000','#FFA500' ,'#009900'],
-          backgroundColor: ['#00FF00', '#FFFF00', '#FF0000','#FFA500' ,'#009900'],
+          borderColor: ['#00FF00', '#FFFF00', '#FF0000','#FFA500' ,'#118547'],
+          backgroundColor: ['#00FF00', '#FFFF00', '#FF0000','#FFA500' ,'#118547'],
         }]
       },
       options: {
