@@ -53,6 +53,9 @@
   --card-color-esmeralda: #50C878;
   --card-color-turquesa: #40E0D0;
   --card-color-coral: #FF7F50;
+  --card-color-safira: #36639b;
+  --card-color-jade: #00a86b;
+  --card-color-prata: #c0c0c0;
 }
 
 
@@ -419,4 +422,16 @@ img {
 
 .coral h4{
   color: var(--card-color-coral);
+}
+
+.safira h4{
+  color: var(--card-color-safira);
+}
+
+.jade h4{
+  color: var(--card-color-jade);
+}
+
+.prata h4{
+  var(--card-color-prata);
 }
