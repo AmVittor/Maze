@@ -38,7 +38,8 @@ Este projeto tem como ideia controlar o fluxo de pessoas nas linhas de metrô de
 
 
 
-![image](https://user-images.githubusercontent.com/84856203/139486636-342bfd09-1e5a-4a4a-858c-2f45bb009d35.png) <br> <br>
+![image](https://user-images.githubusercontent.com/84856203/139486767-0733157a-5e3d-44ea-861b-38a528548539.png)
+ <br> <br>
 
 
 
@@ -52,5 +53,6 @@ Este projeto tem como ideia controlar o fluxo de pessoas nas linhas de metrô de
 
 # Tabelas banco de dados
 
+![modelagem_linha_cheia](https://user-images.githubusercontent.com/84856203/139486827-2e453201-fcbd-4c6f-91ff-31c4316bf91a.png)
 
 
