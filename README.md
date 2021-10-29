@@ -11,25 +11,24 @@ Este projeto tem como ideia controlar o fluxo de pessoas nas linhas de metrô de
 'HTML, CSS, JavaScript e MySQL Workbench'
 ```
 
-### Em andamento:
-- 🔲 Escopo do projeto
+### Concluído:
+- ✅ Escopo do projeto
 - ✅ Backlog do projeto
 - ✅ Identidade visual da empresa
-- 🔲 Banco de dados
-- 🔲 Apresentação do projeto
-- 🔲 Apresentação em PowerPoint
+- ✅ Banco de dados
+- ✅ Apresentação do projeto
+- ✅ Apresentação em PowerPoint
 
 
 # Site da empresa
 
-- 🔲 Linkar calculadora CNPJ
+- ✅ Linkar calculadora CNPJ
 - ✅ Home do site
-- 🔲 Select CNPJ/Pessoa física
-- 🔲 Carrossel de feedback
-- 🔲 Linhas parceiras 
-- 🔲 Tirar do protótipo os cards
-- 🔲 Tela do dashbord
-- 🔲 CSS DO login
+- ✅ Input CNPJ
+- ✅ Linhas parceiras 
+- ✅ Tirar do protótipo os cards
+- ✅ Tela do dashbord
+- ✅ CSS DO login
 
 # Visual do site
 
