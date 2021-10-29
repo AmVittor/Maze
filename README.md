@@ -36,6 +36,12 @@ Este projeto tem como ideia controlar o fluxo de pessoas nas linhas de metrô de
 
 # Visual do site
 
+
+
+![image](https://user-images.githubusercontent.com/84856203/139486636-342bfd09-1e5a-4a4a-858c-2f45bb009d35.png) <br> <br>
+
+
+
 ░▄▄▄▄░ <br>
 ▀▀▄██► <br>
 ▀▀███► <br>
