@@ -311,7 +311,6 @@ img {
   align-items: center;
   display: flex;
   padding: 5px;
-
 }
 
 .name_login {
@@ -383,6 +382,8 @@ img {
   margin: 0 0 16px;
   color: var(--first-color);
 }
+
+/* TITTLE CARDS COLORS */
 
 .azul h4{
   color: var(--card-color-azul);

@@ -9,22 +9,24 @@
 a{
     text-decoration: none;
 }
+
 body{
     background-color: #202124;
     font-family: 'Spartan', sans-serif;
     color: white;
 }
+
 input{
-    outline: 0;
-    
+    outline: 0;  
 }
+
 /**************   TODA A PARTE DE LOGIN                 *************************/
 .footer-social-links{
     font-size: 14px;
     font-weight: bold;
     text-align: center;
-  
 }
+
 #bota_cad{
     outline: 0;
     border: 0;
@@ -37,15 +39,14 @@ input{
     margin: 0 5px;
     text-align: center;
     display: inline-block;
-    color: #ffff;
-    
+    color: #ffff;   
 }
+
 .footer-social-links a i,
 .footer-social-links a span{
-    position: relative;
-
-    
+    position: relative; 
 }
+
 .footer-social-links a:before{
     content: "";
     display: inline-block;
@@ -56,12 +57,15 @@ input{
     left: 0;
     border: 1px solid #ffff;
 }
+
 .footer-social-links a:hover{
     color: #fff;
 }
+
 .footer-social-links a:hover:before{
     background: #4ADAA8;
 }
+
 .containernav{
     display: flex;
     align-items: center;
@@ -71,6 +75,7 @@ input{
     justify-content: space-between;
     align-items: center;
 }
+
 .containernav h3{
     text-align: center;
     font-style: italic;
@@ -78,6 +83,7 @@ input{
     border-bottom: 2px solid white;
     cursor: pointer;
 }
+
 .container{
     display: flex;
     align-items: center;
@@ -86,9 +92,8 @@ input{
     width: 90%;
     height: 90vh;
    flex-direction: column;
-   
-  
 }
+
 .container .login{
     text-align: center;
     align-self: center;
@@ -97,15 +102,16 @@ input{
     height: 140px;
     width: 350px;
     flex-direction: column;
-    
 }
+
 .container .login h1{
     margin-bottom: 10%;
 }
+
 .container .login p{
     margin-bottom: 10%;
-
 }
+
 .entrar{
     display: flex;
     flex-direction: column;
@@ -113,6 +119,7 @@ input{
     height: 200px;
     justify-content: space-evenly;
 }
+
 .entrar input{
     margin-top: 10%;
     font-size: 25px;
@@ -125,15 +132,16 @@ input{
     border-radius: 2px;
     border-bottom: 4px solid white;
     width: 340px;
-
 }
+
 .button_main {
     text-align: center;
     font-weight: bold;
     cursor: pointer;
     margin-top: 5%;
-  }
-  .button_main {
+}
+
+.button_main {
     cursor: pointer;
     background-color: var(--first-color);
     color: var(--white-color);
@@ -144,17 +152,9 @@ input{
     border-radius: 5px;
     font-family: 'Spartan', sans-serif;
     transition: background 0.3s;
-  }
-  
-  .button_main:hover {
+}
+
+.button_main:hover {
     background-color: #3B3D3F;
     color: #4ADAA8;
-  }
-
-
-
-
-
-
-
-
+}
