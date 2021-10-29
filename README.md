@@ -4,7 +4,11 @@ Este projeto tem como ideia controlar o fluxo de pessoas nas linhas de metrô de
 
 ## Participantes
 
-- Nome
+- Augusto
+- Diego
+- Lara
+- Vinicius
+- Vitor
 
 # Linguagens usadas
 ```bash
