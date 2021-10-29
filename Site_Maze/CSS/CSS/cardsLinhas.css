@@ -46,7 +46,7 @@ img {
 body {
   font: 400 1rem 'DM Sans', sans-serif;
   color: var(--title-color-primary);
-  background: var(--base-color-primary);
+  background: #202124;
 }
 
 h1 {

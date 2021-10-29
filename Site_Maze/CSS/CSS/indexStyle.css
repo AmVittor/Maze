@@ -7,7 +7,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 body{
-  background-color: #2b2c2d;
+  background-color: #202124;
 }
 
 :root{
@@ -45,7 +45,7 @@ span {
 /* SPAN PARA DEIXAR QUALQUER TEXTO NEGRITO span_negrito */
 .span_negrito{
   font-weight: bolder;
-  color: #69B99D;
+  color: #4ADAA8;
   border-bottom: 2px solid #4ADAA8;
 }
 .stroke_divide{

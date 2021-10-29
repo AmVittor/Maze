@@ -8,7 +8,7 @@
 
   /* Colors */
   --first-color: #69B99D;
-  --bg-color: #222324;
+  --bg-color: #202124;
   --sub-color: #4ADAA8;
   --white-color: #FFF;
   
@@ -67,7 +67,7 @@ body{
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   font: 400 1rem 'DM Sans', sans-serif;
-  color: var(--title-color-primary);
+  color: #4ADAA8;
   background-color: var(--base-color-secondary);
   transition: 0.5s;
 }
@@ -170,7 +170,7 @@ span {
 }
 
 .nav_link:hover{
-  background-color: var(--first-color);
+  background-color: #4ADAA8;
   transition: 0.5s;
 }
 
@@ -195,7 +195,7 @@ span {
 
 /* Active links menu */
 .active{
-  background-color: var(--first-color);
+  background-color: #4ADAA8;
 }
 
 /* CONTEUDO DA DASHBOARD */
@@ -217,7 +217,7 @@ li{
 a {
   text-decoration: none;
   color: white;
-  color:#69B99D;
+  color:#4ADAA8;
   font-size: 20px;
 }
 
