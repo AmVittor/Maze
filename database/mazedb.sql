@@ -5,12 +5,13 @@ use sprint2;
 create table cadastroEmpresa(
 	idEmpresa int primary key auto_increment,
     nomeEmpresa varchar(60) not null,
-    CNPJ varchar(25) not null,
+    CNPJ varchar(20) not null,
     emailEmpresa varchar(60) not null,
     senhaEmpresa varchar(40) not null
 );
 
 describe cadastroEmpresa;
+
 
 -- Criação da tabela de login da empresa --
 create table loginEmpresa (
@@ -25,7 +26,8 @@ describe loginEmpresa;
 -- Criação de uma chave estrangeira ligando a tabela de login com a tabela de cadastro --
 alter table loginEmpresa add foreign key (fkCadastro)
 	references cadastroEmpresa(idEmpresa);
-    
+   
+
 -- Criação da tabela das linhas parceiras
 create table linha(
 idLinha int primary key,
@@ -35,17 +37,19 @@ nomeLinha varchar(30) not null
 
 describe linha;
 
+
 -- Criação da tabela das estações que estão nas linhas
 create table estacao(
 idEstacao int primary key auto_increment,
 nomeEstacao varchar(30) not null,
 fkLinha int
-);
+) auto_increment = 100;
 
 -- Criação de uma chave estrangeira ligando a tabela estacao com a tabela linha
 alter table estacao add foreign key (fkLinha) references linha (idLinha);
 
 desc estacao;
+
 
 -- Por uma questão de segurança criamos a tabela catraca para sabermos onde ela está caso não esteja funcionando corretamente --
 create table catraca(
@@ -53,12 +57,13 @@ idCatraca int primary key auto_increment,
 fkEstacao int,
 statusCatraca varchar(30),
 check (statusCatraca = 'ativa' or statusCatraca = 'inativa' )
-);
+) auto_increment = 1000;
 
 -- Criação de uma chave estrangeira ligando a tabela catraca com a estação na qual ela está
 alter table catraca add foreign  key (fkEstacao) references estacao (idEstacao);
 
 desc catraca; 
+
 
 
 -- Criação da tabela passagem, que será o dado registrado pelo sensor
@@ -77,13 +82,17 @@ desc passagem;
 -- Criação de uma chave estrangeira ligando a tabela passagem com a catraca que foi utilizada
 alter table passagem add foreign key (fkCatraca) references catraca(idCatraca);
 
+
 -- Criação de uma chave estrangeira ligando a tabela passagem com a linha na qual foi registrada
 alter table passagem add foreign key (fkLinha) references linha(idLinha);
 
--- Criação de uma chave estrangeira ligando a tabela passsagem com a estação na qual foi registrada
-alter table passagem add foreign key (fkLinha) references estacao(idEstacao);
 
--- Criação de uma tabela dos locais da estação, para um possível mapa térmico --
+-- Criação de uma chave estrangeira ligando a tabela passsagem com a estação na qual foi registrada
+alter table passagem add foreign key (fkEstacao) references estacao(idEstacao);
+
+
+
+-- Criação de uma tabela dos locais da estação, para um futuro mapa térmico --
 create table Locais (
 	idLocais int primary key auto_increment,
 	nomeLocal varchar(150),
@@ -92,12 +101,13 @@ create table Locais (
     fkEstacao int);
     
 alter table Locais add foreign key (fkEstacao) references estacao(idEstacao);
+
 alter table Locais add foreign key (fkLinha) references linha(idLinha);
+
 alter table Locais add foreign key (fkLogin) references loginEmpresa(idLoginEmpresa);
 
 desc Locais;
 
-show tables;
 
 
 insert into cadastroEmpresa (nomeEmpresa, CNPJ, emailEmpresa, senhaEmpresa) values
@@ -110,6 +120,7 @@ insert into cadastroEmpresa (nomeEmpresa, CNPJ, emailEmpresa, senhaEmpresa) valu
 select * from cadastroEmpresa;
 
 
+
 insert into loginEmpresa (emailEmpresa, senhaEmpresa, fkCadastro) values
 ('empresa1@empresa1.com', 'senhaempresa1', 1),
 ('empresa2@empresa2.com', 'senhaempresa2', 2),
@@ -118,6 +129,7 @@ insert into loginEmpresa (emailEmpresa, senhaEmpresa, fkCadastro) values
 ('empresa5@empresa5.com', 'senhaempresa5', 5);
 
 select * from loginEmpresa;
+
 
 
 insert into linha values 
@@ -129,6 +141,7 @@ insert into linha values
 (15, 15, 'Prata');
 
 select * from linha;
+
 
 
 insert into estacao(nomeEstacao, fkLinha) values 
@@ -251,113 +264,172 @@ insert into estacao(nomeEstacao, fkLinha) values
 select * from estacao;
 
 
+
 insert into catraca (fkEstacao,statusCatraca) values
-	(1, 'ativa'),
-	(2, 'ativa'),
-	(3, 'ativa'),
-	(4, 'ativa'),
-	(5, 'ativa'),
-	(15, 'ativa'),
-	(3, 'ativa'),
-	(5, 'ativa'),
-	(15, 'ativa'),
-	(1, 'ativa'),
-	(1, 'ativa'),
-	(2, 'ativa'),
-	(3, 'ativa'),
-	(4, 'ativa'),
-	(4, 'ativa'),
-	(4, 'ativa'),
-	(4, 'ativa'),
-	(4, 'ativa'),
-	(4, 'ativa'),
-	(4, 'ativa'),
-	(4, 'ativa'),
-	(4, 'ativa'),
-	(4, 'ativa'),
-	(1, 'ativa'),
-	(1, 'ativa'),
-	(2, 'ativa'),
-	(2, 'ativa'),
-	(2, 'ativa'),
-	(2, 'ativa'),
-	(3, 'ativa'),
-	(3, 'ativa'),
-	(3, 'ativa'),
-	(3, 'ativa'),
-	(5, 'ativa'),
-	(5, 'ativa'),
-	(5, 'ativa'),
-	(5, 'ativa'),
-	(5, 'ativa'),
-	(15, 'ativa'),
-	(15, 'ativa'),
-	(15, 'ativa'),
-	(15, 'ativa'),  
-	(15, 'ativa');  
+	(100, 'ativa'),
+	(101, 'ativa'),
+	(102, 'ativa'),
+	(103, 'ativa'),
+	(104, 'ativa'),
+	(105, 'ativa'),
+	(106, 'ativa'),
+	(107, 'ativa'),
+	(108, 'ativa'),
+	(109, 'ativa'),
+	(110, 'ativa'),
+	(111, 'ativa'),
+	(112, 'ativa'),
+	(113, 'ativa'),
+	(114, 'ativa'),
+	(115, 'ativa'),
+	(116, 'ativa'),
+	(117, 'ativa'),
+	(118, 'ativa'),
+	(119, 'ativa'),
+	(120, 'ativa'),
+	(121, 'ativa'),
+	(122, 'ativa'),
+	(123, 'ativa'),
+	(124, 'ativa'),
+	(125, 'ativa'),
+	(126, 'ativa'),
+	(127, 'ativa'),
+	(128, 'ativa'),
+	(129, 'ativa'),
+	(130, 'ativa'),
+	(131, 'ativa'),
+	(132, 'ativa'),
+	(133, 'ativa'),
+	(134, 'ativa'),
+	(135, 'ativa'),
+	(136, 'ativa'),
+	(137, 'ativa'),
+	(138, 'ativa'),
+	(139, 'ativa'),
+	(140, 'ativa'),
+	(141, 'ativa'),  
+	(142, 'ativa');  
   
 select * from catraca;
 
 
-insert into passagem (fkCatraca, fkLinha, fkEstacao) values
-	(1, 1, 5),
-    (2, 2, 43),
-    (3, 3, 7),
-    (4, 4, 21),
-    (5, 5, 14),
-    (6, 15, 24),
-    (7, 2, 52),
-    (8, 1, 67),
-    (9, 1, 35),
-    (10, 15, 2),
-    (11, 4, 61),
-    (12, 3, 61),
-    (13, 5, 61),
-    (14, 2, 15),
-    (15, 1, 5),
-    (1, 2, 81),
-    (2, 3, 18),
-    (3, 4, 78),
-    (4, 5, 73),
-    (5, 15, 98),
-    (6, 1, 15),
-    (7, 2, 37),
-    (8, 3, 19),
-    (9, 4, 83),
-    (10, 5, 7),
-    (11, 15, 71),
-    (12, 1, 91),
-    (13, 2, 62),
-    (14, 3, 10),
-    (15, 4, 50),
-    (1, 15, 71),
-    (2, 15, 71),
-    (3, 15, 71),
-    (4, 15, 71),
-    (5, 3, 61),
-    (6, 3, 61),
-    (7, 3, 61),
-    (8, 3, 61),
-    (9, 3, 61);
-    
-    
 
+insert into passagem (fkCatraca, fkLinha, fkEstacao) values
+	(1000, 1, 100),
+    (1001, 2, 101),
+    (1002, 3, 102),
+    (1003, 4, 103),
+    (1004, 5, 104),
+    (1005, 15, 105),
+    (1006, 2, 106),
+    (1007, 1, 107),
+    (1008, 1, 108),
+    (1009, 15, 109),
+    (1010, 4, 110),
+    (1011, 3, 100),
+    (1012, 5, 101),
+    (1013, 2, 102),
+    (1014, 1, 103),
+    (1015, 2, 104),
+    (1016, 3, 105),
+    (1017, 4, 106),
+    (1018, 5, 107),
+    (1019, 15, 108),
+    (1020, 1, 109),
+    (1021, 2, 110),
+    (1022, 3, 100),
+    (1023, 4, 102),
+    (1024, 5, 103),
+    (1025, 15, 104),
+    (1026, 1, 105),
+    (1027, 2, 106),
+    (1028, 3, 107),
+    (1029, 4, 108),
+    (1030, 15, 109),
+    (1031, 15, 110),
+    (1032, 15, 100),
+    (1033, 15, 101),
+    (1034, 3, 102),
+    (1035, 3, 103),
+    (1036, 3, 104),
+    (1037, 3, 105),
+    (1038, 3, 105),
+    (1039, 3, 104),
+    (1040, 3, 104),
+    (1041, 3, 101),
+    (1042, 3, 102),
+    (1000, 3, 102),
+    (1001, 4, 103),
+    (1002, 4, 109),
+    (1003, 2, 109),
+    (1004, 1, 108),
+    (1005, 5, 106);
+
+    
+    
 select * from passagem;
+
+
+
+-- Exibindo as tabelas com suas correspondentes
+select * from cadastroEmpresa join loginEmpresa on fkCadastro = idEmpresa; 
 
 select * from estacao join linha on fkLinha = idLinha;
 
-select * from catraca join estacao on fkEstacao = fkLinha;
+select * from catraca join estacao on fkEstacao = idEstacao;
 
 select * from passagem join catraca on fkCatraca = idCatraca;
 
-select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha  where nomeLinha = 'Azul';
 
-select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Verde';
+-- Exibindo o volume de pessoas em cada linha
 
-select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Vermelha';
+select sum(registro) as 'volume de pessoas', nomeLinha as Linha from passagem join linha on fkLinha = idLinha  where nomeLinha = 'Azul';
 
-select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Amarela';
+select sum(registro) as 'volume de pessoas', nomeLinha as Linha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Verde';
 
-select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Lilás';
+select sum(registro) as 'volume de pessoas', nomeLinha as Linha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Vermelha';
 
-select sum(registro), nomeLinha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Prata';
+select sum(registro) as 'volume de pessoas', nomeLinha as Linha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Amarela';
+
+select sum(registro) as 'volume de pessoas', nomeLinha as Linha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Lilás';
+
+select sum(registro) as 'volume de pessoas', nomeLinha as Linha from passagem join linha on fkLinha = idLinha where nomeLinha = 'Prata';
+
+
+
+-- Exibindo o volume de pessoas em cada estação
+
+
+select sum(registro) as 'volume de pesssoas', nomeEstacao as Estação from passagem 
+	join estacao on fkEstacao = idEstacao where fkEstacao = '100';
+
+select sum(registro) as 'volume de pesssoas', nomeEstacao as Estação from passagem 
+	join estacao on fkEstacao = idEstacao where fkEstacao = '101';
+
+select sum(registro) as 'volume de pesssoas', nomeEstacao as Estação from passagem 
+	join estacao on fkEstacao = idEstacao where fkEstacao = '102';
+
+select sum(registro) as 'volume de pesssoas', nomeEstacao as Estação from passagem 
+	join estacao on fkEstacao = idEstacao where fkEstacao = '103';
+
+select sum(registro) as 'volume de pesssoas', nomeEstacao as Estação from passagem 
+	join estacao on fkEstacao = idEstacao where fkEstacao = '104';
+
+select sum(registro) as 'volume de pesssoas', nomeEstacao as Estação from passagem 
+	join estacao on fkEstacao = idEstacao where fkEstacao = '105';
+
+select sum(registro) as 'volume de pesssoas', nomeEstacao as Estação from passagem 
+	join estacao on fkEstacao = idEstacao where fkEstacao = '106';
+
+select sum(registro) as 'volume de pesssoas', nomeEstacao as Estação from passagem 
+	join estacao on fkEstacao = idEstacao where fkEstacao = '107';
+
+select sum(registro) as 'volume de pesssoas', nomeEstacao as Estação from passagem 
+	join estacao on fkEstacao = idEstacao where fkEstacao = '108';
+
+select sum(registro) as 'volume de pesssoas', nomeEstacao as Estação from passagem 
+	join estacao on fkEstacao = idEstacao where fkEstacao = '109';
+    
+select sum(registro) as 'volume de pesssoas', nomeEstacao as Estação from passagem 
+	join estacao on fkEstacao = idEstacao where fkEstacao = '110';
+
