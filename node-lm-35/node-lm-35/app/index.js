@@ -10,7 +10,7 @@ temperatura = sensors.lm35()
 
 /*Utilizando a função console.log() para exibir no terminal o retorno da função,
 incrementando com uma string para facilitar a interpretação.*/
-console.log('Temperatura: ' + temperatura.toFixed(2))
+console.log(temperatura.toFixed(2))
 
 //Atribuindo o retorno da função trc5000 a variável chave.
 chave = sensors.trc5000()
