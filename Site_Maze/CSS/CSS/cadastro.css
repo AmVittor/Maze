@@ -25,6 +25,10 @@ input{
     text-align: center;
   
 }
+#bota_cad{
+    outline: 0;
+    border: 0;
+}
 .footer-social-links a{
     width: 25px;
     height: 25px;
