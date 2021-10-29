@@ -1,13 +1,7 @@
-/******        FONTE PRINCIPAL                     **************/
-
+/******        FONTE PRINCIPAL            **************/
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-/******        SEGUNDA OPÇÃO DE FONTE                     **************/
+/******        SEGUNDA OPÇÃO DE FONTE     **************/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-
-body{
-  background-color: #202124;
-}
 
 :root{
   /* Colors */
@@ -22,40 +16,66 @@ body{
   --body-font: 'Spartan', sans-serif;
   --normal-font-size: 16px;
   --small-font-size: 14px;
-  
+  /* --- Cores de fundo do site ---  */
+  /* Cor de Fundo Primaria: #222324 - (Escura) */
+  --base-color-primary: #222324;
+  /* Cor de Fundo Secundaria: #2B2C2D - (Clara, pórem não mais que a Terciaria) */
+  --base-color-secondary: #2B2C2D;
+  /* Cor de Fundo Terciaria: #3B3D3F - (Mais clara) */
+  --base-color-tertiary: #3B3D3F;
+    
+  /*	--- Cor para os Textos do Site --- */
+  /* Cor de Titulo: #69B99D - (Verde Escuro) */
+      
+  --title-color-primary: #ffff;
+  /* Cor de Texto: #4ADAA8 - (Verde Claro) */
+  --text-color-secondary: #fff;
+      
+  --title-color-primary: #fff;
+  /* Cor de Texto: #4ADAA8 - (Verde Claro) */
+  --text-color-secondary: #fff;
 }
+
+body{
+  background-color: #202124;
+  padding: 0;
+  margin: 0;
+}
+
 *{
   font-family: 'Spartan', sans-serif; 
 }
+
 a{
   text-decoration: none;
 }
+
 h1 {
   font-family: 'Spartan', sans-serif;
   color: #4ADAA8;
 }
-body{
-  padding: 0;
-  margin: 0;
-}
+
 span {
   font-family: 'Spartan', sans-serif;
 }
+
 /* SPAN PARA DEIXAR QUALQUER TEXTO NEGRITO span_negrito */
 .span_negrito{
   font-weight: bolder;
 }
+
 .stroke_divide{
   width: 100%;
   height: 2px;
   background-color: var(--first-color);
 }
+
 .header{
-  
   color: var(--first-color);
   border-bottom: 3px solid #4ADAA8;
   text-align: center;
 }
+
 .container{
   display: flex;
   justify-content: space-between;
@@ -63,6 +83,7 @@ span {
   margin: auto;
   width: 90%;
 }
+
 .navbar{
   height: 100%;
   display: flex;
@@ -74,64 +95,38 @@ span {
   font-weight: 500;
   font-size: 20px;
 }
+
 .navbar a{
   color: var(--sub-color);
   text-decoration: none;
 }
 
-
-
-
-
-
-
 /*====  VARIABLES ============================ */
-:root {
-    /* --- Cores de fundo do site ---  */
-    /* Cor de Fundo Primaria: #222324 - (Escura) */
-    --base-color-primary: #222324;
-    /* Cor de Fundo Secundaria: #2B2C2D - (Clara, pórem não mais que a Terciaria) */
-    --base-color-secondary: #2B2C2D;
-    /* Cor de Fundo Terciaria: #3B3D3F - (Mais clara) */
-    --base-color-tertiary: #3B3D3F;
-    
-    /*	--- Cor para os Textos do Site --- */
-    /* Cor de Titulo: #69B99D - (Verde Escuro) */
-    
-    --title-color-primary: #ffff;
-    /* Cor de Texto: #4ADAA8 - (Verde Claro) */
-    --text-color-secondary: #fff;
-    
-    --title-color-primary: #fff;
-    /* Cor de Texto: #4ADAA8 - (Verde Claro) */
-    --text-color-secondary: #fff;
-    
-    }
 
-    .span_negrito{
-      font-weight: bolder;
-      color: #fff;
-      border-bottom: 2px solid #4ADAA8;
-    }
+.span_negrito{
+  font-weight: bolder;
+  color: #fff;
+  border-bottom: 2px solid #4ADAA8;
+}
  
- .feedback{
-   display: flex;
-   height: 500px;
-   flex-direction: column;
-   padding-left: 15%;
-   color: #4ADAA8;
+.feedback{
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+  padding-left: 15%;
+  color: #4ADAA8;
   margin-bottom: 3%;
- }
+}
+
  .feedback input{
    width: 20%;
    height: 16%;
  }
+
  #opnion{
    height: 60%;
  }
+
  .feedback textarea{
    width: 600px;
  }
-   
-    
- 

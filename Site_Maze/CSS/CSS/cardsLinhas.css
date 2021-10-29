@@ -61,7 +61,6 @@ span {
   order: 0;
   max-width: 420px;
   text-align: left;
-
 }
 
 #home .text h1 {
@@ -176,9 +175,8 @@ span {
   height: 400px;
   display: flex;
   padding-top: 2%;
- 
-  
 }
+
 .containerDash .linhas{
   display: flex;
   height: 50%;
@@ -189,5 +187,4 @@ span {
   height: 50%;
   width: 20%;
   background-color: blue;
-
 }
