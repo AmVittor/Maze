@@ -113,20 +113,15 @@
         <p>Bem vindo! Entre na sua conta para ter acesso a nossos serviços
           exclusivos!</p>
       </div>
-      <div class="entrar">
-        <div class="footer-social-links">
-          <a href="https://web.facebook.com/?_rdc=1&_rdr" title="Facebook"><i class="fa fa-facebook">F</i></a>
-          <a href="https://accounts.google.com/signin/v2/identifier?hl=pt-br&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
-            title="Google"><i class="fa fa-facebook">G</i></a>
-          <a href="https://www.linkedin.com/login/pt" title="Linkedin"><i class="fa fa-facebook">Li</i></a>
-        </div>
-        <input maxlength="20" id="empresa_login" type="text" placeholder="Nome da empresa">
-        <input maxlength="20" id="email_login" type="text" placeholder="E-mail">
-        <input maxlength="8" id="senha_login" type="password" placeholder="Senha">
-
+    
+        <form id="form_login" method="post" onsubmit="return cadastrar()">
+        <input name="nome_empresa" maxlength="20" id="empresa_login" type="text" placeholder="Nome da empresa">
+        <input name="email_login" maxlength="20" id="email_login" type="text" placeholder="E-mail">
+        <input name="senha_login" maxlength="8" id="senha_login" type="password" placeholder="Senha">
         <div style="cursor: pointer;" onclick="login()" class="options">
           <a class="button_login">Entrar</a>
-        </div>
+        </form>
+       
       </div>
     </div>
   </div>
@@ -160,4 +155,18 @@
   function dashboard() {
     alert('você precisa estar logado para acessar este campo')
   }
+  function cadastrar() {
+        var formulario = new URLSearchParams(new FormData(document.getElementById("form_login"))); 
+
+        fetch("/usuarios/cadastrar", {             
+            method: "POST", 
+            body: formulario 
+        }).then(function (resposta) { 
+            console.log("resposta: ", resposta); 
+        }).catch(function (erro) { 
+            console.log(`#ERRO: ${erro}`); 
+        });
+
+        return false;
+    }
 </script>

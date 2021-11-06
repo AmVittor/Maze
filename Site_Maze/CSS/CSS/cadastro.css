@@ -31,108 +31,58 @@ input{
     outline: 0;
     border: 0;
 }
-.footer-social-links a{
-    width: 25px;
-    height: 25px;
-    line-height: 30px;
-    position: relative;
-    margin: 0 5px;
-    text-align: center;
-    display: inline-block;
-    color: #ffff;   
-}
 
-.footer-social-links a i,
-.footer-social-links a span{
-    position: relative; 
-}
-
-.footer-social-links a:before{
-    content: "";
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border: 1px solid #ffff;
-}
-
-.footer-social-links a:hover{
-    color: #fff;
-}
-
-.footer-social-links a:hover:before{
-    background: #4ADAA8;
-}
 
 .containernav{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2%;
     width: 90%;
     height: 120px;
     justify-content: space-between;
     align-items: center;
 }
 
-.containernav h3{
-    text-align: center;
-    font-style: italic;
-    font-weight: 300;
-    border-bottom: 2px solid white;
-    cursor: pointer;
-}
+
 
 .container{
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
+    padding: 2%;
     width: 90%;
     height: 90vh;
    flex-direction: column;
 }
-
-.container .login{
+.login{
+    height: 500px;
     text-align: center;
-    align-self: center;
-    align-items: center;
-    justify-content: center;
-    height: 140px;
-    width: 350px;
-    flex-direction: column;
+    width: 40%;
+}
+.login p {
+    padding-top: 1%;
 }
 
-.container .login h1{
-    margin-bottom: 10%;
-}
-
-.container .login p{
-    margin-bottom: 10%;
-}
-
-.entrar{
+form{
     display: flex;
     flex-direction: column;
-    margin: 5%;
-    height: 200px;
+    height: 2000px;
+    width: 30%;
     justify-content: space-evenly;
+  }
+form input{
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    height: 17%;
+    border: 0;
+    border-bottom: 3px solid white;
 }
 
-.entrar input{
-    margin-top: 10%;
-    font-size: 25px;
-    font-weight: 500;
-    color: white;
-    background-color: transparent;
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-radius: 2px;
-    border-bottom: 4px solid white;
-    width: 340px;
-}
+
 
 .button_main {
     text-align: center;
