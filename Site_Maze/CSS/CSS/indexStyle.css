@@ -5,17 +5,14 @@
 
 /******        SEGUNDA OPÇÃO DE FONTE                     **************/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
-
-body{
-  background-color: #202124;
-}
-
 :root{
   /* Colors */
   --first-color: #fff;
   --sub-color: #fff;
   --bg-color: #202124;
+  --bg-color-lighter: #3B3D3F;
   --white-color: #FFF;
+  --green-strong: #4ADAA8;
   
   /* Fonts */
   --body-font: 'Spartan', sans-serif;
@@ -23,16 +20,35 @@ body{
   --small-font-size: 14px;
 }
 
-*{
-  font-family: 'Spartan', sans-serif; 
+body{
+  background-color: var(--bg-color);
 }
+
+
+*{
+  font-family: 'Spartan', sans-serif;
+ 
+}
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg-color);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green-strong);    /* color of the scroll thumb */
+  border-radius: 2px;
+  width: 5px;       /* roundness of the scroll thumb */
+  }
 a{
   text-decoration: none;
 }
 
 h1 {
   font-family: 'Spartan', sans-serif;
-  color: #4ADAA8;
+  color: var(--green-strong);
 }
 
 body{
@@ -48,7 +64,7 @@ span {
 .span_negrito{
   font-weight: bolder;
   color: #4ADAA8;
-  border-bottom: 2px solid #4ADAA8;
+  border-bottom: 2px solid var(--green-strong);
 }
 
 .stroke_divide{
@@ -59,7 +75,7 @@ span {
 
 .header{
   color: var(--first-color);
-  border-bottom: 3px solid #4ADAA8;
+  border-bottom: 3px solid var(--green-strong);
   text-align: center;
 }
 
@@ -102,7 +118,7 @@ span {
 }
 
 .logo_img img{
-  height: 100%;
+  height: 90%;
 }
 
 .text {
@@ -123,31 +139,34 @@ span {
 }
 
 .button_main {
+  display: flex;
   text-align: center;
-  font-weight: bold;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bolder;
   cursor: pointer;
 }
 
 .button_main {
   cursor: pointer;
-  background-color: #4ADAA8;
-  color: #3B3D3F;
+  background-color: var(--green-strong);
+  color: var(--bg-color-lighter);
   height: 56px;
   display: inline-flex;
   align-items: center;
   padding: 0 32px;
   border-radius: 5px;
-  font-family: 'Spartan', sans-serif;
   transition: background 0.3s;
 }
 
 .button_main:hover {
-  background-color: #3B3D3F;
-  color: #4ADAA8;
+  background-color: var(--bg-color-lighter);
+  color: var(--green-strong);
 }
 
 /*********************                LINHAS PARCEIRAS               *************/
 .linhas{
+  height: 100vh;
   padding-right: 17%;
   display: flex;
 }
@@ -195,13 +214,13 @@ linhasTxt h1{
   transition: transform .3s ease-in-out;
   }
   .linhasTxt:before{
-    border-left: 2px dashed #4ADAA8;
-    border-right: 2px dashed #4ADAA8;
+    border-left: 2px dashed var(--green-strong);
+    border-right: 2px dashed var(--green-strong);
     transform:scaleY(0)
   }
   .linhasTxt:after{
-    border-top: 2px dashed #4ADAA8;
-    border-bottom: 2px dashed #4ADAA8;
+    border-top: 2px dashed var(--green-strong);
+    border-bottom: 2px dashed var(--green-strong);
     transform:scaleX(0)
   }
   .linhasTxt:hover::before{
@@ -343,7 +362,7 @@ linhasTxt h1{
 }
 
 .footer-social-links a:hover:before{
-    background: #4ADAA8;
+    background: var(--green-strong);
 }
 
 .options{
@@ -358,8 +377,8 @@ linhasTxt h1{
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
-  background-color: #4ADAA8;
-  color: #3B3D3F;
+  background-color: var(--green-strong);
+  color: var(--bg-color-lighter);
   height: 85%;
   width: 23%;
   margin-top: 3%;
@@ -371,8 +390,8 @@ linhasTxt h1{
   transition: background 0.3s;
 }
 .button_login:hover {
-  background-color: #3B3D3F;
-  color: #4ADAA8;
+  background-color: var(--bg-color-lighter);
+  color: var(--green-strong);
 }
 
 /************   FOOTER  **************/
@@ -389,7 +408,7 @@ footer{
   margin-top: 5%;
   position: relative;
   width: 100%;
-  background-color: #69b99d;
+  background-color: var(--green-strong);
   min-height: 100px;
   padding: 20px, 50px;
   display: flex;
@@ -439,7 +458,7 @@ footer .social_icon li a:hover{
 
 footer .menu_footer li a{
   font-size: 20px;
-  color: #2B2C2D;
+  color: var(--bg-color);
   margin: 0 10px;
   display: inline-block;
   transition: 0.5s;
@@ -449,7 +468,7 @@ footer .menu_footer li a{
 
 footer .menu_footer li a:hover{
   opacity: 1;
-  color: #222324;
+  color: var(--bg-color);
   transition: 0.5s;
 }
  form{
