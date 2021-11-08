@@ -4,6 +4,7 @@
 <head>
   <script src="../JS/Caljs.js"></script>
   <script src="../JS/Tela_cadastro.js"></script>
+  <link rel="stylesheet" href="../CSS/CSS/Nav&footer.css">
   <meta charset="UTF-8">
   <link rel="shortcut icon" href="../CSS/Images/ico_maze.ico" type="image/x-icon">
   <link rel="stylesheet" href="../CSS/CSS/indexStyle.css">
@@ -113,17 +114,17 @@
         <p>Bem vindo! Entre na sua conta para ter acesso a nossos serviços
           exclusivos!</p>
       </div>
-    
-        <form id="form_login" method="post" onsubmit="return cadastrar()">
+
+      <form id="form_login" method="post" onsubmit="return cadastrar()">
         <input name="nome_empresa" maxlength="20" id="empresa_login" type="text" placeholder="Nome da empresa">
         <input name="email_login" maxlength="20" id="email_login" type="text" placeholder="E-mail">
         <input name="senha_login" maxlength="8" id="senha_login" type="password" placeholder="Senha">
         <div style="cursor: pointer;" onclick="login()" class="options">
           <a class="button_login">Entrar</a>
-        </form>
-       
-      </div>
+      </form>
+
     </div>
+  </div>
   </div>
 
   <!--                              Footer                                  -->
@@ -156,17 +157,17 @@
     alert('você precisa estar logado para acessar este campo')
   }
   function cadastrar() {
-        var formulario = new URLSearchParams(new FormData(document.getElementById("form_login"))); 
+    var formulario = new URLSearchParams(new FormData(document.getElementById("form_login")));
 
-        fetch("/usuarios/cadastrar", {             
-            method: "POST", 
-            body: formulario 
-        }).then(function (resposta) { 
-            console.log("resposta: ", resposta); 
-        }).catch(function (erro) { 
-            console.log(`#ERRO: ${erro}`); 
-        });
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      body: formulario
+    }).then(function (resposta) {
+      console.log("resposta: ", resposta);
+    }).catch(function (erro) {
+      console.log(`#ERRO: ${erro}`);
+    });
 
-        return false;
-    }
+    return false;
+  }
 </script>

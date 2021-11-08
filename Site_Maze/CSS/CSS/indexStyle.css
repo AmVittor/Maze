@@ -7,8 +7,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 :root{
   /* Colors */
-  --first-color: #fff;
-  --sub-color: #fff;
   --bg-color: #202124;
   --bg-color-lighter: #3B3D3F;
   --white-color: #FFF;
@@ -70,42 +68,8 @@ span {
 .stroke_divide{
   width: 100%;
   height: 2px;
-  background-color: var(--first-color);
+  background-color: var(--white-color);
 }
-
-.header{
-  color: var(--first-color);
-  border-bottom: 3px solid var(--green-strong);
-  text-align: center;
-}
-
-.header .name_company{
-  color: var(--var-color-white);
-}
-
-.container{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  width: 90%;
-}
-.navbar{
-  height: 100%;
-  display: flex;
-  list-style: none;
-  text-decoration: none;
-  justify-content: space-evenly;
-  width: 40%;
-  color: var(--sub-color);
-  font-weight: 500;
-  font-size: 20px;
-}
-.navbar a{
-  color: var(--sub-color);
-  text-decoration: none;
-}
-
 /* Banner */
 .abt-us{
   display: flex;
@@ -134,7 +98,7 @@ span {
 
 .text p {
   margin-bottom: 32px;
-  color: white;
+  color: var(--white-color);
   font-size: 22px;
 }
 
@@ -199,7 +163,7 @@ linhasTxt h1{
 }
   
 .linhasTxt p{
-  color: white;
+  color: var(--white-color);
 }
 
 /* ANIMAÇÃO TEXTO */
@@ -244,7 +208,7 @@ linhasTxt h1{
   }
  
     .explica_cal h3{
-      color: var(--first-color);
+      color: var(--white-color);
   
     }
    .explica_cal{
@@ -258,7 +222,7 @@ linhasTxt h1{
     .conta{
       padding-left: 2%;
       display: flex;
-      color: var(--first-color);
+      color: var(--white-color);
       flex-direction: column;
  
       width: 40%;
@@ -266,7 +230,7 @@ linhasTxt h1{
     .conta select{
       cursor: pointer;
       height: 40px;
-      background-color: var(--sub-color);
+      background-color: var(--white-color);
       color: var(--bg-color);
       font-size: 18px;
       font-weight: bold;
@@ -276,7 +240,7 @@ linhasTxt h1{
     }
 
 .conta option{
-  color: #232424;
+  color: var(--bg-color-lighter);
   font-weight: bold;
   font-size: 16px;
   padding: 2%;
@@ -288,7 +252,7 @@ linhasTxt h1{
   border: 0;
   width: 38%;
   height: 40px;
-  background-color: var(--sub-color);
+  background-color: var(--white-color);
   color: var(--bg-color);
   font-size: 18px;
   font-weight: bold;
@@ -305,7 +269,7 @@ linhasTxt h1{
 }
 
 .login p{
-  color: white;
+  color: var(--white-color);
   width: 400px;
 }
 
@@ -314,13 +278,13 @@ linhasTxt h1{
   margin-top: 8%;
   font-size: 20px;
   font-weight: 600;
-  color: white;
+  color: var(--white-color);
   background-color: transparent;
   height: 20%;
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid var(--white-color);
   width: 340px;
 }
 
@@ -338,7 +302,7 @@ linhasTxt h1{
   margin: 0 5px;
   text-align: center;
   display: inline-block;
-  color: #ffff;  
+  color:var(--white-color);  
 }
 
 .footer-social-links a i,
@@ -354,11 +318,11 @@ linhasTxt h1{
   position: absolute;
   top: 0;
   left: 0;
-  border: 1px solid #ffff;
+  border: 1px solid  var(--white-color);
 }
 
 .footer-social-links a:hover{
-    color: #fff;
+    color: var(--white-color);
 }
 
 .footer-social-links a:hover:before{
@@ -394,94 +358,3 @@ linhasTxt h1{
   color: var(--green-strong);
 }
 
-/************   FOOTER  **************/
-#main_footer{
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  background-color: var(--base-color-primary);
-}
-input{
-  outline: 0;
-}
-footer{
-  margin-top: 5%;
-  position: relative;
-  width: 100%;
-  background-color: var(--green-strong);
-  min-height: 100px;
-  padding: 20px, 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-footer .social_icon{
-  position: relative;
-  padding-top: 16px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-}
- 
-footer .menu_footer{
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-}
-
-footer .social_icon li, 
-footer .menu_footer li{
-  list-style: none;
-}
-
-footer .social_icon li a{
-  font-size: 32px;
-  color: #fff;
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
-}
-
-footer .social_icon li a img{
-height: 24px;
-width: 24px;
-}
-
-footer .social_icon li a:hover{
-  transform: translateY(-10px);
-}
-
-footer .menu_footer li a{
-  font-size: 20px;
-  color: var(--bg-color);
-  margin: 0 10px;
-  display: inline-block;
-  transition: 0.5s;
-  text-decoration: none;
-  opacity: 0.70;
-}
-
-footer .menu_footer li a:hover{
-  opacity: 1;
-  color: var(--bg-color);
-  transition: 0.5s;
-}
- form{
-  display: flex;
-  flex-direction: column;
-  height: 70%;
-  justify-content: space-evenly;
-}
-form input{
-  height: 80px;
-  border: 0;
-  background-color: var(--bg-color);
-  color: var(--first-color);
-  font-weight: bold;
-  border-bottom: 3px solid var(--first-color);
-}
