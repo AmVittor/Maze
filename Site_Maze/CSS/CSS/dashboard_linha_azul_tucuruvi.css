@@ -22,7 +22,10 @@
 --z-fixed: 100;
 }
 
-
+a{
+  color: var(--white-color);
+  text-decoration: none;
+}
 
 /* BASE */
 *,::before,::after{
@@ -40,23 +43,6 @@ body{
   transition: 0.5s;
 }
 
-h1{
-  margin: 0;
-  font-family: 'Spartan', sans-serif;
-  color: var(--green-strong);
-}
-ul{
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-a{
-  text-decoration: none;
-}
-
-span {
-  font-family: 'Spartan', sans-serif;
-}
 
 /* l NAV é a class que contem todos os filhos (elementos) */
 .l-navbar{
@@ -135,15 +121,12 @@ span {
   cursor: pointer;
 }
 
-.nav_link:hover{
-  background-color: var(--green-strong);
-  transition: 0.5s;
-}
 
 .nav_icon{
   font-size: 20px;
   width: 24px;
 }
+
 
 .nav_name{
   font-size: var(--small-font-size);
@@ -239,95 +222,70 @@ span {
 }
 
 /*Espaço para os graficos*/
-.dash {
-  margin: auto;
-  text-align: center;
+details > summary{
+
+  font-weight: bold;
+}
+
+.scrollTeste{
+  overflow: scroll;
+  height: 270px;
+  overflow-x: hidden;
+}
+
+
+
+.scrollTeste::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+.scrollTeste::-webkit-scrollbar-track {
+  background: var(--bg-color);        /* color of the tracking area */
+}
+
+.scrollTeste::-webkit-scrollbar-thumb {
+  background-color: var(--green-strong);    /* color of the scroll thumb */
+  border-radius: 2px;
+  width: 5px;       /* roundness of the scroll thumb */
+  }
+
+.dash_space{
   display: flex;
+  width: 97%;
   padding: 0%;
+  justify-content: space-evenly;
   margin: 0%;
+  flex-wrap: wrap;
+  height: 100vh;
 }
 
-.dash_space {
-  display: flex-start;
-  width: 80%;
-  height: 490px;
-  margin-right: 20px;
-}
+#grafico_1{
 
-.dash_space_1 {
-  display: inline-flex;
-  width: 20%;
-  height: 490px;
-}
-
-.dash_space_2 {
-  display: inline-flex;
   width: 50%;
-  height: 230px; 
 }
 
-.dash_space_3 {
-  display: inline-flex;
-  width: 49.5%;
-  height: 230px;
+#grafico_2{
   
-}
-
-.dash_space_4 {
   width: 50%;
-  display: inline-flex;
-  height: 250px;
 }
 
-.dash_space_5 {
-  width: 49%;
-  display: inline-flex;
-  height: 250px;
-  justify-content: center;
-  padding: 5px;
+#grafico_3{
+  width: 50%;
 }
 
-
-/* Graficos */
+#grafico_4{
+  margin-left: 2%;
+  width: 48%;
+}
 
 /*GRAFICO*/
-
 .grafico_linha_azul{
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 700px;
+  
 }
 
 /* linhas */
 
-.line_linha_azul{
-  display: flex;
-  padding-left: 25%;
-}
-
-.vl {
-  border-left: 5px solid #6E95F9;
-  height: 475px;
-}
-
-.v2 {
-  color: var(--white-color);
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: right;
-  padding-right: 8px;
-  list-style-type: style;
-}
-
-.a_line_linha_azul{
-  text-decoration: none;
-  color: var(--white-color);
-  font-size: 17.4px;
-  justify-content: space-between;
-  cursor: pointer;
-  padding: 2.5;
-}
-
-.a_line_linha_azul:hover{
-  color: var(--green-strong);
-  transition: 0.5s;
-}
