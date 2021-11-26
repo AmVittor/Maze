@@ -22,6 +22,40 @@
   border-bottom: 3px solid var(--green-strong);
   text-align: center;
 }
+.navigation{
+  height: 100px;
+  border-bottom: 2px solid var(--green-strong);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navMenu{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.navMenu a {
+color: #FFFF;
+text-decoration: none;
+font-size: 16px;
+text-transform: uppercase;
+font-weight: 500;
+display: inline-block;
+width: 150px;
+}
+.navMenu h1{
+  color: #4ADAA8;
+  margin: 0;
+  padding: 0;
+}
+
+.navMenu a:hover {
+color: #4ADAA8;
+transition: 300ms;
+}
+
+
 
 
 

@@ -3,10 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="shortcut icon" href="../CSS/Images/ico_maze.ico" type="image/x-icon">
-  <link rel="stylesheet" href="../CSS/CSS/sobreus.css">
-  <link rel="stylesheet" href="../CSS/CSS/Nav&footer.css">
-  <link rel="stylesheet" href="../CSS/CSS/contato.css">
+  <link rel="shortcut icon" href="./css/Images/ico_maze.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/sobreus.css">
+ <link rel="stylesheet" href="./css/Nav&footer.css">
+  <link rel="stylesheet" href="./css/contato.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maze</title>
@@ -14,21 +14,16 @@
 
 <body>
   <!-- CABEÇALHO -->
-  <div class="header">
-    <div class="container">
-      <u class="navbar">
-        <li><a href="./index.html">Inicial</a></li>
-        <span class="span_negrito">
-          <li><a href="">Sobre nós</a></li>
-        </span>
-      </u>
-      <h1>Maze</h1>
-      <u class="navbar">
-        <li><a href="./cadastro.html">Cadastro</a></li>
-        <li><a href="./dashboard.html">Dashboard</a></li>
-      </u>
-    </div>
-  </div>
+  <div class="navigation">
+    <nav  class="navMenu">
+        <a style="margin-left: 6%;"  href="./index.html">Inicial</a>
+        <a style="font-weight: bold;" href="">Sobre nós</a>
+        <h1>Maze</h1>
+        <a href="./cadastro.html">Cadastro</a>
+        <a href="./dashboard.html" onclick="dashboard()">Dashboard</a>
+      <div class="dot"></div>
+    </nav>
+</div>
   <!--                             SOBRE NÓS PRIMEIRA                              -->
   <div class="abt-us-t">
     <div class="container">
@@ -95,9 +90,9 @@
   <footer>
 
     <ul class="social_icon">
-      <li><a href=""><img src="../CSS/icon/linkedin-logo.png"></a></li>
-      <li><a href=""><img src="../CSS/icon/google-logo.png"></a></li>
-      <li><a href=""><img src="../CSS/icon/facebook-logo.png"></a></li>
+      <li><a href=""><img src="./css/icon/linkedin-logo.png"></a></li>
+      <li><a href=""><img src="./css/icon/google-logo.png"></a></li>
+      <li><a href=""><img src="./css/icon/facebook-logo.png"></a></li>
     </ul>
 
     <ul class="menu_footer">
@@ -115,7 +110,7 @@
 </body>
 
 </html>
-<script src="../JS/Caljs.js"></script>
+<script src="./js/Caljs.js"></script>
 <script src="../JS/sobre_nos.js"></script>
 <!--
 

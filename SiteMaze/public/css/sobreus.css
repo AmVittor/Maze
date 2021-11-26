@@ -106,7 +106,7 @@ span {
 .abt-us-t{
   display: flex;
   height: 100vh;
-  background-image: url(../Images/Team.png);
+  background-image: url(../css/Images/Team.png);
   background-size: 45em;
   background-repeat: no-repeat;
   background-position-x: right;
