@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maze Metro</title>
-
+    <script src="./js/funcoes.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="./css/dashboardStyle.css">
 </head>
 <!-- body-pd para animar a sidebar pelo JS-->
 
-<body>
+<body onload="validarSessao()">
     <div class="l-navbar" id="navbar">
         <nav class="nav">
             <div>
@@ -50,7 +50,9 @@
 
     <div class="title_cards">
         <h1>Linhas Parceiras</h1>
-        <div class="div_name_login"><span onloadstart="empresa_login()" id="em_login" class="name_login"></span></div>
+        <div class="div_name_login">
+            <span onloadstart="empresa_login()" id="em_login" class="name_login"></span>
+        </div>
     </div>
 
     <div class="cards_container">
@@ -239,7 +241,7 @@
             <a style="background-color: #202124; color: #202124;" bclass="card prata" href="">
 
                 <div class="card-header">
-                    
+
                 </div>
                 <div class="card-body">
                     <h4 style="background-color: #202124; color: #202124;">
