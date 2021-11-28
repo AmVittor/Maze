@@ -205,19 +205,20 @@ linhasTxt h1{
   }
   .conteudo-resultado{
     display: flex;
+    width: 450px;
   }
  
-    .explica_cal h3{
+  .explica_cal h3{
       color: var(--white-color);
   
-    }
-   .explica_cal{
+  }
+  .explica_cal{
      font-size: 26px;
      width: 60%;
      height: 24px;
      align-self: center;
      margin-left: 2%;
-   }
+  }
    
     .conta{
       padding-left: 2%;

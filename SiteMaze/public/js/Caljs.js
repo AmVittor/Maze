@@ -48,7 +48,7 @@ function fnCalculo() {
     // var resultado_financeiro = (preco * qtd_pessoas * 0.01).toLocaleString();
     //Mostrar o retorno financeiro e as visualizações
     tempo.innerHTML = `Selecionando o plano <strong style="color: white">${plano} dias</strong>, com fluxo <strong style="color: white">${linha_selecionada}</strong>, seu anúncio terá aproximadamente: <br><br>
-         <span id="span_views_dia"><strong id="views_dia" style="color: white">${visualizacoes_por_dia}</strong> visualizações por dia,</span><br>
+         <span id="span_views_dia"><strong id="views_dia" style="color: white">${visualizacoes_por_dia}</strong> visualizações por dia,</span><br><br>
          <span id="span_views_mes"><strong id="views_mes" style="color: white">${visualizacoes_mensais}</strong> visualizações por mês </span> <br><br>   
          `;
 
@@ -62,11 +62,11 @@ function fnCalculo() {
 
     function fnQtdPessoas(linha) {
         if (linha == "Baixo") {
-            return 489000;
+            return 250000;
         } else if (linha == "Médio") {
-            return 275000;
+            return 425000;
         } else if (linha == "Alto") {
-            return 603000;
+            return 536000;
         } 
     }
 }
