@@ -7,7 +7,7 @@
   <title>Maze Metro</title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../CSS/CSS/dashboard_linha_azul_tucuruvi.css">
+  <link rel="stylesheet" href="./css/dashboard_linha_azul_tucuruvi.css">
 
   <!-- JS CANVAS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
@@ -153,9 +153,9 @@
 
  
         <!-- GRAFICO -->
-        <div id='grafico_4'>
+        <!-- <div id='grafico_4'>
           <canvas id="chart_4" > </canvas>
-        </div>
+        </div> -->
         
         <div  id='grafico_2'>
           <canvas id="chart_2" > </canvas>
@@ -173,6 +173,7 @@
   
   
   
+  <span onclick="obterDadosGrafico(1)"></span>
   
   <!-- MAIN JS -->
   <script src="./js/dashboard.js"></script>
@@ -181,6 +182,7 @@
 </html>
 
 <script>
+  let proximaAtualizacao;
   // Referenciando a tag canvas e defininco que o gráfico será em 2d
 
   var context = document.getElementById("chart").getContext("2d");
@@ -300,101 +302,122 @@
 
   // Referenciando a tag canvas e defininco que o gráfico será em 2d
 
-  var context_3 = document.getElementById("chart_3").getContext("2d");
+  obterDadosGrafico(1)
+ 
+  function obterDadosGrafico(idAquario) {
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
+        }
 
-  // configurando todo o corpo do gráfico, as colunas, linhas, valores, etc
-  var configuration_3 = {
-    type: 'bar',
-    data: {
-      labels: ["1:00", "3:00", "5:00", "7:00", "9:00", "11:00", "13:00", "15:00", "17:00", "19:00", "21:00", "23:00"],
-      datasets: [{
-        label: ["volume de pessoas"],
-        data: ["280000", "340000", "295000", "260000", "330000", "403000", "250000", "190000", "365000", "440000", "450000", "300000"],
-        type: 'line',
-        borderColor: '#00f01f',
-        backgroundColor: '#00f01f33',
-      }]
-    },
-    options: {
-      scales: {
-        xAxes: [{
-          barPercentage: .7,
-          distribution: 'series',
-          ticks: {
-            beginAtZero: true,
-            fontColor: "#4ADAA8",
-            drawBorder: false,
-          },
+        fetch(`/medidas/ultimas/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
 
-          gridLines: {
-            color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
-          },
-          scaleLabel: {
-            display: true,
-            labelString: 'Horario',
-            fontColor: "#4ADAA8"
-          }
+                    plotarGrafico(resposta, idAquario);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
 
-        }],
-        yAxes: [{
-          gridLines: {
-            color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#FFF"],
-          },
-          scaleLabel: {
-            fontColor: "#4ADAA8",
-            display: true,
-            labelString: 'Número de pesssoas',
-          }
-        }],
-
-      },
     }
-  };
+    
+    function plotarGrafico(resposta, idAquario) {
+    console.log('iniciando plotagem do gráfico...');
 
-  //adicionando esses valores a um novo gráfico na tag canvas
-  var chart_3 = new Chart(context_3, configuration_3);
+    var dados = {
+        labels: [],
+        datasets: [
+            {
+                
+                label: 'Presença',
+                borderColor: '#00f01f',
+                backgroundColor: '#00f0206c',
+                fill: true,
+                data: []
+            }
+        ]
+    };
 
-  // QUARTO GRÁFICO
-
-  // Referenciando a tag canvas e defininco que o gráfico será em 2d
-
-  var context_4 = document.getElementById("chart_4").getContext("2d");
-
-  // configurando todo o corpo do gráfico, as colunas, linhas, valores, etc
-  var configuration_4 = {
-    type: 'doughnut',
-    data: {
-      labels: ["Bom", "Comum", "Crítico", "Risco", "Excelente"],
-      datasets: [{
-        label: ["Numero de Alertas"],
-        data: ["4", "2", "1", '2', "3"],
-        type: 'doughnut',
-        borderColor: ['#00FF00', '#FFFF00', '#FF0000', '#FFA500', '#118547'],
-        backgroundColor: ['#00FF00', '#FFFF00', '#FF0000', '#FFA500', '#118547'],
-      }]
-    },
-    options: {
-      scales: {
-        xAxes: [{
-          barPercentage: 0,
-          distribution: '',
-
-          gridLines: {
-            color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
-          },
-
-        }],
-        yAxes: [{
-          gridLines: {
-            color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
-          }
-        }],
-
-      },
+    for (i = 0; i < resposta.length; i++) {
+        var registro = resposta[i];
+        dados.labels.push(registro.momento_grafico);
+        dados.datasets[0].data.push(registro.resultado);
     }
-  };
 
-  //adicionando esses valores a um novo gráfico na tag canvas
-  var chart_4 = new Chart(context_4, configuration_4);
+    console.log(JSON.stringify(dados));
+
+    var context_3 = chart_3.getContext("2d");
+    window.grafico_linha = Chart.Line(context_3, {
+        data: dados,
+        //Configurações do gráfico
+        options: {
+            responsive: true,
+            animation: { duration: 500 },
+            hoverMode: 'index',
+            stacked: false,
+            title: {
+                display: true,
+                text: 'Histórico recente de presença'
+            },
+            scales: {
+                yAxes: [{
+                    type: 'linear',
+                    display: true,
+                    position: 'left',
+                    id: 'y-temperatura',
+                }, {
+                    type: 'linear',
+                    display: true,
+                    position: 'right',
+                    id: 'y-umidade',
+
+                    gridLines: {
+                        drawOnChartArea: false,
+                    },
+                }],
+            }
+        }
+    });
+
+    //Atualiza os dados de 2 em 2 segundos
+    setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
+}
+
+// só mexer se quiser alterar o tempo de atualização
+// ou se souber o que está fazendo!
+function atualizarGrafico(idAquario, dados) {
+    fetch(`/medidas/tempo-real/${idAquario}`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (novoRegistro) {
+
+                console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+                console.log(`Dados atuais do gráfico: ${dados}`);
+
+                // tirando e colocando valores no gráfico
+                dados.labels.shift(); // apagar o primeiro
+                dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
+                dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+                dados.datasets[0].data.push(novoRegistro[0].is_present); // incluir uma nova medida de umidade
+
+                window.grafico_linha.update();
+
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 5000);
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+            proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 5000);
+        }
+    })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+
+}
 
 </script>

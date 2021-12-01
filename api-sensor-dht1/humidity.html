@@ -17,16 +17,12 @@
 </head>
 
 <body>
-	<div>
-		<h1>Sensor LM35 - Temperatura</h1>
-			<section>
-				<h2>Média: <label id='average'>0.00</label></h2>
-			</section>
-			<section style="width:100%">
-				<canvas id="chart"></canvas>
-		<section>
-	</div>
-	
+	<section>
+		<h2>Média: <label id='average'>0.00</label></h2>
+	</section>
+	<section style="width:100%">
+		<canvas id="chart"></canvas>
+	<section>
 	<script>
 
 		var context = document.getElementById("chart").getContext("2d");
@@ -37,15 +33,14 @@
 			type: 'line',
 			data: {
 				datasets: [{
-					label: "Teste",
+					label: "Humidity x Time",
 					type: 'line',
-					borderColor: ['#00f01f'],
-					backgroundColor: ['#00ff0033']
 				}]
 			},
 			options: {
 				scales: {
 					xAxes: [{
+						//type: 'value',
 						distribution: 'series',
                         ticks: {
                             beginAtZero:true
@@ -54,7 +49,7 @@
 					yAxes: [{
 						scaleLabel: {
 							display: true,
-							labelString: 'Temperatura'
+							labelString: 'Humidity'
                         },
                         ticks: {
                             beginAtZero:true
@@ -66,6 +61,7 @@
 				}
 			}
         };
+        
 		var chart = new Chart(context, configuration);
 
         //Função para obter os dados de temperatura do server
@@ -79,10 +75,11 @@
         function get_data(){
 
             var http = new XMLHttpRequest();
-            http.open('GET', 'http://localhost:3000/api', false);
-            http.send(20);        
+            http.open('GET', 'http://localhost:3000/api/humidity', false);
+            http.send(null);        
 			
             var obj = JSON.parse(http.responseText);
+
             if (obj.data.length == 0){
                 return;
             }
@@ -103,11 +100,13 @@
                 chart.update();
 			});
 			
-			document.getElementById('average').textContent = obj.average;
+			document.getElementById('average').textContent = obj.average
 		} 
+		
+		get_data();
 
         setInterval(() => {
-			get_data();
+            get_data();
         }, 1000);
 
 	</script>
