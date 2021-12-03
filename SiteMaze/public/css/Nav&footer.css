@@ -23,7 +23,7 @@
   text-align: center;
 }
 .navigation{
-  height: 100px;
+  height: 60px;
   border-bottom: 2px solid var(--green-strong);
   display: flex;
   justify-content: center;

@@ -73,12 +73,13 @@ span {
 /* Banner */
 .abt-us{
   display: flex;
-  height: 100vh;
+  height: 90vh;
 }
 
 .logo_img{
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
+  margin: 70px 11%;
 }
 
 .logo_img img{
@@ -364,4 +365,68 @@ linhasTxt h1{
   /* border: 3px solid pink; */
   margin: auto;
   display: none;
+}
+
+
+/* intro text */
+.text_intro {
+  --offset: 6px;
+  display: flex;
+  margin-left: 19%;
+}
+
+.text_intro_h2{
+  width: 570px;
+  font-size: 40px;
+  font-family: Helvetica;
+  line-height: 1.4;
+  letter-spacing: -0.04em;
+  color: var(--white-color);
+}
+
+.mask {
+  height: 70px;
+  position: relative;
+  overflow: hidden;
+  margin-top: var(--offset);
+}
+
+.mask span {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  top: 70px;
+  padding-bottom: var(--offset);
+  
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+}
+
+.mask span[data-show] {
+  transform: translateY(-100%);
+  transition: .5s transform ease-in-out;
+}
+
+.mask span[data-up] {
+  transform: translateY(-200%);
+  transition: .5s transform ease-in-out;
+}
+
+.mask span:nth-child(1) {
+  background-image: linear-gradient(45deg, #0ecffe 50%, #07a6f1);
+}
+
+.mask span:nth-child(2) {
+  background-image: linear-gradient(45deg, #18e198 50%, #0ec15d);
+}
+
+.mask span:nth-child(3) {
+  background-image: linear-gradient(45deg, #8a7cfb 50%, #633e9c);
+}
+
+.mask span:nth-child(4) {
+  background-image: linear-gradient(45deg, #fa7671 50%, #f45f7f);
 }
