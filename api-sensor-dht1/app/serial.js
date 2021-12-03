@@ -82,7 +82,7 @@ class ArduinoDataRead {
                     }
                     else{
                         data = 0
-                        this.listData.push(parseFloat(data))
+                        this.listDataSwitch.push(parseFloat(data))
                     }
                 });
             } catch (e) {

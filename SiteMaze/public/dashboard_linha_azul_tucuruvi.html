@@ -189,15 +189,15 @@
 
   // configurando todo o corpo do gráfico, as colunas, linhas, valores, etc
   var configuration = {
-    type: 'bar',
+    type: 'line',
     data: {
       labels: ["janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"],
       datasets: [{
         label: ["volume de pessoas"],
-        data: ["280000", "340000", "295000", "260000", "330000", "403000", "250000", "190000", "365000", "440000", "450000", "300000"],
-        type: 'bar',
-        borderColor: ['#eef414', '#00f01f', '#00f01f', '#eef414', '#00f01f', '#118547', '#FFA500', '#d3000d', '#00f01f', '#118547', '#118547', '#eef414'],
-        backgroundColor: ['#eef414', '#00f01f', '#00f01f', '#eef414', '#00f01f', '#118547', '#FFA500', '#d3000d', '#00f01f', '#118547', '#118547', '#eef414'],
+        data: ["280000", "340000", "295000", "260000", "330000", "403000", "250000", "190000", "365000", "440000", "450000"],
+        type: 'line',
+        borderColor: ['#00f01f'],
+        backgroundColor: ['#00f01f0b'],
       }]
     },
     options: {
@@ -337,7 +337,7 @@
                 
                 label: 'Presença',
                 borderColor: '#00f01f',
-                backgroundColor: '#00f0206c',
+                backgroundColor: ['1','2','3','4','5','6','7'],
                 fill: true,
                 data: []
             }
@@ -353,7 +353,7 @@
     console.log(JSON.stringify(dados));
 
     var context_3 = chart_3.getContext("2d");
-    window.grafico_linha = Chart.Line(context_3, {
+    window.grafico_linha = Chart.Bar(context_3, {
         data: dados,
         //Configurações do gráfico
         options: {
@@ -388,7 +388,32 @@
     //Atualiza os dados de 2 em 2 segundos
     setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
 }
-
+    var i1 = ""
+    var i2 = ""
+    var i3 = ""
+    var i4 = ""
+    var i5 = ""
+    var i6 = ""
+    var i7 = ""
+    var i8 = ""
+    var i9 = ""
+    var i10 = ""
+    var i11= ""
+    var i12= ""
+    var i13 = ""
+    var i14 = ""
+    var i15 = ""
+    var i16 = ""
+    var i17 = ""
+    var i18 = ""
+    var i19 = ""
+    var i20 = ""
+    var i21 = ""
+    var i22 = ""
+    var i23 = ""
+    // só mexer se quiser alterar o tempo de atualização
+    // ou se souber o que está fazendo!
+    
 // só mexer se quiser alterar o tempo de atualização
 // ou se souber o que está fazendo!
 function atualizarGrafico(idAquario, dados) {
@@ -403,7 +428,72 @@ function atualizarGrafico(idAquario, dados) {
                 dados.labels.shift(); // apagar o primeiro
                 dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
                 dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                dados.datasets[0].data.push(novoRegistro[0].is_present); // incluir uma nova medida de umidade
+                dados.datasets[0].data.push(novoRegistro[0].is_present * 25 ); // incluir uma nova medida de umidade
+
+                        dados.datasets[0].backgroundColor[22]  = i1
+                        dados.datasets[0].backgroundColor[21]  = i2
+                        dados.datasets[0].backgroundColor[20]  = i3
+                        dados.datasets[0].backgroundColor[19]  = i4
+                        dados.datasets[0].backgroundColor[18]  = i5
+                        dados.datasets[0].backgroundColor[17]  = i6
+                        dados.datasets[0].backgroundColor[16]  = i7
+                        dados.datasets[0].backgroundColor[15]  = i8
+                        dados.datasets[0].backgroundColor[14]  = i9
+                        dados.datasets[0].backgroundColor[13]  = i10
+                        dados.datasets[0].backgroundColor[12]  = i11
+                        dados.datasets[0].backgroundColor[11]  = i12
+                        dados.datasets[0].backgroundColor[10]  = i13
+                        dados.datasets[0].backgroundColor[9]  = i14
+                        dados.datasets[0].backgroundColor[8]  = i15
+                        dados.datasets[0].backgroundColor[7]  = i16
+                        dados.datasets[0].backgroundColor[6]  = i17
+                        dados.datasets[0].backgroundColor[5]  = i18
+                        dados.datasets[0].backgroundColor[4]  = i19
+                        dados.datasets[0].backgroundColor[3]  = i20
+                        dados.datasets[0].backgroundColor[2]  = i21
+                        dados.datasets[0].backgroundColor[1]  = i22
+                        dados.datasets[0].backgroundColor[0]  = i23
+                      
+                        i23 = i22
+                        i22 = i21
+                        i21 = i20
+                        i20 = i19
+                        i19 = i18
+                        i18 = i17
+                        i17 = i16
+                        i16 = i15
+                        i15 = i14
+                        i14 = i13
+                        i13 = i12
+                        i12 = i11
+                        i11 = i10
+                        i10 = i9
+                        i9 = i8
+                        i8 = i7
+                        i7 = i6
+                        i6 = i5
+                        i5 = i4
+                        i4 = i3
+                        i3 = i2
+                        i2 = i1
+                        if(novoRegistro[0].is_present > 300){
+                            i1 = "#118547"
+                            dados.datasets[0].backgroundColor[23] = i1
+                        } else if(novoRegistro[0].is_present > 250){
+                            i1 = "#00f01f"
+                            dados.datasets[0].backgroundColor[23] =  i1
+                        } else if(novoRegistro[0].is_present > 200){
+                            i1 = "#eef414"
+                            dados.datasets[0].backgroundColor[23]   = i1
+                        }
+                        else if(novoRegistro[0].is_present > 150){
+                            i1 = "#FFA500"
+                            dados.datasets[0].backgroundColor[23]   = i1
+                        }
+                        else{
+                          i1 = "#d3000d"
+                            dados.datasets[0].backgroundColor[23]   = i1
+                        }
 
                 window.grafico_linha.update();
 
