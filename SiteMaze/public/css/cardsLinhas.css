@@ -49,6 +49,20 @@ body {
   background: #202124;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg-color);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green-strong);    /* color of the scroll thumb */
+  border-radius: 2px;
+  width: 5px;       /* roundness of the scroll thumb */
+  }
+
 h1 {
   font-family: 'Spartan', sans-serif;
   color: var(--title-color-primary);

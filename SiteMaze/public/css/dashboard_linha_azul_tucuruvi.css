@@ -43,6 +43,20 @@ body{
   transition: 0.5s;
 }
 
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg-color);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green-strong);    /* color of the scroll thumb */
+  border-radius: 2px;
+  width: 5px;       /* roundness of the scroll thumb */
+  }
+
 
 /* l NAV é a class que contem todos os filhos (elementos) */
 .l-navbar{

@@ -15,6 +15,8 @@
 --normal-font-size: 16px;
 --small-font-size: 14px;
 --nav-width: 92px;
+
+
 /* CARDS */
 --card-color-azul: #2c6ff7;
 
@@ -61,6 +63,20 @@ body{
   background-color: var(--bg-color);
   transition: 0.5s;
 }
+
+body::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--bg-color);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--green-strong);    /* color of the scroll thumb */
+  border-radius: 2px;
+  width: 5px;       /* roundness of the scroll thumb */
+  }
 
 h1{
   margin: 0;
@@ -143,7 +159,7 @@ span {
 .nav_logo{
   color: var(--white-color);
   font-weight: 600;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .nav_link{
