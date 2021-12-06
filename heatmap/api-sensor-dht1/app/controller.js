@@ -56,10 +56,11 @@ router.post('/sendData', (request, response) => {
     let data_agora = new Date()
 
     var sql = "INSERT INTO medida_presenca(is_present, id_sensor, date_moviment) VALUES(?)";
-    values = [tcrt5000(), Math.floor(Math.random() * (7 - 1) + 1), data_agora];
+    values = [tcrt5000(), Math.floor(Math.random() * (14 - 1) + 1), data_agora];
     db.query(sql, [values], function(err, result){
         if(err) throw err;
         console.log("Medidas inseridas: " + result.affectedRows)
+        console.log(values);
     });
     response.sendStatus(200);
 })

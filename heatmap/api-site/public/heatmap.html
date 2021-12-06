@@ -10,7 +10,7 @@
         .heatmap{
             height: 490px;
             width: 850px;
-            background-image: url("planta.png");
+            background-image: url("planta_metro.png");
             background-size: cover;
         }
     </style>
@@ -31,9 +31,7 @@
 
 <script>
     
-
-        // heatmapInstance.addData({ x: 10, y: 10, value: 100})
-
+    
         function buscarPresencas() {
             var hora_iniVar = hora_ini.value;
             var hora_fimVar = hora_fim.value;
@@ -50,7 +48,7 @@
             })
             }).then((resultado) => {
                 if(resultado.ok) {
-                    resultado.json().then((json) => {
+                     resultado.json().then((json) => {
                         console.log("JSON AQUI", json);
 
 // Configuração mínima, container padrão
@@ -66,13 +64,19 @@ var heatmapInstance = h337.create({
         var height = 490;
 
         //Gerando um ponto por local da planta
-        var local1 = {x: 130, y:150, value: json[0].total, radius: 150,};
-        var local2 = {x: 350, y:110, value: json[1].total, radius: 120,};
-        var local3 = {x: 750, y:130, value: json[2].total, radius: 130,};
-        var local4 = {x: 150, y:380, value: json[3].total, radius: 100,};
-        var local5 = {x: 450, y:370, value: json[4].total, radius: 150,};
-        var local6 = {x: 700, y:380, value: json[5].total, radius: 180,};
-
+        var local1 = {x: 115, y:70, value: json[0].total, radius: 45,};
+        var local2 = {x: 115, y:123, value: json[1].total, radius: 40,};
+        var local3 = {x: 118, y:175, value: json[2].total, radius: 50,};
+        var local4 = {x: 120, y:224, value: json[3].total, radius: 50,};
+        var local5 = {x: 119, y:271, value: json[4].total, radius: 50,};
+        var local6 = {x: 350, y:100, value: json[5].total, radius: 105,};
+        var local7 = {x: 520, y:100, value: json[6].total, radius: 105,};
+        var local8 = {x: 690, y:100, value: json[7].total, radius: 105,};
+        var local9 = {x: 765, y:242, value: json[8].total, radius: 95,};
+        var local10 = {x: 765, y:340, value: json[9].total, radius: 95,};
+        var local11 = {x: 550, y:390, value: json[10].total, radius: 160,};
+        var local12 = {x: 105, y:380, value: json[11].total, radius: 120,};
+        var local13 = {x: 320, y:400, value: json[12].total, radius: 105,};
 
         console.log("Local 1:", local1);
         console.log("Local 2:", local2);
@@ -80,8 +84,15 @@ var heatmapInstance = h337.create({
         console.log("Local 4:", local4);
         console.log("Local 5:", local5);
         console.log("Local 6:", local6);
+        console.log("Local 7:", local7);
+        console.log("Local 8:", local8);
+        console.log("Local 9:", local9);
+        console.log("Local 10:", local10);
+        console.log("Local 11:", local11);
+        console.log("Local 12:", local12);
+        console.log("Local 13:", local13);
 
-        points = points.concat(local1, local2, local3, local4, local5, local6);
+        points = points.concat(local1, local2, local3, local4, local5, local6, local7, local8, local9, local10, local11, local12, local13);
 
 
         //formato para gerar mapa
@@ -93,6 +104,8 @@ var heatmapInstance = h337.create({
 
         //inicia pontos no mapa de calor
         heatmapInstance.setData(data);
+        // heatmapInstance.addData({ x: 10, y: 10, value: 100})
+
                     });
                 } else {
                     console.log("Erro ao buscar quantidade de presença!");

@@ -27,7 +27,7 @@ class ArduinoDataRead {
                     this.__listDataTemp.pop();
                 }
             }
-            console.log('temp: ', parseFloat(data_float[1].toFixed(2)), 'hum: ', data_float[0]);
+            // console.log('temp: ', parseFloat(data_float[1].toFixed(2)), 'hum: ', data_float[0]);
             this.__listDataTemp.push(data_float[1]);
             this.listData.push(data_float[0]);
 
@@ -60,7 +60,7 @@ class ArduinoDataRead {
 				let humidity = parseFloat(value[0].replace('\r', ''));
                 this.listData.push(humidity);
                 this.__listDataTemp.push(temperature)
-                console.log("Temp: ",temperature," Umidade: ",humidity);
+                // console.log("Temp: ",temperature," Umidade: ",humidity);
             });
             
         }).catch(error => console.log(error));
