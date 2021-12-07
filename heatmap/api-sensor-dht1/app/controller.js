@@ -43,9 +43,9 @@ function tcrt5000() {
     let random = Math.random() * (max - min) + min;
   
     if (random > 0.5) {
-      return 1;
+      return random * 500;
     } else if (random <= 0.5) {
-      return 0;
+      return random * 200;
     }
 };
 
