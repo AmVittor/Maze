@@ -43,9 +43,9 @@ function tcrt5000() {
     let random = Math.random() * (max - min) + min;
   
     if (random > 0.5) {
-      return random * 500;
+      return random * 15;
     } else if (random <= 0.5) {
-      return random * 200;
+      return random * 15;
     }
 };
 
@@ -55,8 +55,8 @@ router.post('/sendData', (request, response) => {
 
     let data_agora = new Date()
 
-    var sql = "INSERT INTO medida_presenca(is_present, id_sensor, date_moviment) VALUES(?)";
-    values = [tcrt5000(), Math.floor(Math.random() * (14 - 1) + 1), data_agora];
+    var sql = "INSERT INTO medida_presenca(is_present, id_sensor, date_moviment, id_estacao) VALUES(?)";
+    values = [tcrt5000(), Math.floor(Math.random() * (14 - 1) + 1), data_agora, Math.floor(Math.random() * (200 - 100) + 100)];
     db.query(sql, [values], function(err, result){
         if(err) throw err;
         console.log("Medidas inseridas: " + result.affectedRows)

@@ -16,7 +16,7 @@
     </style>
   </head>
 
-  <body>
+  <body onload= "buscarMaior()">
     <div class="heatmap"></div>
 
     <form id="heatmap_form">
@@ -38,10 +38,51 @@
       />
     </form>
     <button type="submit" onclick="buscarPresencas()">Buscar</button>
+    <div id="contagem_estacoes"></div>
   </body>
 </html>
 
 <script>
+
+function buscarMaior() {
+    fetch('medidas/maiores', {
+      method: 'POST'
+    }).then(function(resposta) {
+        if (resposta.ok) {
+            if(resposta.status == 204) {
+                var contagem = document.getElementById("contagem_estacoes");
+                var mensagem = document.createElement("span");
+                
+                mensagem.innerHTML = "Nenhum resultado encontrado"; 
+                contagem.appendChild(mensagem);
+                throw "Nenhum resultado encontrado!!";
+            }
+
+            resposta.json().then(function (resposta) {
+                console.log("Dados recebidos: ", JSON.stringify(resposta));
+            
+
+    
+                // for (var i = 0; i < resposta.length; i++) {
+                    var conta = resposta[0];
+                    var divConta = document.createElement("div");
+                    var spanConta = document.createElement("span");
+
+                    console.log(conta.Estação, conta.total);
+
+                    contagem_estacoes.innerHTML = `<br/>${conta.Estação} <br/> total: ${conta.total} `;
+                    
+                  //  divConta.appendChild(spanConta);
+
+                  //  contagem.appendChild(divConta);
+                // }
+            })
+        }
+    })
+
+}
+
+
   function buscarPresencas() {
     var hora_iniVar = hora_ini.value;
     var hora_fimVar = hora_fim.value;
