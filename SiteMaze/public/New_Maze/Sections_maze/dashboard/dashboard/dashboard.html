@@ -137,18 +137,18 @@
 
     </div>
    </div>
-<div class="container">
+<!-- <div class="container">
   <div class="buttons">
     <button class="button-59" onclick="Main_graph('ano')">Anual</button>
     <button class="button-59" onclick="Main_graph('mes')">Mensal</button>
     <button class="button-59" onclick="Main_graph('dia')">Diário</button>
   </div>
-</div>
+</div> -->
 
   <div  class="container">
    <div class="year">
           <div class="year_graph" id='grafico_1'>
-            <h3 id="destaque"></h3>
+            <h3 id="destaque">Volume Anual</h3>
             <canvas id="chart" > </canvas>
           </div>
         </div>
@@ -157,14 +157,14 @@
 
           <div  class="dash_space">
         <div  class="graphs" id='grafico_2'>
-          <h3 id="destaque_2"></h3>
+          <h3 id="destaque_2">Volume Mensal</h3>
           <canvas id="chart_2" > </canvas>
         </div>
    
 
 
       <div class="graphs" id='grafico_3'>
-        <h3 id="destaque_3"></h3>
+        <h3 id="destaque_3">Volume Diário</h3>
         <canvas id="chart_3" > </canvas>
       </div>
 
@@ -175,11 +175,7 @@
 </body>
 </html>
 <script> 
-  
-function Main_graph (destaque){
-  if(destaque == 'ano'){
-
-    var context = document.getElementById("chart").getContext("2d");
+  var context = document.getElementById("chart").getContext("2d");
     var configuration = {
     type: 'line ',
     data: {
@@ -325,262 +321,411 @@ function Main_graph (destaque){
     };
   
     var chart_3 = new Chart(context_3, configuration_3);
-    destaque.innerHTML = `Volume Anual`
-    destaque_2.innerHTML = `Volume Mensal`
-    destaque_3.innerHTML = `Volume Diário`
+// function Main_graph (destaque){
+//   if(destaque == 'ano'){
 
-  } else if(destaque == 'mes'){
-  
-    var context = document.getElementById("chart_2").getContext("2d");
-    var configuration = {
-    type: 'line ',
-    data: {
-      labels: ["Nov", "Dez",'Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out'],
-      datasets: [{
-        label: ["Volume de pessoas"],
-        data: ["19440000", "1380000"],
-        type: 'line',
-        borderColor: ['#6E95F9'],
-        backgroundColor: ['#6E95F90b'],
-      }]
-    },
-    options: {
-      scales: {
-        xAxes: [{
-          barPercentage: .7,
-          distribution: 'series',
-          ticks: {
-            beginAtZero: false,
-            fontColor: "#4ADAA8",
-            drawBorder: true,
-          },
+//     var context = document.getElementById("chart").getContext("2d");
+//     var configuration = {
+//     type: 'line ',
+//     data: {
+//       labels: ["Nov", "Dez",'Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out'],
+//       datasets: [{
+//         label: ["Volume de pessoas"],
+//         data: ["19440000", "1380000"],
+//         type: 'line',
+//         borderColor: ['#6E95F9'],
+//         backgroundColor: ['#6E95F90b'],
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         xAxes: [{
+//           barPercentage: .7,
+//           distribution: 'series',
+//           ticks: {
+//             beginAtZero: false,
+//             fontColor: "#4ADAA8",
+//             drawBorder: true,
+//           },
 
-          gridLines: {
-            color: ["#3B3D3F", "#3B3D3F",  "#3B3D3F",  "#3B3D3F",  "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
-          },
+//           gridLines: {
+//             color: ["#3B3D3F", "#3B3D3F",  "#3B3D3F",  "#3B3D3F",  "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
+//           },
       
 
-        }],
-        yAxes: [{
-          gridLines: {
-            color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8","#4ADAA8","#4ADAA8","#4ADAA8", "#4ADAA8",],
-          },
-          scaleLabel: {
-            fontColor: "#4ADAA8",
-            display: true,
-            labelString: 'Número de pesssoas',
+//         }],
+//         yAxes: [{
+//           gridLines: {
+//             color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8","#4ADAA8","#4ADAA8","#4ADAA8", "#4ADAA8",],
+//           },
+//           scaleLabel: {
+//             fontColor: "#4ADAA8",
+//             display: true,
+//             labelString: 'Número de pesssoas',
           
-          }
-        }],
+//           }
+//         }],
 
-      },
-    }
-  };
+//       },
+//     }
+//   };
 
-    var chart_2 = new Chart(context, configuration);
+//     var chart = new Chart(context, configuration);
+
+//     // DIAS DO MES DIA 1, 2, 3 ETC
+//     var context_2 = document.getElementById("chart_2").getContext("2d");
+
+//     var configuration_2 = {
+//     type: 'bar',
+//     data: {
+//       labels: ["01", "02", "03"],
+//        datasets: [{
+//         label: ["Volume de pessoas"],
+//         data: ["28000", "34000",''],
+//         type: 'bar',
+//         borderColor: ['#00f01f'],
+//         backgroundColor: ['#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f'],
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         xAxes: [{
+//           barPercentage: .7,
+//           distribution: 'series',
+//           ticks: {
+//             beginAtZero: true,
+//             fontColor: "#4ADAA8",
+//             drawBorder: true,
+//           },
+
+//           gridLines: {
+//             color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
+//           },
   
-    var context_2 = document.getElementById("chart").getContext("2d");
 
-var configuration_2 = {
-type: 'bar',
-data: {
-  labels: ["01", "02", "03"],
-   datasets: [{
-    label: ["Volume de pessoas"],
-    data: ["28000", "34000",''],
-    type: 'bar',
-    borderColor: ['#00f01f'],
-    backgroundColor: ['#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f'],
-  }]
-},
-options: {
-  scales: {
-    xAxes: [{
-      barPercentage: .7,
-      distribution: 'series',
-      ticks: {
-        beginAtZero: true,
-        fontColor: "#4ADAA8",
-        drawBorder: true,
-      },
+//         }],
+//         yAxes: [{
+//           gridLines: {
+//             color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8",  "#FFF"],
+//       },
+//           scaleLabel: {
+//             fontColor: "#4ADAA8",
+//             display: true,
+//             labelString: 'Número de pesssoas',
+//           }
+//         }],
 
-      gridLines: {
-        color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
-      },
+//       },
+//     }
+//   };
 
+//   var chart_2 = new Chart(context_2, configuration_2);
 
-    }],
-    yAxes: [{
-      gridLines: {
-        color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8",  "#FFF"],
-  },
-      scaleLabel: {
-        fontColor: "#4ADAA8",
-        display: true,
-        labelString: 'Número de pesssoas',
-      }
-    }],
-
-  },
-}
-};
-
-var chart = new Chart(context_2, configuration_2);
   
-    destaque.innerHTML = `Volume Mensal`
-    destaque_2.innerHTML = `Volume Anual`
-    destaque_3.innerHTML = `Volume Diário`
-    
-  } else if(destaque == 'dia') {
-
-    var context_3 = document.getElementById("chart").getContext("2d");
   
-  var configuration_3 = {
-    type: 'bar',
-    data: {
-      labels: ["04:40", "05:00", "07:00", "09:00", "11:00", "13:00", "15:00", "17:00", "19:00", "21:00", "23:00", "00:00"],
-      datasets: [{
-        label: ["volume de pessoas"],
-        data: ["280000", "340000", "295000", "260000", "330000", "403000", "250000", "190000", "365000", "440000", "450000", "300000"],
-        type: 'line',
-        borderColor: '#00f01f',
-        backgroundColor: '#00f01f33',
-      }]
-    },
-    options: {
-      scales: {
-        xAxes: [{
-          barPercentage: .7,
-          distribution: 'series',
-          ticks: {
-            beginAtZero: false,
-            fontColor: "#4ADAA8",
-            drawBorder: true,
-          },
+//     var context_3 = document.getElementById("chart_3").getContext("2d");
+  
+//     var configuration_3 = {
+//       type: 'bar',
+//       data: {
+//         labels: ["04:40", "05:00", "07:00", "09:00", "11:00", "13:00", "15:00", "17:00", "19:00", "21:00", "23:00", "00:00"],
+//         datasets: [{
+//           label: ["volume de pessoas"],
+//           data: ["280000", "340000", "295000", "260000", "330000", "403000", "250000", "190000", "365000", "440000", "450000", "300000"],
+//           type: 'line',
+//           borderColor: '#00f01f',
+//           backgroundColor: '#00f01f33',
+//         }]
+//       },
+//       options: {
+//         scales: {
+//           xAxes: [{
+//             barPercentage: .7,
+//             distribution: 'series',
+//             ticks: {
+//               beginAtZero: false,
+//               fontColor: "#4ADAA8",
+//               drawBorder: true,
+//             },
+  
+//             gridLines: {
+//               color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
+//             },
+      
+  
+//           }],
+//           yAxes: [{
+//             gridLines: {
+//               color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8",  "#FFF"],
+//             },
+//             scaleLabel: {
+//               fontColor: "#4ADAA8",
+//               display: true,
+//               labelString: 'Número de pesssoas',
+//             }
+//           }],
+  
+//         },
+//       }
+//     };
+  
+//     var chart_3 = new Chart(context_3, configuration_3);
+//     destaque.innerHTML = `Volume Anual`
+//     destaque_2.innerHTML = `Volume Mensal`
+//     destaque_3.innerHTML = `Volume Diário`
 
-          gridLines: {
-            color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
-          },
-    
+//   } else if(destaque == 'mes'){
+  
+//     var context = document.getElementById("chart_2").getContext("2d");
+//     var configuration = {
+//     type: 'line ',
+//     data: {
+//       labels: ["Nov", "Dez",'Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out'],
+//       datasets: [{
+//         label: ["Volume de pessoas"],
+//         data: ["19440000", "1380000"],
+//         type: 'line',
+//         borderColor: ['#6E95F9'],
+//         backgroundColor: ['#6E95F90b'],
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         xAxes: [{
+//           barPercentage: .7,
+//           distribution: 'series',
+//           ticks: {
+//             beginAtZero: false,
+//             fontColor: "#4ADAA8",
+//             drawBorder: true,
+//           },
 
-        }],
-        yAxes: [{
-          gridLines: {
-            color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8",  "#FFF"],
-          },
-          scaleLabel: {
-            fontColor: "#4ADAA8",
-            display: true,
-            labelString: 'Número de pesssoas',
-          }
-        }],
-
-      },
-    }
-  };
-
-  var chart = new Chart(context_3, configuration_3);
-
-  var context = document.getElementById("chart_3").getContext("2d");
-    var configuration = {
-    type: 'line ',
-    data: {
-      labels: ["Nov", "Dez",'Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out'],
-      datasets: [{
-        label: ["Volume de pessoas"],
-        data: ["19440000", "1380000"],
-        type: 'line',
-        borderColor: ['#6E95F9'],
-        backgroundColor: ['#6E95F90b'],
-      }]
-    },
-    options: {
-      scales: {
-        xAxes: [{
-          barPercentage: .7,
-          distribution: 'series',
-          ticks: {
-            beginAtZero: false,
-            fontColor: "#4ADAA8",
-            drawBorder: true,
-          },
-
-          gridLines: {
-            color: ["#3B3D3F", "#3B3D3F",  "#3B3D3F",  "#3B3D3F",  "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
-          },
+//           gridLines: {
+//             color: ["#3B3D3F", "#3B3D3F",  "#3B3D3F",  "#3B3D3F",  "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
+//           },
       
 
-        }],
-        yAxes: [{
-          gridLines: {
-            color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8","#4ADAA8","#4ADAA8","#4ADAA8", "#4ADAA8",],
-          },
-          scaleLabel: {
-            fontColor: "#4ADAA8",
-            display: true,
-            labelString: 'Número de pesssoas',
+//         }],
+//         yAxes: [{
+//           gridLines: {
+//             color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8","#4ADAA8","#4ADAA8","#4ADAA8", "#4ADAA8",],
+//           },
+//           scaleLabel: {
+//             fontColor: "#4ADAA8",
+//             display: true,
+//             labelString: 'Número de pesssoas',
           
-          }
-        }],
+//           }
+//         }],
 
-      },
-    }
-  };
+//       },
+//     }
+//   };
 
-    var chart_3 = new Chart(context, configuration);
+//     var chart_2 = new Chart(context, configuration);
+  
+//     var context_2 = document.getElementById("chart").getContext("2d");
 
-    var context_2 = document.getElementById("chart_2").getContext("2d");
+// var configuration_2 = {
+// type: 'bar',
+// data: {
+//   labels: ["01", "02", "03"],
+//    datasets: [{
+//     label: ["Volume de pessoas"],
+//     data: ["28000", "34000",''],
+//     type: 'bar',
+//     borderColor: ['#00f01f'],
+//     backgroundColor: ['#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f'],
+//   }]
+// },
+// options: {
+//   scales: {
+//     xAxes: [{
+//       barPercentage: .7,
+//       distribution: 'series',
+//       ticks: {
+//         beginAtZero: true,
+//         fontColor: "#4ADAA8",
+//         drawBorder: true,
+//       },
 
-    var configuration_2 = {
-    type: 'bar',
-    data: {
-      labels: ["01", "02", "03"],
-       datasets: [{
-        label: ["Volume de pessoas"],
-        data: ["28000", "34000",''],
-        type: 'bar',
-        borderColor: ['#00f01f'],
-        backgroundColor: ['#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f'],
-      }]
-    },
-    options: {
-      scales: {
-        xAxes: [{
-          barPercentage: .7,
-          distribution: 'series',
-          ticks: {
-            beginAtZero: true,
-            fontColor: "#4ADAA8",
-            drawBorder: true,
-          },
+//       gridLines: {
+//         color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
+//       },
 
-          gridLines: {
-            color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
-          },
+
+//     }],
+//     yAxes: [{
+//       gridLines: {
+//         color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8",  "#FFF"],
+//   },
+//       scaleLabel: {
+//         fontColor: "#4ADAA8",
+//         display: true,
+//         labelString: 'Número de pesssoas',
+//       }
+//     }],
+
+//   },
+// }
+// };
+
+// var chart = new Chart(context_2, configuration_2);
+  
+//     destaque.innerHTML = `Volume Mensal`
+//     destaque_2.innerHTML = `Volume Anual`
+//     destaque_3.innerHTML = `Volume Diário`
+    
+//   } else if(destaque == 'dia') {
+
+//     var context_3 = document.getElementById("chart").getContext("2d");
+  
+//   var configuration_3 = {
+//     type: 'bar',
+//     data: {
+//       labels: ["04:40", "05:00", "07:00", "09:00", "11:00", "13:00", "15:00", "17:00", "19:00", "21:00", "23:00", "00:00"],
+//       datasets: [{
+//         label: ["volume de pessoas"],
+//         data: ["280000", "340000", "295000", "260000", "330000", "403000", "250000", "190000", "365000", "440000", "450000", "300000"],
+//         type: 'line',
+//         borderColor: '#00f01f',
+//         backgroundColor: '#00f01f33',
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         xAxes: [{
+//           barPercentage: .7,
+//           distribution: 'series',
+//           ticks: {
+//             beginAtZero: false,
+//             fontColor: "#4ADAA8",
+//             drawBorder: true,
+//           },
+
+//           gridLines: {
+//             color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
+//           },
+    
+
+//         }],
+//         yAxes: [{
+//           gridLines: {
+//             color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8",  "#FFF"],
+//           },
+//           scaleLabel: {
+//             fontColor: "#4ADAA8",
+//             display: true,
+//             labelString: 'Número de pesssoas',
+//           }
+//         }],
+
+//       },
+//     }
+//   };
+
+//   var chart = new Chart(context_3, configuration_3);
+
+//   var context = document.getElementById("chart_3").getContext("2d");
+//     var configuration = {
+//     type: 'line ',
+//     data: {
+//       labels: ["Nov", "Dez",'Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out'],
+//       datasets: [{
+//         label: ["Volume de pessoas"],
+//         data: ["19440000", "1380000"],
+//         type: 'line',
+//         borderColor: ['#6E95F9'],
+//         backgroundColor: ['#6E95F90b'],
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         xAxes: [{
+//           barPercentage: .7,
+//           distribution: 'series',
+//           ticks: {
+//             beginAtZero: false,
+//             fontColor: "#4ADAA8",
+//             drawBorder: true,
+//           },
+
+//           gridLines: {
+//             color: ["#3B3D3F", "#3B3D3F",  "#3B3D3F",  "#3B3D3F",  "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
+//           },
+      
+
+//         }],
+//         yAxes: [{
+//           gridLines: {
+//             color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8","#4ADAA8","#4ADAA8","#4ADAA8", "#4ADAA8",],
+//           },
+//           scaleLabel: {
+//             fontColor: "#4ADAA8",
+//             display: true,
+//             labelString: 'Número de pesssoas',
+          
+//           }
+//         }],
+
+//       },
+//     }
+//   };
+
+//     var chart_3 = new Chart(context, configuration);
+
+//     var context_2 = document.getElementById("chart_2").getContext("2d");
+
+//     var configuration_2 = {
+//     type: 'bar',
+//     data: {
+//       labels: ["01", "02", "03"],
+//        datasets: [{
+//         label: ["Volume de pessoas"],
+//         data: ["28000", "34000",''],
+//         type: 'bar',
+//         borderColor: ['#00f01f'],
+//         backgroundColor: ['#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f', '#00f01f'],
+//       }]
+//     },
+//     options: {
+//       scales: {
+//         xAxes: [{
+//           barPercentage: .7,
+//           distribution: 'series',
+//           ticks: {
+//             beginAtZero: true,
+//             fontColor: "#4ADAA8",
+//             drawBorder: true,
+//           },
+
+//           gridLines: {
+//             color: ["#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D", "#2B2C2D"],
+//           },
   
 
-        }],
-        yAxes: [{
-          gridLines: {
-            color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8",  "#FFF"],
-      },
-          scaleLabel: {
-            fontColor: "#4ADAA8",
-            display: true,
-            labelString: 'Número de pesssoas',
-          }
-        }],
+//         }],
+//         yAxes: [{
+//           gridLines: {
+//             color: ["#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8", "#4ADAA8",  "#FFF"],
+//       },
+//           scaleLabel: {
+//             fontColor: "#4ADAA8",
+//             display: true,
+//             labelString: 'Número de pesssoas',
+//           }
+//         }],
 
-      },
-    }
-  };
+//       },
+//     }
+//   };
 
-  var chart_2 = new Chart(context_2, configuration_2);
+//   var chart_2 = new Chart(context_2, configuration_2);
   
-    destaque.innerHTML = `Volume Diário`
-    destaque_2.innerHTML = `Volume Mensal`
-    destaque_3.innerHTML = `Volume Anual`
-  }
-}
+//     destaque.innerHTML = `Volume Diário`
+//     destaque_2.innerHTML = `Volume Mensal`
+//     destaque_3.innerHTML = `Volume Anual`
+//   }
+// }
     
   </script>
