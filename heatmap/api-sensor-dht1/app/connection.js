@@ -3,8 +3,8 @@ var mysql = require('mysql2');
 var connection = mysql.createConnection({
   host: 'localhost',
   port: '3306',
-  user: 'admin',
-  password: 'D1g1t@lschool',
+  user: 'root',
+  password: 'XXXXX',
   database: 'maze'
 });
 

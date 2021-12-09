@@ -61,21 +61,24 @@ function buscarMaior() {
             resposta.json().then(function (resposta) {
                 console.log("Dados recebidos: ", JSON.stringify(resposta));
             
+                var contagem = document.getElementById("contagem_estacoes")
 
-    
-                // for (var i = 0; i < resposta.length; i++) {
-                    var conta = resposta[0];
+
+             
                     var divConta = document.createElement("div");
-                    var spanConta = document.createElement("span");
+                    var spanMaior = document.createElement("span");
+                    var spanMenor = document.createElement("span");
 
-                    console.log(conta.Estação, conta.total);
+                    console.log(resposta.Estação, resposta.total);
 
-                    contagem_estacoes.innerHTML = `<br/>${conta.Estação} <br/> total: ${conta.total} `;
-                    
-                  //  divConta.appendChild(spanConta);
+                    spanMaior.innerHTML = `<br/>Estação: ${resposta[0].Estação} <br/> total: ${resposta[0].total} `;
+                    spanMenor.innerHTML = `<br/><br/> Estação: ${resposta[resposta.length - 1].Estação} <br/> total: ${resposta[resposta.length - 1].total}`
 
-                  //  contagem.appendChild(divConta);
-                // }
+                   divConta.appendChild(spanMaior);
+                   divConta.appendChild(spanMenor);
+
+                   contagem.appendChild(divConta);
+                 
             })
         }
     })

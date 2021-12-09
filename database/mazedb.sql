@@ -55,8 +55,12 @@ create table medida_presenca(
 	id int primary key auto_increment,
     is_present int,
     date_moviment datetime,
-	id_sensor int
+	id_sensor int,
+    id_estacao int
 );
+
+alter table medida_presenca add foreign key (id_sensor) references sensor (idSensor);
+alter table medida_presenca add foreign key (id_estacao) references estacao	(idEstacao);
 
 -- inserindo dados na tabela
 
@@ -201,13 +205,18 @@ insert into estacao(nomeEstacao, fkLinha) values
 ('Hospital C. Tiradentes', 15);
 
 select * from medida;
-
-select count(*) as total, id_sensor as sensor from medida_presenca where is_present = 1 
-	 and CAST(date_moviment as time) between '00:00' and '01:35' 
-		group by id_sensor;
-
 select * from estacao;
+select * from medida_presenca;
 
 -- Exibindo as tabelas com suas correspondentes
 
 select * from estacao join linha on fkLinha = idLinha;
+
+select sum(is_present) as total, nomeEstacao as Estação from medida_presenca 
+	join estacao on id_estacao = idEstacao 
+		group by id_estacao 
+			order by sum(is_present) desc;
+            
+            
+select sum(is_present) as total, id_sensor as sensor from medida_presenca where CAST(date_moviment as time) between '01:25' and '01:29'
+    group by id_sensor;
