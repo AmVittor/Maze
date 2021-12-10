@@ -217,6 +217,42 @@ select sum(is_present) as total, nomeEstacao as Estação from medida_presenca
 		group by id_estacao 
 			order by sum(is_present) desc;
             
-            
-select sum(is_present) as total, id_sensor as sensor from medida_presenca where CAST(date_moviment as time) between '01:25' and '01:29'
+select nomeEstacao, date_moviment, sum(is_present) from medida_presenca 
+	join estacao on id_estacao = idEstacao 
+			group by id_estacao 
+				order by sum(is_present) desc;
+     
+
+select nomeEstacao, date_moviment, is_present from medida_presenca 
+	join estacao on id_estacao = idEstacao
+		where nomeEstacao = 'Sacomã' 
+			group by date_moviment 
+				order by is_present desc;
+
+-- Horário mais movimentado
+select nomeEstacao as Estação, date_moviment as horario, is_present as total from medida_presenca 
+	join estacao on id_estacao = idEstacao 
+			group by date_moviment  
+				order by is_present desc;
+                
+                
+select sum(is_present) as total, id_sensor as sensor from medida_presenca where CAST(date_moviment as time) between '00:00' and '01:29'
     group by id_sensor;
+   
+-- Estações e o número de pessoas nela
+   select sum(is_present) as total, nomeEstacao as Estação from medida_presenca 
+	join estacao on id_estacao = idEstacao 
+		group by id_estacao 
+			order by sum(is_present) desc;
+            
+ select sum(is_present) as total, nomeEstacao as Estação, nomeLinha as Linha from medida_presenca  
+	join estacao on id_estacao = idEstacao 
+		join linha on fkLinha = idLinha
+			group by nomeLinha
+				order by sum(is_present) desc;
+                
+
+  select sum(is_present) as total, nomeEstacao as Estação, nomeLinha as Linha from medida_presenca 
+	join estacao on id_estacao = idEstacao 
+		join linha on fkLinha = idLinha
+			group by nomeEstacao;

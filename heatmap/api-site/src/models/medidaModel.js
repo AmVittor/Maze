@@ -21,7 +21,19 @@ function buscarMaior() {
   return database.executar(instrucaoSql);  
 }
 
+function buscarHorario() {
+  // console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function buscarMaior()");
+
+  instrucaoSql = `select nomeEstacao as Estação, date_moviment as horario, is_present as total from medida_presenca 
+	join estacao on id_estacao = idEstacao 
+			group by date_moviment  
+				order by is_present desc;`;
+
+  console.log('Executando a instrução SQL: \n' + instrucaoSql);
+  return database.executar(instrucaoSql);  
+}
 module.exports = {
   buscarPresencas,
-  buscarMaior
+  buscarMaior,
+  buscarHorario
 };

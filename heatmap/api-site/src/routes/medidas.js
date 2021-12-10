@@ -12,5 +12,7 @@ router.post("/maiores", function(req,res) {
     medidaController.buscarMaior(req, res);
 })
 
-
+router.post("/lotados", function(req, res) {
+    medidaController.buscarHorario(req,res);
+})
 module.exports = router;
